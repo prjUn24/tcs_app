@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:tcs/views/booking_page.dart';
 import 'package:tcs/views/login_page.dart';
 import 'package:tcs/views/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashScreen(),
         '/login': (context) => const LoginPage(),
         '/home': (context) => const LoginPage(),
+        '/booking_screen': (context) => const BookingPage(),
       },
     );
   }

@@ -141,9 +141,15 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 const SizedBox(
                   height: 50,
                 ),
-                ButtonTCS(
-                  txt: 'REGISTER',
-                  onTap: registerUser,
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 130, vertical: 20),
+                  margin: const EdgeInsets.symmetric(horizontal: 30),
+                  child: ButtonTCS(
+                    txt: 'REGISTER',
+                    onTap: registerUser,
+                    color: Colors.green[200],
+                  ),
                 ),
                 const SizedBox(
                   height: 50,

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/text_area.dart';
 
@@ -88,15 +88,31 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               const SizedBox(
                 height: 30,
               ),
-              ButtonTCS(onTap: forgotPassword, txt: 'Send Mail'),
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 130, vertical: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 30),
+                child: ButtonTCS(
+                  onTap: forgotPassword,
+                  txt: 'Send Mail',
+                  color: Colors.green[200],
+                ),
+              ),
               const SizedBox(
                 height: 30,
               ),
-              ButtonTCS(
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 130, vertical: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 30),
+                child: ButtonTCS(
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  txt: 'Go back'),
+                  txt: 'Go back',
+                  color: Colors.green[200],
+                ),
+              ),
             ],
           ),
         ),
