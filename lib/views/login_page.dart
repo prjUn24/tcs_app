@@ -1,4 +1,5 @@
 // import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tcs/services/auth_service.dart';
 import 'package:tcs/views/forgot_password.dart';
@@ -6,7 +7,6 @@ import 'package:tcs/views/forgot_password.dart';
 // import 'package:tcs/views/splash_screen.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/text_area.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
@@ -127,9 +127,15 @@ class _LoginPageState extends State<LoginPage> {
                 // const Padding(
                 //     padding: EdgeInsets.symmetric(horizontal: 30),
                 //     child: ),
-                ButtonTCS(
-                  txt: 'L O G I N',
-                  onTap: signUserIn,
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 130, vertical: 20),
+                  margin: const EdgeInsets.symmetric(horizontal: 30),
+                  child: ButtonTCS(
+                    txt: 'L O G I N',
+                    onTap: signUserIn,
+                    color: Colors.green[200],
+                  ),
                 ),
                 const SizedBox(
                   height: 50,
