@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "801398051846",
+    "project_id": "caringsouls-62376",
+    "storage_bucket": "caringsouls-62376.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801398051846:android:6ef763a21cb1d5de5a9f87",
+        "android_client_info": {
+          "package_name": "com.thecaringsouls.tcs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIhzfQ3_qt76DqlVmUYvKxHfk0RIRzzG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
