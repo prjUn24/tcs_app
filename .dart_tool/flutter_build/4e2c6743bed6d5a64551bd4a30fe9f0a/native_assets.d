@@ -1,0 +1,1 @@
+ D:\\Project\ Unknown\\The\ Caring\ Souls\\The\ Caring\ Souls\ App\\tcs_app\\.dart_tool\\flutter_build\\4e2c6743bed6d5a64551bd4a30fe9f0a\\native_assets.yaml: 
