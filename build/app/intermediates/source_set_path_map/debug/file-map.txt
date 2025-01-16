@@ -50,8 +50,10 @@ com.thecaringsouls.tcs.app-merged_res-48 D:\Project Unknown\The Caring Souls\The
 com.thecaringsouls.tcs.app-packaged_res-49 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\cloud_firestore\intermediates\packaged_res\debug
 com.thecaringsouls.tcs.app-packaged_res-50 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\firebase_auth\intermediates\packaged_res\debug
 com.thecaringsouls.tcs.app-packaged_res-51 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\firebase_core\intermediates\packaged_res\debug
-com.thecaringsouls.tcs.app-packaged_res-52 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\geocoding_android\intermediates\packaged_res\debug
-com.thecaringsouls.tcs.app-packaged_res-53 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\geolocator_android\intermediates\packaged_res\debug
-com.thecaringsouls.tcs.app-packaged_res-54 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\google_sign_in_android\intermediates\packaged_res\debug
-com.thecaringsouls.tcs.app-packaged_res-55 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\shared_preferences_android\intermediates\packaged_res\debug
-com.thecaringsouls.tcs.app-packaged_res-56 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\url_launcher_android\intermediates\packaged_res\debug
+com.thecaringsouls.tcs.app-packaged_res-52 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\fluttertoast\intermediates\packaged_res\debug
+com.thecaringsouls.tcs.app-packaged_res-53 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\geocoding_android\intermediates\packaged_res\debug
+com.thecaringsouls.tcs.app-packaged_res-54 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\geolocator_android\intermediates\packaged_res\debug
+com.thecaringsouls.tcs.app-packaged_res-55 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\google_sign_in_android\intermediates\packaged_res\debug
+com.thecaringsouls.tcs.app-packaged_res-56 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\permission_handler_android\intermediates\packaged_res\debug
+com.thecaringsouls.tcs.app-packaged_res-57 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\shared_preferences_android\intermediates\packaged_res\debug
+com.thecaringsouls.tcs.app-packaged_res-58 D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\url_launcher_android\intermediates\packaged_res\debug

@@ -69,6 +69,7 @@ INJECTED from D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\a
 MERGED from [:cloud_firestore] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_auth] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:fluttertoast] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:geocoding_android] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\geocoding_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:geolocator_android] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:google_sign_in_android] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
@@ -206,6 +207,8 @@ MERGED from [:firebase_auth] D:\Project Unknown\The Caring Souls\The Caring Soul
 MERGED from [:firebase_auth] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:geocoding_android] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\geocoding_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:geocoding_android] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\geocoding_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:geolocator_android] D:\Project Unknown\The Caring Souls\The Caring Souls App\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44

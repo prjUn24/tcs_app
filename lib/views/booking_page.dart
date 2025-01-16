@@ -1,7 +1,7 @@
 // ignore_for_file: use_build_context_synchronously, avoid_print
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:tcs/views/booking_funtion.dart';
 import 'package:tcs/widgets/address_feild.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/date_picker.dart';
@@ -16,6 +16,9 @@ class BookingPage extends StatefulWidget {
 }
 
 class _BookingPageState extends State<BookingPage> {
+  // Booking Funtion Class object
+  final BookingService _bookingService = BookingService();
+
   final _formKey = GlobalKey<FormState>();
   final Map<String, dynamic> _formData = {
     "name": "",
@@ -131,16 +134,20 @@ class _BookingPageState extends State<BookingPage> {
     if (isValid) {
       if (_formKey.currentState!.validate()) {
         _formKey.currentState!.save();
+
         try {
           // Save form data to Firestore
-          await FirebaseFirestore.instance
-              .collection('bookings')
-              .add(_formData);
-          print("Data saved successfully: $_formData");
+          await _bookingService.createBooking(_formData);
+          // await FirebaseFirestore.instance
+          //     .collection('bookings')
+          //     .add(_formData);
+          // print("Data saved successfully: $_formData");
 
           // Show success message
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text("Booking submitted successfully!")),
+            const SnackBar(
+              content: Text("Booking submitted successfully!"),
+            ),
           );
 
           // Clear form fields

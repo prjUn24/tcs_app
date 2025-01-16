@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:tcs/views/booking_funtion.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/text_area.dart';
 
@@ -11,7 +13,28 @@ class BookingConfirmationPage extends StatefulWidget {
 }
 
 class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
+  final BookingService _bookingService = BookingService();
   final TextEditingController otpController = TextEditingController();
+
+  String? serviceId;
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchServiceId();
+  }
+
+  Future<void> _fetchServiceId() async {
+    final bookingData = await FirebaseFirestore.instance
+        .collection('bookings')
+        .doc('your_booking_document_id')
+        .get();
+    setState(() {
+      serviceId = bookingData['serviceId'];
+    });
+    debugPrint(serviceId);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +76,14 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
               height: 25.0,
             ),
             ButtonTCS(
-              onTap: () {},
+              onTap: () {
+                setState(() async {
+                  await _fetchServiceId();
+                  await _bookingService.confirmBooking(
+                      serviceId!, otpController.text);
+                  Navigator.pushNamed(context, "/home");
+                });
+              },
               txt: 'Confirm Booking',
               color: const Color(0xffB4D1B3),
             ),
