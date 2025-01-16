@@ -1,6 +1,10 @@
+// ignore_for_file: avoid_print
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:tcs/services/auth_service.dart';
+// import 'package:tcs/views/home_page.dart';
 import 'package:tcs/views/width_and_height.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/text_area.dart';
@@ -19,53 +23,104 @@ class _RegistrationPageState extends State<RegistrationPage> {
   final confirmPasswordController = TextEditingController();
   final nameController = TextEditingController();
   final phoneController = TextEditingController();
+  final addressController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailRegisterController.dispose();
+    passwordRegisterController.dispose();
+    confirmPasswordController.dispose();
+    nameController.dispose();
+    phoneController.dispose();
+    addressController.dispose();
+    super.dispose();
+  }
+
+  Future<void> addDataToFirestore(User user) async {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+
+    // Reference to the users collection, using the UID as the document ID
+    DocumentReference userDoc = firestore.collection('users').doc(user.uid);
+
+    // Set the user data inside the document with UID
+    await userDoc.set({
+      'address': addressController.text, // User address from the input field
+      'authProvider': 'email', // Since we are registering with email
+      'createdAt': FieldValue
+          .serverTimestamp(), // Timestamp for when the account is created
+      'email': emailRegisterController.text, // User email
+      'emailVerified': user.emailVerified, // Email verification status
+      'name': nameController.text, // User name
+      'lastLogin': FieldValue
+          .serverTimestamp(), // Timestamp for the last login (initially set to createdAt)
+      'number': phoneController.text, // User phone number
+    });
+
+    print("User data added to Firestore under UID ${user.uid}");
+  }
 
   void registerUser() async {
-    // Show loading circle
     showDialog(
       context: context,
-      barrierDismissible:
-          false, // Prevent dismissing the dialog by tapping outside
       builder: (context) {
-        return const Center(
-          child: CircularProgressIndicator(),
-        );
+        return Lottie.asset('lib/images/loading_anim.json');
       },
     );
-
     try {
-      // Check if passwords match
+      // Validate passwords and required fields
       if (passwordRegisterController.text == confirmPasswordController.text &&
           nameController.text.isNotEmpty) {
-        // Attempt to create the user
-        await FirebaseAuth.instance.createUserWithEmailAndPassword(
-          email: emailRegisterController.text,
-          password: passwordRegisterController.text,
+        print("Creating user...");
+
+        // Register the user
+        UserCredential userCredential =
+            await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: emailRegisterController.text.trim(),
+          password: passwordRegisterController.text.trim(),
         );
+        Navigator.of(context).pop();
+        // Update the display name
+        await userCredential.user!
+            .updateDisplayName(nameController.text.trim());
 
-        await FirebaseAuth.instance.currentUser!
-            .updateDisplayName(nameController.text);
+        // Add user data to Firestore
+        await addDataToFirestore(userCredential.user!);
 
-        // Successfully created user; pop the loading dialog
-        Navigator.pop(context);
-        // Optional: Show success message or navigate to another screen
+        // Dismiss the loading dialog
+
+        print("User registration complete.");
       } else {
-        // Passwords don't match; show error dialog
-        Navigator.pop(context); // Pop the loading dialog
-        wrongCredentials();
+        // Throw error if passwords mismatch or fields are empty
+        throw FirebaseAuthException(
+          message: 'Passwords do not match or fields are empty.',
+          code: 'passwords_mismatch',
+        );
       }
     } on FirebaseAuthException catch (e) {
-      Navigator.pop(context); // Pop the loading dialog
-
-      // Handle specific Firebase errors
-      wrongCredentials();
       print("Firebase Auth Error: ${e.message}");
+      showErrorDialog(e.message ?? 'An unknown error occurred.');
     } catch (e) {
-      Navigator.pop(context); // Pop the loading dialog
-
-      // Handle any other unexpected errors
       print("Unexpected Error: $e");
+      // showErrorDialog('Unexpected error occurred. Please try again.');
     }
+  }
+
+  void showErrorDialog(String message) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Error'),
+        content: Text(message),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: const Text('Close'),
+          ),
+        ],
+      ),
+    );
   }
 
   void wrongCredentials() {
@@ -155,6 +210,28 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       obsureText: true,
                       hintText: 'Confirm Password',
                       controller: confirmPasswordController,
+                    )),
+                SizedBox(
+                  height: FrameSize.screenHeight * 0.03,
+                ),
+                Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: FrameSize.screenWidth * 0.08),
+                    child: TextArea(
+                      obsureText: false,
+                      hintText: 'Phone Number',
+                      controller: phoneController,
+                    )),
+                SizedBox(
+                  height: FrameSize.screenHeight * 0.03,
+                ),
+                Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: FrameSize.screenWidth * 0.08),
+                    child: TextArea(
+                      obsureText: false,
+                      hintText: 'Address',
+                      controller: addressController,
                     )),
                 SizedBox(
                   height: FrameSize.screenHeight * 0.05,

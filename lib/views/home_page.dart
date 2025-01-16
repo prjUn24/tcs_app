@@ -44,8 +44,9 @@ class _HomePageState extends State<HomePage> {
     FrameSize.init(context: context);
 
     return Scaffold(
-      backgroundColor: const Color(0xffF5FAF9),
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
+        leading: const SizedBox.shrink(),
         centerTitle: true,
         backgroundColor: const Color(0xffF8E8F5),
         title: const Image(
@@ -63,7 +64,7 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
+                    color: Colors.grey.withValues(alpha: 0.5),
                     spreadRadius: 1, // How wide the shadow spreads
                     blurRadius: 6, // Softness of the shadow
                     offset: const Offset(0, 1), // Position of the shadow (x, y)
@@ -178,7 +179,6 @@ class _HomePageState extends State<HomePage> {
                   title: "Pending Bookings:",
                   bookingStatus: "You have 1 pending booking.",
                 ),
-                SizedBox(height: FrameSize.screenHeight * 0.04),
               ],
             ),
           ),
@@ -202,7 +202,7 @@ class _HomePageState extends State<HomePage> {
         ],
         onTap: (index) {
           if (index == 0) {
-            Navigator.pushNamed(context, '/home');
+            Navigator.pushNamed(context, '/');
           } else if (index == 1) {
             Navigator.pushNamed(context, '/account_screen');
           }

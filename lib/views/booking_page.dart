@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tcs/views/width_and_height.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/date_picker.dart';
 import 'package:tcs/widgets/drop_down_feild.dart';
@@ -336,6 +337,7 @@ class _BookingPageState extends State<BookingPage> {
                     maxHeight: 50,
                   ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     spacing: 15.0,
                     children: [
                       ButtonTCS(

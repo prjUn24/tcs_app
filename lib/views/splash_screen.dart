@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tcs/views/home_page.dart';
@@ -12,8 +13,23 @@ class SplashScreen extends StatelessWidget {
       body: StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return const HomePage();
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          } else if (snapshot.hasData) {
+            final user = snapshot.data;
+            return StreamBuilder<DocumentSnapshot>(
+              stream: FirebaseFirestore.instance
+                  .collection('users')
+                  .doc(user!.uid)
+                  .snapshots(),
+              builder: (context, userSnapshot) {
+                if (userSnapshot.hasData && userSnapshot.data!.exists) {
+                  return const HomePage();
+                } else {
+                  return const LoginOrRegisterPage();
+                }
+              },
+            );
           } else {
             return const LoginOrRegisterPage();
           }

@@ -1,5 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:tcs/theme/theme.dart';
+import 'package:tcs/theme/theme_provider.dart';
 import 'package:tcs/views/width_and_height.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/text_area.dart';
@@ -17,6 +21,9 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   var user = FirebaseAuth.instance.currentUser;
   final phoneController = TextEditingController();
+
+  final addressController = TextEditingController();
+
   final newEmail = TextEditingController();
   final oldEmail = TextEditingController();
   final oldEmailPass = TextEditingController();
@@ -27,17 +34,89 @@ class _ProfilePageState extends State<ProfilePage> {
 
   final changeName = TextEditingController();
 
-  bool toEdit = false;
+  final FirebaseFirestore fireStoreData = FirebaseFirestore.instance;
+
+  bool isGoogle = false;
 
   @override
   void initState() {
     super.initState();
+    isEmailVerified();
+    findIsGoogle();
   }
 
-  void updateNewName() async {
+  late bool emailVerified;
+
+  bool toEdit = false;
+
+  void findIsGoogle() async {
+    final userDoc =
+        await fireStoreData.collection('users').doc(user!.uid).get();
+    if (userDoc.exists) {
+      setState(() {
+        isGoogle = userDoc.data()?['authProvider'] == 'Google';
+      });
+    }
+  }
+
+  // Method to check if email is verified.
+  void isEmailVerified() {
+    setState(() {
+      emailVerified = FirebaseAuth.instance.currentUser!.emailVerified;
+    });
+    print("This is the output of email Verification: $emailVerified");
+  }
+
+  // Method to send a verification email
+  Future<void> verifyEmail() async {
+    try {
+      // Check if a user is currently signed in
+      User? user = FirebaseAuth.instance.currentUser;
+      if (user == null) {
+        print("No user is currently signed in.");
+        return;
+      }
+
+      // Send the verification email
+      await user.sendEmailVerification();
+
+      // Optionally, you can display a confirmation message
+      print("Verification email sent to ${user.email}");
+
+      // Trigger the check for email verification status after a delay
+      // We add a delay to give time for the email to be processed
+      await Future.delayed(
+          Duration(seconds: 3)); // Wait 3 seconds for email to be sent
+      isEmailVerified(); // Re-check the email verification status
+
+      // Optionally, you can keep checking periodically (not necessary for basic use cases)
+      FirebaseAuth.instance.authStateChanges().listen((user) {
+        if (user != null) {
+          isEmailVerified();
+        }
+      });
+    } on FirebaseAuthException catch (e) {
+      // Handle error when sending email
+      print("Error sending verification email: ${e.message}");
+    }
+  }
+
+  void updateNewName(User? user) async {
     try {
       await FirebaseAuth.instance.currentUser!
           .updateDisplayName(changeName.text);
+      if (user != null) {
+        final userDoc = fireStoreData.collection('users').doc(user.uid);
+
+        // Check if the user already exists in Firestore
+        final docSnapshot = await userDoc.get();
+        if (docSnapshot.exists) {
+          await userDoc.update({
+            'name': changeName.text,
+          });
+          print('NAME UPDATION');
+        }
+      }
     } on FirebaseAuthException catch (e) {
       showDialog(
         context: context,
@@ -222,26 +301,42 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
-  void addPhoneNumber() async {
-    await FirebaseAuth.instance.verifyPhoneNumber(
-      phoneNumber: phoneController.text,
-      verificationCompleted: (PhoneAuthCredential credential) {
-        print('Verification completed');
-      },
-      verificationFailed: (FirebaseAuthException e) {
-        print(e);
-      },
-      codeSent: (String verificationId, int? resendToken) {
-        print("Verification code sent: $verificationId");
-      },
-      codeAutoRetrievalTimeout: (String verificationId) {
-        print("Auto retrieval timeout: $verificationId");
-      },
-    );
+  void addPhoneNumber(User? user) async {
+    if (user != null) {
+      final userDoc = fireStoreData.collection('users').doc(user.uid);
+
+      // Check if the user already exists in Firestore
+      final docSnapshot = await userDoc.get();
+      if (docSnapshot.exists) {
+        await userDoc.update({
+          'number': phoneController.text,
+        });
+        print('MOBILE NUMBER UPDATION');
+      }
+    }
+  }
+
+  void updateAddress(User? user) async {
+    if (user != null) {
+      final userDoc = fireStoreData.collection('users').doc(user.uid);
+
+      // Check if the user already exists in Firestore
+      final docSnapshot = await userDoc.get();
+      if (docSnapshot.exists) {
+        await userDoc.update({
+          'address': addressController.text,
+        });
+        print('ADDRESS UPDATION');
+      }
+    }
   }
 
   void deleteUser() async {
     try {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(user?.uid)
+          .delete();
       await FirebaseAuth.instance.currentUser!.delete();
       Navigator.pushNamed(context, '/');
     } on FirebaseAuthException catch (e) {
@@ -259,8 +354,28 @@ class _ProfilePageState extends State<ProfilePage> {
     FrameSize.init(context: context);
     return Scaffold(
       appBar: AppBar(
+        leading: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/home');
+            },
+            child: const Icon(Icons.arrow_back_ios_outlined)),
         backgroundColor: const Color(0xffF8E8F5),
         centerTitle: true,
+        actions: [
+          IconButton(
+            iconSize: FrameSize.screenWidth * 0.09,
+            icon: Icon(
+              Provider.of<ThemeProvider>(context).themeData == lightMode
+                  ? Icons.brightness_7 // Sun Icon for light mode
+                  : Icons.brightness_4, // Moon Icon for dark mode
+              color: Colors.black.withAlpha(150),
+            ),
+            onPressed: () {
+              // Toggle theme when icon is pressed
+              Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+            },
+          )
+        ],
         title: const Text(
           "My Account",
           style: TextStyle(
@@ -275,19 +390,62 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Lottie.asset('lib/images/user.json',
-                    width: FrameSize.screenWidth * 0.35),
+                // StreamBuilder<DocumentSnapshot>(
+                //   stream: FirebaseFirestore.instance
+                //       .collection('users')
+                //       .doc(user!.uid)
+                //       .snapshots(),
+                //   builder: (context, userSnapshot) {
+                //     return Text(userSnapshot.data?['name']);
+                //   },
+                // ),
+                Lottie.asset('lib/images/user_new.json',
+                    frameRate: const FrameRate(100),
+                    repeat: false,
+                    width: FrameSize.screenWidth * 0.2),
                 SizedBox(height: FrameSize.screenHeight * 0.01),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      user!.displayName ?? user!.email!,
-                      style: TextStyle(
-                        fontSize: FrameSize.screenWidth * 0.08,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ).animate().fade(),
+                    StreamBuilder<DocumentSnapshot>(
+                      stream: FirebaseFirestore.instance
+                          .collection('users')
+                          .doc(user!.uid)
+                          .snapshots(),
+                      builder: (context, userSnapshot) {
+                        // Check if the connection is still loading
+                        if (userSnapshot.connectionState ==
+                            ConnectionState.waiting) {
+                          return const SizedBox.shrink();
+                        }
+
+                        // Handle error if the stream has an error
+                        if (userSnapshot.hasError) {
+                          return Text('Error: ${userSnapshot.error}');
+                        }
+
+                        // Check if the data exists in the snapshot
+                        if (userSnapshot.hasData && userSnapshot.data != null) {
+                          var userData = userSnapshot.data!;
+                          if (userData.exists) {
+                            // Safely access the 'name' field
+                            var name = userData['name'] ??
+                                'No name available'; // Fallback if 'name' is null
+                            return Text(
+                              name,
+                              style: TextStyle(
+                                fontSize: FrameSize.screenWidth * 0.08,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ).animate().fade();
+                          } else {
+                            return Text('User document does not exist');
+                          }
+                        } else {
+                          return Text('No data available');
+                        }
+                      },
+                    ),
                     toEdit
                         ? GestureDetector(
                             onTap: () {
@@ -316,7 +474,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       TextButton(
                                         onPressed: () {
                                           Navigator.of(context).pop();
-                                          updateNewName();
+                                          updateNewName(user);
                                           showDialog(
                                               context: context,
                                               builder: (BuildContext context) {
@@ -355,36 +513,513 @@ class _ProfilePageState extends State<ProfilePage> {
                   ],
                 ),
                 SizedBox(height: FrameSize.screenHeight * 0.01),
-                Container(
-                  height: FrameSize.screenHeight * 0.05,
-                  margin: EdgeInsets.symmetric(
-                    horizontal: FrameSize.screenWidth * 0.35,
-                  ),
-                  child: toEdit
-                      ? ButtonTCS(
-                          onTap: () {
-                            toEdit = !toEdit;
-                            setState(() {});
-                          },
-                          txtcolor: Colors.black,
-                          txt: "Done",
-                          color: const Color(0xffBDCFE7),
-                        )
-                      : ButtonTCS(
-                          onTap: () {
-                            toEdit = !toEdit;
-                            setState(() {});
-                          },
-                          txtcolor: Colors.black,
-                          txt: "Edit Profile",
-                          color: const Color(0xffBDCFE7),
+                toEdit
+                    ? ButtonTCS(
+                        onTap: () {
+                          toEdit = !toEdit;
+                          setState(() {});
+                        },
+                        txtcolor: Colors.black,
+                        txt: "Done",
+                        color: const Color(0xffBDCFE7),
+                      )
+                    : ButtonTCS(
+                        onTap: () {
+                          toEdit = !toEdit;
+                          setState(() {});
+                        },
+                        txtcolor: Colors.black,
+                        txt: "Edit Profile",
+                        color: const Color(0xffBDCFE7),
+                      ),
+                SizedBox(height: FrameSize.screenHeight * 0.009),
+
+                // EMAIL LIST TILE STARTS HERE
+
+                StreamBuilder<DocumentSnapshot>(
+                  stream: FirebaseFirestore.instance
+                      .collection('users')
+                      .doc(user!.uid)
+                      .snapshots(),
+                  builder: (context, userSnapshot) {
+                    if (userSnapshot.connectionState ==
+                        ConnectionState.waiting) {
+                      return const SizedBox.shrink();
+                    }
+
+                    // Handle error if the stream has an error
+                    if (userSnapshot.hasError) {
+                      return Text('Error: ${userSnapshot.error}');
+                    }
+                    if (userSnapshot.hasData && userSnapshot.data != null) {
+                      var userData = userSnapshot.data!;
+
+                      isGoogle = userData['authProvider'] == 'Google';
+
+                      // String email = userData['email'] ?? '';
+                      return ListTile(
+                        subtitle: emailVerified
+                            ? const Text('Email')
+                            : Row(
+                                children: [
+                                  const Text('Not Verified'),
+                                  SizedBox(
+                                      width: FrameSize.screenWidth * 0.009),
+                                  GestureDetector(
+                                      onTap: verifyEmail,
+                                      child: const Icon(Icons.error_outline))
+                                ],
+                              ),
+                        trailing: toEdit && userData['authProvider'] != 'Google'
+                            ? GestureDetector(
+                                onTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        title: const Text('Change New Email'),
+                                        content: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            TextArea(
+                                              hintText: 'New Email Address',
+                                              controller: newEmail,
+                                              obsureText: false,
+                                            ),
+                                            SizedBox(
+                                                height: FrameSize.screenHeight *
+                                                    0.02),
+                                            TextArea(
+                                              hintText: 'Current Email Address',
+                                              controller: oldEmail,
+                                              obsureText: false,
+                                            ),
+                                            SizedBox(
+                                                height: FrameSize.screenHeight *
+                                                    0.02),
+                                            TextArea(
+                                              hintText: 'Password',
+                                              controller: oldEmailPass,
+                                              obsureText: true,
+                                            ),
+                                          ],
+                                        ),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: const Text('Cancel'),
+                                          ),
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                              updateNewEmail();
+                                              user = FirebaseAuth
+                                                  .instance.currentUser;
+                                              setState(() {
+                                                toEdit = !toEdit;
+                                              });
+                                            },
+                                            child: const Text('Save'),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                },
+                                child: const Icon(Icons.edit).animate().fade(),
+                              )
+                            : null,
+                        leading: Icon(
+                          Icons.email,
+                          size: FrameSize.screenWidth * 0.09,
                         ),
+                        minLeadingWidth: FrameSize.screenWidth * 0.15,
+                        title: StreamBuilder<DocumentSnapshot>(
+                          stream: FirebaseFirestore.instance
+                              .collection('users')
+                              .doc(user!.uid)
+                              .snapshots(),
+                          builder: (context, userSnapshot) {
+                            // Check if the connection is still loading
+                            if (userSnapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return const SizedBox.shrink();
+                            }
+
+                            // Handle error if the stream has an error
+                            if (userSnapshot.hasError) {
+                              return Text('Error: ${userSnapshot.error}');
+                            }
+
+                            // Check if the data exists in the snapshot
+                            if (userSnapshot.hasData &&
+                                userSnapshot.data != null) {
+                              var userData = userSnapshot.data!;
+                              if (userData.exists) {
+                                // Safely access the 'name' field
+                                var name = userData['email'] ??
+                                    'No name available'; // Fallback if 'name' is null
+                                return Text(
+                                  name,
+                                ).animate().fade();
+                              } else {
+                                return Text('User document does not exist');
+                              }
+                            } else {
+                              return Text('No data available');
+                            }
+                          },
+                        ),
+                      );
+                    }
+                    return const Text('No data available');
+                  },
                 ),
-                SizedBox(height: FrameSize.screenHeight * 0.05),
-                ListTile(
-                  subtitle: const Text('Email'),
-                  trailing: toEdit
-                      ? GestureDetector(
+
+                // EMAIL LIST TILE END HERE
+
+                // THIS IS MOBILE NUMBER TILE
+
+                StreamBuilder<DocumentSnapshot>(
+                  stream: FirebaseFirestore.instance
+                      .collection('users')
+                      .doc(user!.uid)
+                      .snapshots(),
+                  builder: (context, userSnapshot) {
+                    // Check if the connection is still loading
+                    if (userSnapshot.connectionState ==
+                        ConnectionState.waiting) {
+                      return const SizedBox.shrink();
+                    }
+
+                    // Handle error if the stream has an error
+                    if (userSnapshot.hasError) {
+                      return Text('Error: ${userSnapshot.error}');
+                    }
+
+                    // Check if the data exists in the snapshot
+                    if (userSnapshot.hasData && userSnapshot.data != null) {
+                      var userData = userSnapshot.data!;
+                      false; // Assuming 'toEdit' is a boolean field that controls edit mode
+                      String mobileNumber = userData['number'] ?? '';
+
+                      return ListTile(
+                        subtitle: const Text('Phone Number'),
+                        trailing: toEdit
+                            ? GestureDetector(
+                                onTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        title: const Text('Enter Phone Number'),
+                                        content: TextField(
+                                          controller: phoneController,
+                                          decoration: const InputDecoration(
+                                            hintText: 'Phone Number',
+                                          ),
+                                        ),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: const Text('Cancel'),
+                                          ),
+                                          TextButton(
+                                            onPressed: () {
+                                              addPhoneNumber(user);
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: const Text('Save'),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                },
+                                child: const Icon(Icons.edit).animate().fade())
+                            : mobileNumber == ''
+                                ? GestureDetector(
+                                    onTap: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                          return AlertDialog(
+                                            title: const Text(
+                                                'Enter Phone Number'),
+                                            content: TextField(
+                                              controller: phoneController,
+                                              decoration: const InputDecoration(
+                                                hintText: 'Phone Number',
+                                              ),
+                                            ),
+                                            actions: <Widget>[
+                                              TextButton(
+                                                onPressed: () {
+                                                  Navigator.of(context).pop();
+                                                },
+                                                child: const Text('Cancel'),
+                                              ),
+                                              TextButton(
+                                                onPressed: () {
+                                                  addPhoneNumber(user);
+                                                  Navigator.of(context).pop();
+                                                },
+                                                child: const Text('Save'),
+                                              ),
+                                            ],
+                                          );
+                                        },
+                                      );
+                                    },
+                                    child: Icon(
+                                      Icons.add_circle_outline_outlined,
+                                      size: FrameSize.screenWidth * 0.095,
+                                    ).animate().fade(),
+                                  )
+                                : null,
+                        leading: Icon(
+                          Icons.phone,
+                          size: FrameSize.screenWidth * 0.09,
+                        ),
+                        minLeadingWidth: FrameSize.screenWidth * 0.15,
+                        title: mobileNumber == ''
+                            ? const Text('Not Available')
+                            : StreamBuilder<DocumentSnapshot>(
+                                stream: FirebaseFirestore.instance
+                                    .collection('users')
+                                    .doc(user!.uid)
+                                    .snapshots(),
+                                builder: (context, userSnapshot) {
+                                  // Check if the connection is still loading
+                                  if (userSnapshot.connectionState ==
+                                      ConnectionState.waiting) {
+                                    return const SizedBox.shrink();
+                                  }
+
+                                  // Handle error if the stream has an error
+                                  if (userSnapshot.hasError) {
+                                    return Text('Error: ${userSnapshot.error}');
+                                  }
+
+                                  // Check if the data exists in the snapshot
+                                  if (userSnapshot.hasData &&
+                                      userSnapshot.data != null) {
+                                    var userData = userSnapshot.data!;
+                                    if (userData.exists) {
+                                      // Safely access the 'name' field
+                                      var name = userData['number'] ??
+                                          'No name available'; // Fallback if 'name' is null
+                                      return Text(
+                                        name,
+                                      ).animate().fade();
+                                    } else {
+                                      return Text(
+                                          'User document does not exist');
+                                    }
+                                  } else {
+                                    return Text('No data available');
+                                  }
+                                },
+                              ),
+                      );
+                    }
+                    return const Text('No data available');
+                  },
+                ),
+
+                // THIS IS ADDRESS AREA TILE
+
+                StreamBuilder<DocumentSnapshot>(
+                  stream: FirebaseFirestore.instance
+                      .collection('users')
+                      .doc(user!.uid)
+                      .snapshots(),
+                  builder: (context, userSnapshot) {
+                    if (userSnapshot.connectionState ==
+                        ConnectionState.waiting) {
+                      return const SizedBox.shrink();
+                    }
+
+                    // Handle error if the stream has an error
+                    if (userSnapshot.hasError) {
+                      return Text('Error: ${userSnapshot.error}');
+                    }
+
+                    // Check if the data exists in the snapshot
+                    if (userSnapshot.hasData && userSnapshot.data != null) {
+                      var userData = userSnapshot.data!;
+                      String address = userData['address'] ?? '';
+                      return ListTile(
+                        subtitle: const Text('Address'),
+                        trailing: toEdit
+                            ? GestureDetector(
+                                onTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        title: const Text('Enter Address'),
+                                        content: TextField(
+                                          controller: addressController,
+                                          decoration: const InputDecoration(
+                                            hintText: 'Address',
+                                          ),
+                                        ),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: const Text('Cancel'),
+                                          ),
+                                          TextButton(
+                                            onPressed: () {
+                                              updateAddress(user);
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: const Text('Save'),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                },
+                                child: const Icon(Icons.edit).animate().fade())
+                            : address.isEmpty
+                                ? GestureDetector(
+                                    onTap: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                          return AlertDialog(
+                                            title: const Text('Enter Address'),
+                                            content: TextField(
+                                              controller: addressController,
+                                              decoration: const InputDecoration(
+                                                hintText: 'Address',
+                                              ),
+                                            ),
+                                            actions: <Widget>[
+                                              TextButton(
+                                                onPressed: () {
+                                                  Navigator.of(context).pop();
+                                                },
+                                                child: const Text('Cancel'),
+                                              ),
+                                              TextButton(
+                                                onPressed: () {
+                                                  updateAddress(user);
+                                                  Navigator.of(context).pop();
+                                                },
+                                                child: const Text('Save'),
+                                              ),
+                                            ],
+                                          );
+                                        },
+                                      );
+                                    },
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title:
+                                                  const Text('Enter Address'),
+                                              content: TextField(
+                                                controller: addressController,
+                                                decoration:
+                                                    const InputDecoration(
+                                                  hintText: 'Address',
+                                                ),
+                                              ),
+                                              actions: <Widget>[
+                                                TextButton(
+                                                  onPressed: () {
+                                                    Navigator.of(context).pop();
+                                                  },
+                                                  child: const Text('Cancel'),
+                                                ),
+                                                TextButton(
+                                                  onPressed: () {
+                                                    updateAddress(user);
+                                                    Navigator.of(context).pop();
+                                                  },
+                                                  child: const Text('Save'),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      },
+                                      child: Icon(
+                                        Icons.add_circle_outline_outlined,
+                                        size: FrameSize.screenWidth * 0.095,
+                                      ).animate().fade(),
+                                    ),
+                                  )
+                                : null,
+                        leading: Icon(
+                          Icons.home,
+                          size: FrameSize.screenWidth * 0.09,
+                        ),
+                        minLeadingWidth: FrameSize.screenWidth * 0.15,
+                        title: address == ''
+                            ? const Text('Not Available')
+                            : StreamBuilder<DocumentSnapshot>(
+                                stream: FirebaseFirestore.instance
+                                    .collection('users')
+                                    .doc(user!.uid)
+                                    .snapshots(),
+                                builder: (context, userSnapshot) {
+                                  // Check if the connection is still loading
+                                  if (userSnapshot.connectionState ==
+                                      ConnectionState.waiting) {
+                                    return const SizedBox.shrink();
+                                  }
+
+                                  // Handle error if the stream has an error
+                                  if (userSnapshot.hasError) {
+                                    return Text('Error: ${userSnapshot.error}');
+                                  }
+
+                                  // Check if the data exists in the snapshot
+                                  if (userSnapshot.hasData &&
+                                      userSnapshot.data != null) {
+                                    var userData = userSnapshot.data!;
+                                    if (userData.exists) {
+                                      // Safely access the 'name' field
+                                      var name = userData['address'] ??
+                                          'No name available'; // Fallback if 'name' is null
+                                      return Text(
+                                        name,
+                                      ).animate().fade();
+                                    } else {
+                                      return const Text(
+                                          'User document does not exist');
+                                    }
+                                  } else {
+                                    return const Text('No data available');
+                                  }
+                                },
+                              ),
+                      );
+                    }
+                    return const Text('No data available');
+                  },
+                ),
+
+                //ADDRESSS AREA ENDS HERE
+
+                SizedBox(height: FrameSize.screenHeight * 0.025),
+                !isGoogle
+                    ? SizedBox(
+                        width: FrameSize.screenWidth * 0.8,
+                        child: ButtonTCS(
                           onTap: () {
                             showDialog(
                               context: context,
@@ -394,16 +1029,11 @@ class _ProfilePageState extends State<ProfilePage> {
                                   content: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      TextArea(
-                                        hintText: 'New Email Address',
-                                        controller: newEmail,
-                                        obsureText: false,
-                                      ),
                                       SizedBox(
                                           height:
                                               FrameSize.screenHeight * 0.02),
                                       TextArea(
-                                        hintText: 'Current Email Address',
+                                        hintText: 'Current Email',
                                         controller: oldEmail,
                                         obsureText: false,
                                       ),
@@ -411,8 +1041,24 @@ class _ProfilePageState extends State<ProfilePage> {
                                           height:
                                               FrameSize.screenHeight * 0.02),
                                       TextArea(
-                                        hintText: 'Password',
-                                        controller: oldEmailPass,
+                                        hintText: 'Old Password',
+                                        controller: oldPass,
+                                        obsureText: false,
+                                      ),
+                                      SizedBox(
+                                          height:
+                                              FrameSize.screenHeight * 0.02),
+                                      TextArea(
+                                        hintText: 'New Password',
+                                        controller: newPass,
+                                        obsureText: false,
+                                      ),
+                                      SizedBox(
+                                          height:
+                                              FrameSize.screenHeight * 0.02),
+                                      TextArea(
+                                        hintText: 'Confirm Password',
+                                        controller: confirmPass,
                                         obsureText: true,
                                       ),
                                     ],
@@ -427,12 +1073,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     TextButton(
                                       onPressed: () {
                                         Navigator.of(context).pop();
-                                        updateNewEmail();
-                                        user =
-                                            FirebaseAuth.instance.currentUser;
-                                        setState(() {
-                                          toEdit = !toEdit;
-                                        });
+                                        updatePassword();
                                       },
                                       child: const Text('Save'),
                                     ),
@@ -441,134 +1082,12 @@ class _ProfilePageState extends State<ProfilePage> {
                               },
                             );
                           },
-                          child: const Icon(Icons.edit).animate().fade(),
-                        )
-                      : null,
-                  leading: Icon(
-                    Icons.email,
-                    size: FrameSize.screenWidth * 0.09,
-                  ),
-                  minLeadingWidth: FrameSize.screenWidth * 0.15,
-                  title: Text('${user!.email}'),
-                ),
-                ListTile(
-                  subtitle: const Text('Phone Number'),
-                  trailing: toEdit
-                      ? const Icon(Icons.edit).animate().fade()
-                      : user!.phoneNumber == null
-                          ? GestureDetector(
-                              onTap: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) {
-                                    return AlertDialog(
-                                      title: const Text('Enter Phone Number'),
-                                      content: TextField(
-                                        controller: phoneController,
-                                        decoration: const InputDecoration(
-                                          hintText: 'Phone Number',
-                                        ),
-                                      ),
-                                      actions: <Widget>[
-                                        TextButton(
-                                          onPressed: () {
-                                            Navigator.of(context).pop();
-                                          },
-                                          child: const Text('Cancel'),
-                                        ),
-                                        TextButton(
-                                          onPressed: () {
-                                            addPhoneNumber();
-                                            Navigator.of(context).pop();
-                                          },
-                                          child: const Text('Save'),
-                                        ),
-                                      ],
-                                    );
-                                  },
-                                );
-                              },
-                              child: Icon(
-                                Icons.add_circle_outline_outlined,
-                                size: FrameSize.screenWidth * 0.095,
-                              ).animate().fade(),
-                            )
-                          : Text('${user!.phoneNumber}'),
-                  leading: Icon(
-                    Icons.phone,
-                    size: FrameSize.screenWidth * 0.09,
-                  ),
-                  minLeadingWidth: FrameSize.screenWidth * 0.15,
-                  title: user!.phoneNumber == ''
-                      ? const Text('Not Available')
-                      : Text('${user!.phoneNumber}'),
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.025),
-                Container(
-                  height: FrameSize.screenHeight * 0.07,
-                  margin: EdgeInsets.symmetric(
-                    horizontal: FrameSize.screenWidth * 0.08,
-                  ),
-                  child: ButtonTCS(
-                    onTap: () {
-                      showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return AlertDialog(
-                            title: const Text('Change New Email'),
-                            content: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                SizedBox(height: FrameSize.screenHeight * 0.02),
-                                TextArea(
-                                  hintText: 'Current Email',
-                                  controller: oldEmail,
-                                  obsureText: false,
-                                ),
-                                SizedBox(height: FrameSize.screenHeight * 0.02),
-                                TextArea(
-                                  hintText: 'Old Password',
-                                  controller: oldPass,
-                                  obsureText: false,
-                                ),
-                                SizedBox(height: FrameSize.screenHeight * 0.02),
-                                TextArea(
-                                  hintText: 'New Password',
-                                  controller: newPass,
-                                  obsureText: false,
-                                ),
-                                SizedBox(height: FrameSize.screenHeight * 0.02),
-                                TextArea(
-                                  hintText: 'Confirm Password',
-                                  controller: confirmPass,
-                                  obsureText: true,
-                                ),
-                              ],
-                            ),
-                            actions: [
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                                child: const Text('Cancel'),
-                              ),
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                  updatePassword();
-                                },
-                                child: const Text('Save'),
-                              ),
-                            ],
-                          );
-                        },
-                      );
-                    },
-                    txtcolor: Colors.black,
-                    txt: 'CHANGE PASSWORD',
-                    color: const Color(0xffBDCFE7),
-                  ),
-                ),
+                          txtcolor: Colors.black,
+                          txt: 'CHANGE PASSWORD',
+                          color: const Color(0xffBDCFE7),
+                        ),
+                      )
+                    : const SizedBox.shrink(),
                 SizedBox(height: FrameSize.screenHeight * 0.025),
                 Row(
                   spacing: 10,
@@ -607,7 +1126,20 @@ class _ProfilePageState extends State<ProfilePage> {
                       ),
                     ),
                   ],
-                )
+                ),
+                SizedBox(height: FrameSize.screenHeight * 0.05),
+                !emailVerified
+                    ? SizedBox(
+                        width: FrameSize.screenWidth * 0.8,
+                        child: ButtonTCS(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/verification');
+                            },
+                            txt: 'Verify Email',
+                            color: Colors.amber,
+                            txtcolor: Colors.black),
+                      )
+                    : SizedBox(height: FrameSize.screenHeight * 0.05),
               ],
             ),
           ),
