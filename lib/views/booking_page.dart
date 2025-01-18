@@ -1,5 +1,7 @@
+// ignore_for_file: use_build_context_synchronously, avoid_print
 import 'package:flutter/material.dart';
-import 'package:tcs/views/width_and_height.dart';
+import 'package:tcs/views/booking_funtion.dart';
+import 'package:tcs/widgets/address_field.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/date_picker.dart';
 import 'package:tcs/widgets/drop_down_feild.dart';
@@ -13,28 +15,48 @@ class BookingPage extends StatefulWidget {
 }
 
 class _BookingPageState extends State<BookingPage> {
+  // Booking Funtion Class object
+  final BookingService _bookingService = BookingService();
+
   final _formKey = GlobalKey<FormState>();
-  final Map<String, dynamic> _formData = {};
+  final Map<String, dynamic> _formData = {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "contact": "",
+    "address": "",
+    "service": "",
+    "condition": "",
+    "startDate": "",
+    "endDate": "",
+  };
 
   //Controllers
   TextEditingController nameController = TextEditingController();
   TextEditingController ageController = TextEditingController();
   TextEditingController contactNumberController = TextEditingController();
   TextEditingController careNeedController = TextEditingController();
+  TextEditingController addressController = TextEditingController();
+  //Date picker controller
+  final TextEditingController _startDate = TextEditingController();
+  final TextEditingController _endDate = TextEditingController();
 
   String? nameError;
   String? ageError;
   String? genderError;
   String? contactError;
+  String? addressError;
   String? careNeedError;
   String? selectedGender;
   String? selectedService;
   String? serviceError;
+  String? startDateError;
+  String? endDateError;
 
-  void validateAndStoreForm() {
+  void validateAndStoreForm() async {
+    bool isValid = true;
     setState(() {
       // Validation logic
-      bool isValid = true;
 
       // Validate name
       if (nameController.text.isEmpty) {
@@ -69,6 +91,14 @@ class _BookingPageState extends State<BookingPage> {
         contactError = null;
       }
 
+      // Validate address number
+      if (addressController.text.isEmpty) {
+        addressError = "Please enter the Address";
+        isValid = false;
+      } else {
+        addressError = null;
+      }
+
       // Validate Choose Service
       if (selectedService == null) {
         serviceError = "Please select a service";
@@ -84,69 +114,69 @@ class _BookingPageState extends State<BookingPage> {
         careNeedError = null;
       }
 
-      // If all fields are valid, perform the next action
-      if (isValid) {
-        if (_formKey.currentState!.validate()) {
-          _formKey.currentState!.save();
-          // Send _formData to the backend
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Booking Submitted')),
-          );
-          Navigator.pop(context);
-        }
+      // Validate start date
+      if (_startDate.text.isEmpty) {
+        startDateError = "Please choose the start date";
+      } else {
+        startDateError = null;
+      }
+      // Validate end date
+      if (_endDate.text.isEmpty) {
+        endDateError = "Please choose the start date";
+      } else {
+        endDateError = null;
       }
     });
-  }
 
-// Function to validate and show errors
-  void validateForm() {
-    if (_formKey.currentState!.validate()) {
-      _formKey.currentState!.save();
-      // Send _formData to the backend
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Booking Submitted')),
-      );
-      Navigator.pop(context);
+    // If all fields are valid, perform the next action
+
+    if (isValid) {
+      if (_formKey.currentState!.validate()) {
+        _formKey.currentState!.save();
+
+        try {
+          // Save form data to Firestore
+          await _bookingService.createBooking(_formData);
+          // await FirebaseFirestore.instance
+          //     .collection('bookings')
+          //     .add(_formData);
+          // print("Data saved successfully: $_formData");
+
+          // Show success message
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text("Booking submitted successfully!"),
+            ),
+          );
+
+          // Clear form fields
+          nameController.clear();
+          ageController.clear();
+          contactNumberController.clear();
+          addressController.clear();
+          _startDate.clear();
+          _endDate.clear();
+          setState(() {
+            _formData.clear();
+          });
+          Future.delayed(const Duration(seconds: 5));
+          Navigator.pushNamed(context, '/booking_confirmation_page');
+        } catch (e) {
+          print("Error saving data: $e");
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text(
+                "Failed to submit booking. Try again!",
+              ),
+            ),
+          );
+        }
+      } else {
+        print("Form validation failed.");
+      }
     }
-    // setState(() {
-    //    else {
-    //     // Example validations
-
-    //     if (ageController.text.isEmpty) {
-    //       ageError = "Please enter the age";
-    //     } else {
-    //       ageError = null;
-    //     }
-
-    //     if (selectedGender == null) {
-    //       genderError = "Please select a gender";
-    //     } else {
-    //       genderError = null;
-    //     }
-    //     if (selectedGender == null) {
-    //       serviceError = "Please select a service";
-    //     } else {
-    //       serviceError = null;
-    //     }
-
-    //     if (contactNumberController.text.isEmpty) {
-    //       contactError = "Please enter a contact number";
-    //     } else {
-    //       contactError = null;
-    //     }
-
-    //     if (careNeedController.text.isEmpty) {
-    //       careNeedError = "Please Describe why do you need the care";
-    //     } else {
-    //       careNeedError = null;
-    //     }
-    //   }
-    // });
   }
 
-  //Date picker controller
-  final TextEditingController _startDate = TextEditingController();
-  final TextEditingController _endDate = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -227,7 +257,13 @@ class _BookingPageState extends State<BookingPage> {
                         'Female',
                         'Others',
                       ],
-                      onChanged: (value) => _formData['item'] = value,
+                      onChanged: (value) {
+                        setState(() {
+                          selectedGender = value; // Update state variable
+                          _formData['gender'] =
+                              value; // Optionally update _formData
+                        });
+                      },
                     ),
 
                     const SizedBox(
@@ -242,6 +278,18 @@ class _BookingPageState extends State<BookingPage> {
                       prefixIcon: Icons.phone,
                       keyboardType: TextInputType.phone,
                       onSaved: (value) => _formData['contact'] = value,
+                    ),
+
+                    const SizedBox(
+                      height: 15.0,
+                    ),
+
+                    //Address
+                    AddressField(
+                      labelText: "Address",
+                      errorText: addressError,
+                      controller: addressController,
+                      onSaved: (value) => _formData['address'] = value,
                     ),
                   ],
                 ),
@@ -274,7 +322,13 @@ class _BookingPageState extends State<BookingPage> {
                         'Medication Management',
                         'Companion Care'
                       ],
-                      onChanged: (value) => _formData['service'] = value,
+                      onChanged: (value) {
+                        setState(() {
+                          selectedService = value; // Update state variable
+                          _formData['service'] =
+                              value; // Optionally update _formData
+                        });
+                      },
                     ),
 
                     const SizedBox(
@@ -315,7 +369,14 @@ class _BookingPageState extends State<BookingPage> {
 
                     BookingDatePicker(
                       labelText: "Start Date",
+                      errorText: startDateError,
                       controller: _startDate,
+                      onDateChanged: (value) {
+                        setState(() {
+                          _formData['startDate'] =
+                              value; // Save start date in formData
+                        });
+                      },
                     ),
                     //End Date
                     const SizedBox(
@@ -323,7 +384,14 @@ class _BookingPageState extends State<BookingPage> {
                     ),
                     BookingDatePicker(
                       labelText: "End Date",
+                      errorText: endDateError,
                       controller: _endDate,
+                      onDateChanged: (value) {
+                        setState(() {
+                          _formData['endDate'] =
+                              value; // Save end date in formData
+                        });
+                      },
                     ),
                   ],
                 ),
@@ -337,7 +405,6 @@ class _BookingPageState extends State<BookingPage> {
                     maxHeight: 50,
                   ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     spacing: 15.0,
                     children: [
                       ButtonTCS(

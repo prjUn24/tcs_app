@@ -1,3 +1,4 @@
 {
-  "cmake.sourceDirectory": "D:/Project Unknown/tcs_app/linux"
+  "cmake.sourceDirectory": "D:/Project Unknown/tcs_app/linux",
+  "java.configuration.updateBuildConfiguration": "interactive"
 }

@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tcs/theme/theme_provider.dart';
+import 'package:tcs/views/booking_confirmation_page.dart';
 import 'package:tcs/views/booking_page.dart';
 import 'package:tcs/views/email_verification.dart';
 import 'package:tcs/views/home_page.dart';
@@ -10,6 +11,7 @@ import 'package:tcs/views/login_page.dart';
 import 'package:tcs/views/profile_page.dart';
 import 'package:tcs/views/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:tcs/views/test_temp.dart';
 import 'firebase_options.dart';
 // import 'package:flutter/services.dart';
 
@@ -57,6 +59,9 @@ class MyApp extends StatelessWidget {
               '/booking_screen': (context) => const BookingPage(),
               '/account_screen': (context) => const ProfilePage(),
               '/verification': (context) => const EmailVerificationPage(),
+              '/booking_confirmation_page': (context) =>
+                  const BookingConfirmationPage(),
+              '/test_temp': (context) => const App(),
             },
           ),
         );

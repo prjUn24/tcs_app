@@ -179,6 +179,13 @@ class _HomePageState extends State<HomePage> {
                   title: "Pending Bookings:",
                   bookingStatus: "You have 1 pending booking.",
                 ),
+                ButtonTCS(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/test_temp');
+                    },
+                    txt: 'TEST',
+                    color: Colors.blueAccent,
+                    txtcolor: Colors.black)
               ],
             ),
           ),

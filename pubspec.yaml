@@ -33,13 +33,18 @@ dependencies:
   cloud_firestore: ^5.6.0
   cupertino_icons: ^1.0.8
   device_preview: ^1.2.0
+  emailjs: ^4.0.0
   firebase_auth: ^5.3.4
   firebase_core: ^3.8.1
   flutter:
     sdk: flutter
   flutter_animate: ^4.5.2
+  fluttertoast: ^8.2.10
+  geocoding: ^3.0.0
+  geolocator: ^13.0.2
   google_sign_in: ^6.2.2
   lottie: ^3.2.0
+  permission_handler: ^11.3.1
   provider: ^6.1.2
   url_launcher: ^6.3.1
   # google_sign_in_ios: ^5.7.8
