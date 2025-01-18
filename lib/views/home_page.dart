@@ -185,6 +185,14 @@ class _HomePageState extends State<HomePage> {
                     },
                     txt: 'TEST',
                     color: Colors.blueAccent,
+                    txtcolor: Colors.black),
+                ButtonTCS(
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, '/booking_confirmation_page');
+                    },
+                    txt: 'Navigate',
+                    color: Colors.blueAccent,
                     txtcolor: Colors.black)
               ],
             ),

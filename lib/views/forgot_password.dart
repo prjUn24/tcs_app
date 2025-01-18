@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/text_area.dart';
 
@@ -15,20 +16,51 @@ class _ForgotPasswordState extends State<ForgotPassword> {
 
   void forgotPassword() async {
     try {
-      showMsg();
       await FirebaseAuth.instance
           .sendPasswordResetEmail(email: forgotPasswordController.text);
+      showMsg();
     } on FirebaseAuthException catch (e) {
-      // print(e.message);
+      if (e.code == 'channel-error') {
+        return showError('Enter the email address');
+      }
     }
+  }
+
+  void showError(String msg) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Column(
+          children: [
+            Lottie.asset('lib/images/error.json',
+                repeat: false, frameRate: const FrameRate(100)),
+            Text(msg),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: const Text('Close'),
+          ),
+        ],
+      ),
+    );
   }
 
   void showMsg() {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Verification Email Sent'),
-        content: const Text('Open your Inbox and follow the instructions'),
+        alignment: Alignment.center,
+        title: Column(
+          children: [
+            Lottie.asset('lib/images/verify.json', repeat: false),
+            const Text('Verification Email sent')
+          ],
+        ),
+        contentTextStyle: const TextStyle(),
         actions: [
           TextButton(
             onPressed: () {
@@ -50,6 +82,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Lottie.asset('lib/images/forgot.json', repeat: false),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40),
                 child: Row(
@@ -90,8 +123,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               ),
               Container(
                 height: 50,
-                // padding:
-                // const EdgeInsets.symmetric(horizontal: 130, vertical: 20),
                 margin: const EdgeInsets.symmetric(horizontal: 30),
                 child: ButtonTCS(
                   onTap: forgotPassword,
