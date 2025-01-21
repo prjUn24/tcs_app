@@ -1,11 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:tcs/views/booking_funtion.dart';
+import 'package:tcs/services/booking_funtion.dart';
 import 'package:tcs/views/width_and_height.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/otp_form_field.dart';
-// import 'package:tcs/widgets/text_area.dart';
 
 class BookingConfirmationPage extends StatefulWidget {
   const BookingConfirmationPage({super.key});
@@ -24,8 +23,6 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
   final TextEditingController otpController4 = TextEditingController();
   final TextEditingController otpController5 = TextEditingController();
   final TextEditingController otpController6 = TextEditingController();
-
-  // final TextEditingController otpController = TextEditingController();
 
   String? serviceId;
 
@@ -47,16 +44,19 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: const Color(0xffF5FAF9),
+      backgroundColor: colorScheme.surface, // Use surface for background
       appBar: AppBar(
-        backgroundColor: const Color(0xffF8E8F5),
+        backgroundColor: colorScheme.primary, // Primary color for AppBar
         centerTitle: true,
-        title: const Text(
+        title: Text(
           "Booking Confirmation",
           style: TextStyle(
             fontWeight: FontWeight.bold,
+            color: colorScheme.onPrimary, // Text color on AppBar
           ),
         ),
       ),
@@ -71,92 +71,79 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
             children: [
               Padding(
                 padding: EdgeInsetsDirectional.only(
-                    end: 0,
-                    start: 0,
-                    top: 0,
-                    bottom: FrameSize.screenHeight * 0.09),
-                child: Lottie.asset('lib/images/otp.json',
-                    height: FrameSize.screenHeight * 0.30),
+                  bottom: FrameSize.screenHeight * 0.09,
+                ),
+                child: Lottie.asset(
+                  'lib/images/otp.json',
+                  height: FrameSize.screenHeight * 0.30,
+                ),
               ),
-              const Text(
+              Text(
                 "Confirm your care booking by verifying the OTP that is sent to your given mobile number:",
                 style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.w500,
+                  color: colorScheme.onSurface, // Text color
                 ),
               ),
-              const SizedBox(
-                height: 30.0,
-              ),
+              const SizedBox(height: 30.0),
               Form(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    OtpFormField(
-                      otpValue: otpController1,
-                    ),
-                    OtpFormField(
-                      otpValue: otpController2,
-                    ),
-                    OtpFormField(
-                      otpValue: otpController3,
-                    ),
-                    OtpFormField(
-                      otpValue: otpController4,
-                    ),
-                    OtpFormField(
-                      otpValue: otpController5,
-                    ),
-                    OtpFormField(
-                      otpValue: otpController6,
-                    ),
+                    OtpFormField(otpValue: otpController1),
+                    OtpFormField(otpValue: otpController2),
+                    OtpFormField(otpValue: otpController3),
+                    OtpFormField(otpValue: otpController4),
+                    OtpFormField(otpValue: otpController5),
+                    OtpFormField(otpValue: otpController6),
                   ],
                 ),
               ),
-              SizedBox(
-                height: FrameSize.screenHeight * 0.008,
-              ),
+              SizedBox(height: FrameSize.screenHeight * 0.008),
               Padding(
                 padding: EdgeInsets.only(right: FrameSize.screenWidth * 0.04),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    const Text("Didn't Receive OTP?,"),
+                    Text(
+                      "Didn't Receive OTP?,",
+                      style: TextStyle(color: colorScheme.onSurface),
+                    ),
                     SizedBox(width: FrameSize.screenWidth * 0.025),
                     GestureDetector(
                       onTap: () {},
-                      child: const Text(
+                      child: Text(
                         'Re-send',
                         style: TextStyle(
-                            color: Colors.blue, fontWeight: FontWeight.bold),
+                          color: colorScheme.secondary,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
-                height: FrameSize.screenHeight * 0.05,
-              ),
+              SizedBox(height: FrameSize.screenHeight * 0.05),
               ButtonTCS(
                 onTap: () {
                   _fetchServiceId();
                   _bookingService.confirmBooking(
-                      serviceId!,
-                      otpController1.text +
-                          otpController2.text +
-                          otpController3.text +
-                          otpController4.text +
-                          otpController5.text +
-                          otpController6.text);
+                    serviceId!,
+                    otpController1.text +
+                        otpController2.text +
+                        otpController3.text +
+                        otpController4.text +
+                        otpController5.text +
+                        otpController6.text,
+                  );
                   Navigator.pushNamed(context, "/home");
                 },
-                txtcolor: Colors.black,
+                txtcolor: colorScheme.onPrimary, // Button text color
                 txt: 'Confirm Booking',
-                color: const Color(0xffB4D1B3),
+                color: colorScheme.primary, // Button background
               ),
-              const SizedBox(
-                height: 25.0,
-              ),
+              const SizedBox(height: 25.0),
             ],
           ),
         ),

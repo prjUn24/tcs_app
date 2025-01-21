@@ -9,7 +9,9 @@ class OtpFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     FrameSize.init(context: context);
+
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: FrameSize.screenWidth * 0.019),
       child: SizedBox(
@@ -23,38 +25,42 @@ class OtpFormField extends StatelessWidget {
               FocusScope.of(context).previousFocus();
             }
           },
-          onSaved: (newValue) {},
-          onTap: () {},
           decoration: InputDecoration(
             hintText: '0',
-            hintStyle:
-                const TextStyle(color: Color.fromARGB(113, 158, 158, 158)),
+            hintStyle: TextStyle(
+              color: colorScheme.onSurface.withOpacity(0.5), // Subdued hint
+            ),
             contentPadding: EdgeInsets.symmetric(
               vertical: FrameSize.screenHeight * 0.015,
-              // horizontal: FrameSize.screenWidth * 0.02,
             ),
             filled: true,
-            fillColor: Colors.white,
+            fillColor: colorScheme.surface, // Surface for fill color
             border: OutlineInputBorder(
               borderRadius:
                   BorderRadius.circular(FrameSize.screenWidth * 0.021),
               borderSide: BorderSide(
-                  color: Colors.blue, width: FrameSize.screenWidth * 0.004),
+                color: colorScheme.primary, // Primary border color
+                width: FrameSize.screenWidth * 0.004,
+              ),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius:
                   BorderRadius.circular(FrameSize.screenWidth * 0.021),
               borderSide: BorderSide(
-                  color: Colors.blue, width: FrameSize.screenWidth * 0.005),
+                color: colorScheme.secondary, // Secondary color when focused
+                width: FrameSize.screenWidth * 0.005,
+              ),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius:
                   BorderRadius.circular(FrameSize.screenWidth * 0.021),
               borderSide: BorderSide(
-                  color: Colors.grey, width: FrameSize.screenWidth * 0.004),
+                color: colorScheme.onSurface.withOpacity(0.5), // Subdued border
+                width: FrameSize.screenWidth * 0.004,
+              ),
             ),
           ),
-          style: Theme.of(context).textTheme.headlineLarge,
+          style: TextStyle(color: colorScheme.onSurface), // Input text color
           keyboardType: TextInputType.number,
           textAlign: TextAlign.center,
           inputFormatters: [

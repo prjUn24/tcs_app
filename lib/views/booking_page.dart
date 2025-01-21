@@ -1,6 +1,6 @@
 // ignore_for_file: use_build_context_synchronously, avoid_print
 import 'package:flutter/material.dart';
-import 'package:tcs/views/booking_funtion.dart';
+import 'package:tcs/services/booking_funtion.dart';
 import 'package:tcs/widgets/address_field.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/date_picker.dart';
