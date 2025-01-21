@@ -97,6 +97,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
         );
       }
     } on FirebaseAuthException catch (e) {
+      Navigator.of(context).pop();
       print("Firebase Auth Error: ${e.message}");
       showErrorDialog(e.message ?? 'An unknown error occurred.');
     } catch (e) {
@@ -144,10 +145,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     FrameSize.init(context: context);
+
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: Colors.white10,
+      backgroundColor: colorScheme.surface, // Use surface for background
       body: SingleChildScrollView(
         child: SafeArea(
           minimum: EdgeInsets.only(top: FrameSize.screenHeight * 0.05),
@@ -160,127 +163,69 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   'lib/images/tcs.png',
                   scale: 1.5,
                 ),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.05,
-                ),
-                const Text(
+                SizedBox(height: FrameSize.screenHeight * 0.05),
+                Text(
                   "Let's create an account for you",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(
+                      color: colorScheme.onSurface
+                          .withOpacity(0.7)), // Subdued text color
                 ),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.02,
-                ),
-                Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: FrameSize.screenWidth * 0.08),
-                    child: TextArea(
-                      obsureText: false,
-                      hintText: 'Email',
-                      controller: emailRegisterController,
-                    )),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.03,
-                ),
-                Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: FrameSize.screenWidth * 0.08),
-                    child: TextArea(
-                      obsureText: false,
-                      hintText: 'Name',
-                      controller: nameController,
-                    )),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.03,
-                ),
-                Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: FrameSize.screenWidth * 0.08),
-                    child: TextArea(
-                      obsureText: true,
-                      hintText: 'Password',
-                      controller: passwordRegisterController,
-                    )),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.03,
-                ),
-                Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: FrameSize.screenWidth * 0.08),
-                    child: TextArea(
-                      obsureText: true,
-                      hintText: 'Confirm Password',
-                      controller: confirmPasswordController,
-                    )),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.03,
-                ),
-                Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: FrameSize.screenWidth * 0.08),
-                    child: TextArea(
-                      obsureText: false,
-                      hintText: 'Phone Number',
-                      controller: phoneController,
-                    )),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.03,
-                ),
-                Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: FrameSize.screenWidth * 0.08),
-                    child: TextArea(
-                      obsureText: false,
-                      hintText: 'Address',
-                      controller: addressController,
-                    )),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.05,
-                ),
+                SizedBox(height: FrameSize.screenHeight * 0.02),
+                _buildTextField(
+                    emailRegisterController, 'Email', false, colorScheme),
+                _buildSpacer(),
+                _buildTextField(nameController, 'Name', false, colorScheme),
+                _buildSpacer(),
+                _buildTextField(
+                    passwordRegisterController, 'Password', true, colorScheme),
+                _buildSpacer(),
+                _buildTextField(confirmPasswordController, 'Confirm Password',
+                    true, colorScheme),
+                _buildSpacer(),
+                _buildTextField(
+                    phoneController, 'Phone Number', false, colorScheme),
+                _buildSpacer(),
+                _buildTextField(
+                    addressController, 'Address', false, colorScheme),
+                SizedBox(height: FrameSize.screenHeight * 0.05),
                 Container(
                   height: FrameSize.screenHeight * 0.07,
                   margin: EdgeInsets.symmetric(
                       horizontal: FrameSize.screenWidth * 0.08),
-                  child: ButtonTCS(
-                    txtcolor: Colors.black,
-                    txt: 'REGISTER',
-                    onTap: registerUser,
-                    color: Colors.green[200],
+                  child: SizedBox(
+                    width: FrameSize.screenWidth * 0.8,
+                    child: ButtonTCS(
+                      txtcolor: colorScheme.onPrimary, // Text color on button
+                      txt: 'REGISTER',
+                      onTap: registerUser,
+                      color: colorScheme
+                          .primary, // Primary color for button background
+                    ),
                   ),
                 ),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.05,
-                ),
+                SizedBox(height: FrameSize.screenHeight * 0.05),
                 Padding(
                   padding: EdgeInsets.symmetric(
                       horizontal: FrameSize.screenWidth * 0.08),
                   child: Row(
                     children: [
                       const Expanded(
-                          child: Divider(
-                        thickness: 0.5,
-                        color: Colors.blueGrey,
-                      )),
-                      SizedBox(
-                        width: FrameSize.screenWidth * 0.02,
+                        child: Divider(thickness: 0.5, color: Colors.blueGrey),
                       ),
-                      const Text(
+                      SizedBox(width: FrameSize.screenWidth * 0.02),
+                      Text(
                         'or continue with',
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyle(
+                            color: colorScheme.onSurface.withOpacity(0.7)),
                       ),
-                      SizedBox(
-                        width: FrameSize.screenWidth * 0.02,
-                      ),
+                      SizedBox(width: FrameSize.screenWidth * 0.02),
                       const Expanded(
-                          child: Divider(
-                        thickness: 0.5,
-                        color: Colors.blueGrey,
-                      ))
+                        child: Divider(thickness: 0.5, color: Colors.blueGrey),
+                      ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.01,
-                ),
+                SizedBox(height: FrameSize.screenHeight * 0.01),
                 GestureDetector(
                   onTap: () {
                     AuthService().signinWithGoogle();
@@ -290,36 +235,51 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     scale: 15,
                   ),
                 ),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.02,
-                ),
+                SizedBox(height: FrameSize.screenHeight * 0.02),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Already have an account?',
-                      style: TextStyle(color: Colors.grey[700]),
+                      style: TextStyle(
+                          color: colorScheme.onSurface
+                              .withOpacity(0.7)), // Subdued text
                     ),
-                    SizedBox(
-                      width: FrameSize.screenWidth * 0.02,
-                    ),
+                    SizedBox(width: FrameSize.screenWidth * 0.02),
                     GestureDetector(
                       onTap: widget.onTap,
-                      child: const Text(
+                      child: Text(
                         'Login',
-                        style: TextStyle(color: Colors.blue),
+                        style: TextStyle(
+                            color: colorScheme.secondary), // Secondary for link
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: FrameSize.screenHeight * 0.02,
-                ),
+                SizedBox(height: FrameSize.screenHeight * 0.02),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  Widget _buildTextField(TextEditingController controller, String hintText,
+      bool obscureText, ColorScheme colorScheme) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: FrameSize.screenWidth * 0.08),
+      child: TextArea(
+        obsureText: obscureText,
+        hintText: hintText,
+        controller: controller,
+        hintColor: colorScheme.onSurface.withOpacity(0.5), // Hint text color
+        borderColor: colorScheme.primary, // Border color
+      ),
+    );
+  }
+
+  Widget _buildSpacer() {
+    return SizedBox(height: FrameSize.screenHeight * 0.03);
   }
 }
