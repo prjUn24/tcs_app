@@ -6,16 +6,13 @@ import 'package:fluttertoast/fluttertoast.dart';
 class BookingService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final userId = FirebaseAuth.instance.currentUser!.uid;
 
   /// Function to create a booking
   Future<void> createBooking(Map<String, dynamic> bookingDetails) async {
     try {
       // Generate a unique service ID
       String serviceId = _firestore.collection('bookings').doc().id;
-      final emailDoc = await _firestore
-          .collection('users')
-          .doc(_auth.currentUser!.uid)
-          .get();
 
       // Generate a 6-digit OTP
       String otp = (100000 + (DateTime.now().millisecondsSinceEpoch % 900000))
@@ -30,8 +27,16 @@ class BookingService {
         'createdAt': FieldValue.serverTimestamp(),
       });
 
+      updateUserServicesArray(userId, otp, serviceId);
+
       print('Sending Email to the address');
+
       // // Send OTP to user's email
+
+      final emailDoc = await _firestore
+          .collection('users')
+          .doc(_auth.currentUser!.uid)
+          .get();
       sendOTPEmail(emailDoc.data()?['email'], otp);
 
       Fluttertoast.showToast(
@@ -41,6 +46,37 @@ class BookingService {
       Fluttertoast.showToast(
         msg: "Error creating booking: $error",
       );
+    }
+  }
+
+  Future<void> updateUserServicesArray(
+      String userId, String otp, String serviceId) async {
+    try {
+      // Reference to the user's document
+      DocumentReference userDocRef =
+          FirebaseFirestore.instance.collection('users').doc(userId);
+
+      // Update the user's services array with new data
+      await userDocRef.update({
+        'services': FieldValue.arrayUnion([
+          {
+            'otp': otp,
+            'serviceId': serviceId,
+            'status': 'pending',
+          }
+        ]),
+      });
+
+      print("User services array updated successfully");
+    } catch (err) {
+      print("Error updating user services array: $err");
+
+      // Clean up the temporary service if the user update fails
+      DocumentReference bookingsDocRef =
+          FirebaseFirestore.instance.collection('bookings').doc(serviceId);
+      await bookingsDocRef.delete();
+
+      throw Exception("Failed to update user services array");
     }
   }
 
@@ -65,38 +101,66 @@ class BookingService {
     }
   }
 
-  /// Function to confirm booking
   Future<void> confirmBooking(String serviceId, String enteredOtp) async {
     try {
-      // Get booking details from Firestore
-      DocumentSnapshot bookingSnapshot =
-          await _firestore.collection('bookings').doc(serviceId).get();
+      // Fetch user data
+      final userDoc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(_auth.currentUser!.uid)
+          .get();
 
-      if (!bookingSnapshot.exists) {
-        Fluttertoast.showToast(msg: "Invalid Service ID");
+      // Get services array from user data
+      final List<dynamic>? services = userDoc.data()?['services'];
+
+      if (services == null || services.isEmpty) {
+        Fluttertoast.showToast(msg: "No services found for the user.");
         return;
       }
 
-      var bookingData = bookingSnapshot.data() as Map<String, dynamic>;
+      // Find the correct service by serviceId
+      final service = services.firstWhere(
+        (service) => service['serviceId'] == serviceId,
+        orElse: () => null,
+      );
+
+      if (service == null) {
+        Fluttertoast.showToast(msg: "Service not found.");
+        return;
+      }
 
       // Validate OTP
-      if (bookingData['otp'] != enteredOtp) {
-        Fluttertoast.showToast(msg: "Invalid OTP");
+      if (service['otp'] != enteredOtp) {
+        Fluttertoast.showToast(msg: "Invalid OTP.");
         return;
       }
 
-      // Move booking to confirmedBookings collection
-      await _firestore.collection('confirmedBookings').doc(serviceId).set({
-        ...bookingData,
-        'status': 'Confirmed',
-        'confirmedAt': FieldValue.serverTimestamp(),
-      });
+      // Update the status to 'Confirmed' in the user's services array
+      final updatedServices = services.map((item) {
+        if (item['serviceId'] == serviceId) {
+          return {
+            ...item,
+            'status': 'Confirmed',
+          };
+        }
+        return item;
+      }).toList();
 
-      // Delete the original booking entry
-      await _firestore.collection('bookings').doc(serviceId).delete();
+      // Update the user's document with the updated services array
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(_auth.currentUser!.uid)
+          .update({'services': updatedServices});
 
+      // Update the status in the bookings collection
+      await FirebaseFirestore.instance
+          .collection('bookings')
+          .doc(serviceId)
+          .update({'status': 'Confirmed'});
+
+      // Success message
       Fluttertoast.showToast(msg: "Booking confirmed successfully!");
     } catch (error) {
+      // Handle errors
       Fluttertoast.showToast(msg: "Error confirming booking: $error");
     }
   }

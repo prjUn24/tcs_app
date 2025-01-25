@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:tcs/services/booking_funtion.dart';
@@ -24,22 +25,43 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
   final TextEditingController otpController5 = TextEditingController();
   final TextEditingController otpController6 = TextEditingController();
 
-  String? serviceId;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  String? serviceId = "";
 
   @override
   void initState() {
     super.initState();
+    _fetchServiceId();
   }
 
   Future<void> _fetchServiceId() async {
-    final bookingData = await FirebaseFirestore.instance
-        .collection('bookings')
-        .doc('your_booking_document_id')
-        .get();
-    setState(() {
-      serviceId = bookingData['serviceId'];
-    });
-    debugPrint(serviceId);
+    try {
+      final currentUserData = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(_auth.currentUser!.uid)
+          .get();
+
+      // Retrieve the 'services' array from the document
+      final List<dynamic>? currentUserServiceData =
+          currentUserData.data()?['services'];
+
+      if (currentUserServiceData != null && currentUserServiceData.isNotEmpty) {
+        // Extract the last service object from the array
+        final Map<String, dynamic> lastService =
+            currentUserServiceData[currentUserServiceData.length - 1];
+
+        // Extract the serviceId field from the last service
+        setState(() {
+          serviceId = lastService['serviceId'] as String?;
+        });
+        debugPrint("Service ID: $serviceId");
+      } else {
+        debugPrint("No services found for the user.");
+      }
+    } catch (e) {
+      debugPrint("Error fetching serviceId: $e");
+    }
   }
 
   @override
@@ -127,7 +149,6 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
               SizedBox(height: FrameSize.screenHeight * 0.05),
               ButtonTCS(
                 onTap: () {
-                  _fetchServiceId();
                   _bookingService.confirmBooking(
                     serviceId!,
                     otpController1.text +
@@ -137,7 +158,6 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
                         otpController5.text +
                         otpController6.text,
                   );
-                  Navigator.pushNamed(context, "/home");
                 },
                 txtcolor: colorScheme.onPrimary, // Button text color
                 txt: 'Confirm Booking',
