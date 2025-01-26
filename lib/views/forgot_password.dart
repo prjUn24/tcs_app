@@ -96,79 +96,81 @@ class _ForgotPasswordState extends State<ForgotPassword> {
 
     return Scaffold(
       backgroundColor: colorScheme.surface, // Background color
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Lottie.asset('lib/images/forgot.json', repeat: false),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40),
-                child: Row(
-                  children: [
-                    Text(
-                      'Forgot Password?',
-                      style: TextStyle(
-                        fontSize: 32,
-                        color: colorScheme.onSurface, // Text color
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 35),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        'Enter your email address below for verification.',
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Lottie.asset('lib/images/forgot.json', repeat: false),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Forgot Password?',
                         style: TextStyle(
-                          fontSize: 12,
-                          color: colorScheme.onSurface
-                              .withOpacity(0.7), // Subdued text
+                          fontSize: 32,
+                          color: colorScheme.onSurface, // Text color
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              const SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
-                child: TextArea(
-                  hintText: 'Email Address',
-                  controller: forgotPasswordController,
-                  obsureText: false,
-                  hintColor:
-                      colorScheme.onSurface.withOpacity(0.5), // Hint text color
-                  borderColor: colorScheme.primary, // Border color
+                const SizedBox(height: 35),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Enter your email address below for verification.',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: colorScheme.onSurface
+                                .withOpacity(0.7), // Subdued text
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              const SizedBox(height: 30),
-              SizedBox(
-                height: 50,
-                width: FrameSize.screenWidth * 0.8,
-                child: ButtonTCS(
-                  onTap: forgotPassword,
-                  txt: 'Send Mail',
-                  txtcolor: colorScheme.onPrimary, // Button text color
-                  color: colorScheme.primary, // Button background
+                const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: TextArea(
+                    hintText: 'Email Address',
+                    controller: forgotPasswordController,
+                    obsureText: false,
+                    hintColor: colorScheme.onSurface
+                        .withOpacity(0.5), // Hint text color
+                    borderColor: colorScheme.primary, // Border color
+                  ),
                 ),
-              ),
-              const SizedBox(height: 30),
-              SizedBox(
-                height: 50,
-                width: FrameSize.screenWidth * 0.8,
-                child: ButtonTCS(
-                  onTap: () => Navigator.pop(context),
-                  txt: 'Go back',
-                  txtcolor: colorScheme.onPrimary, // Button text color
-                  color: colorScheme.secondary, // Secondary color for button
+                const SizedBox(height: 30),
+                SizedBox(
+                  height: 50,
+                  width: FrameSize.screenWidth * 0.8,
+                  child: ButtonTCS(
+                    onTap: forgotPassword,
+                    txt: 'Send Mail',
+                    txtcolor: colorScheme.onPrimary, // Button text color
+                    color: colorScheme.primary, // Button background
+                  ),
                 ),
-              ),
-            ],
+                const SizedBox(height: 30),
+                SizedBox(
+                  height: 50,
+                  width: FrameSize.screenWidth * 0.8,
+                  child: ButtonTCS(
+                    onTap: () => Navigator.pop(context),
+                    txt: 'Go back',
+                    txtcolor: colorScheme.onPrimary, // Button text color
+                    color: colorScheme.secondary, // Secondary color for button
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

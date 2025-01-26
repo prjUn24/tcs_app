@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:tcs/views/home_page.dart';
+import 'package:tcs/views/login_or_register_page.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -29,15 +31,13 @@ class SplashScreen extends StatelessWidget {
                   return const HomePage();
                 } else {
                   return Center(
-                    child: Image.asset("lib/images/tcs.png"),
-                  ); //LoginOrRegisterPage();
+                    child: Lottie.asset("lib/images/loading_anim.json"),
+                  );
                 }
               },
             );
           } else {
-            return Center(
-              child: Image.asset("lib/images/tcs.png"),
-            ); //LoginOrRegisterPage();
+            return const LoginOrRegisterPage();
           }
         },
       ),
