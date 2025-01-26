@@ -63,6 +63,7 @@ class OtpFormField extends StatelessWidget {
           style: TextStyle(color: colorScheme.onSurface), // Input text color
           keyboardType: TextInputType.number,
           textAlign: TextAlign.center,
+          controller: otpValue,
           inputFormatters: [
             LengthLimitingTextInputFormatter(1),
             FilteringTextInputFormatter.digitsOnly,

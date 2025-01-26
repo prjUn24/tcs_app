@@ -28,6 +28,9 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   String? serviceId = "";
+  String otp = "";
+  String email = "";
+  late String enteredOtp;
 
   @override
   void initState() {
@@ -53,9 +56,12 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
 
         // Extract the serviceId field from the last service
         setState(() {
+          email = currentUserData.data()?['email'] as String;
           serviceId = lastService['serviceId'] as String?;
+          otp = lastService['otp'] as String;
         });
         debugPrint("Service ID: $serviceId");
+        debugPrint("Email: $email");
       } else {
         debugPrint("No services found for the user.");
       }
@@ -134,7 +140,9 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
                     ),
                     SizedBox(width: FrameSize.screenWidth * 0.025),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        _bookingService.sendOTPEmail(email, otp);
+                      },
                       child: Text(
                         'Re-send',
                         style: TextStyle(
@@ -149,15 +157,14 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
               SizedBox(height: FrameSize.screenHeight * 0.05),
               ButtonTCS(
                 onTap: () {
-                  _bookingService.confirmBooking(
-                    serviceId!,
-                    otpController1.text +
-                        otpController2.text +
-                        otpController3.text +
-                        otpController4.text +
-                        otpController5.text +
-                        otpController6.text,
-                  );
+                  enteredOtp = otpController1.text +
+                      otpController2.text +
+                      otpController3.text +
+                      otpController4.text +
+                      otpController5.text +
+                      otpController6.text;
+                  debugPrint("Entered OTP: $enteredOtp");
+                  _bookingService.confirmBooking(serviceId!, enteredOtp);
                 },
                 txtcolor: colorScheme.onPrimary, // Button text color
                 txt: 'Confirm Booking',
