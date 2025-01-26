@@ -63,6 +63,7 @@ class BookingService {
             'otp': otp,
             'serviceId': serviceId,
             'status': 'pending',
+            'admin_status': 'pending',
           }
         ]),
       });
