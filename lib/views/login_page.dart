@@ -23,22 +23,22 @@ class _LoginPageState extends State<LoginPage> {
 
   // Sign in with email and password
   void signUserIn() async {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return Lottie.asset('lib/images/loading_anim.json');
-      },
-    );
+    // showDialog(
+    //   context: context,
+    //   builder: (context) {
+    //     return Lottie.asset('lib/images/loading_anim.json');
+    //   },
+    // );
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
-      Navigator.of(context).pop();
+      // Navigator.of(context).pop();
     } on FirebaseAuthException catch (e) {
       if (e.code.isNotEmpty) {
-        print('something WRONG!!!!!!!! ' + e.code);
-        Navigator.of(context).pop();
+        print('something WRONG!!!!!!!! ${e.code}');
+        // Navigator.of(context).pop();
         _showErrorDialog('Invalid Credentials',
             'The Email or password you have entered is incorrect.');
       }
