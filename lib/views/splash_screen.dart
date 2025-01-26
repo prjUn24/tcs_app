@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tcs/views/home_page.dart';
-import 'package:tcs/views/login_or_register_page.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -14,7 +13,10 @@ class SplashScreen extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+                child: Center(
+              child: Image.asset("lib/images/tcs.png"),
+            ));
           } else if (snapshot.hasData) {
             final user = snapshot.data;
             return StreamBuilder<DocumentSnapshot>(
@@ -26,12 +28,16 @@ class SplashScreen extends StatelessWidget {
                 if (userSnapshot.hasData && userSnapshot.data!.exists) {
                   return const HomePage();
                 } else {
-                  return const LoginOrRegisterPage();
+                  return Center(
+                    child: Image.asset("lib/images/tcs.png"),
+                  ); //LoginOrRegisterPage();
                 }
               },
             );
           } else {
-            return const LoginOrRegisterPage();
+            return Center(
+              child: Image.asset("lib/images/tcs.png"),
+            ); //LoginOrRegisterPage();
           }
         },
       ),
