@@ -155,7 +155,7 @@ class BookingService {
       await FirebaseFirestore.instance
           .collection('bookings')
           .doc(serviceId)
-          .update({'status': 'Confirmed'});
+          .update({'status': 'confirmed'});
 
       // Success message
       Fluttertoast.showToast(msg: "Booking confirmed successfully!");
