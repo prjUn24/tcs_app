@@ -16,9 +16,10 @@ class SplashScreen extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(
-                child: Center(
-              child: Image.asset("lib/images/tcs.png"),
-            ));
+              child: Center(
+                child: Image.asset("lib/images/tcs.png"),
+              ),
+            );
           } else if (snapshot.hasData) {
             final user = snapshot.data;
             return StreamBuilder<DocumentSnapshot>(
