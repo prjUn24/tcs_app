@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.thecaringsouls.tcs.app-mergeDebugResources-46:/values-v24/values-v24.xml",
+            "outputFile": "com.thecaringsouls.tcs.app-mergeDebugResources-47:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-3\\5a9586591b488474b9f6e16966984e86\\transformed\\appcompat-1.1.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\ABDF92\\.gradle\\caches\\transforms-3\\5a9586591b488474b9f6e16966984e86\\transformed\\appcompat-1.1.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

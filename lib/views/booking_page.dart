@@ -20,7 +20,7 @@ class _BookingPageState extends State<BookingPage> {
 
   final _formKey = GlobalKey<FormState>();
   final Map<String, dynamic> _formData = {
-    "name": "",
+    "patientName": "",
     "age": "",
     "gender": "",
     "contact": "",
@@ -225,7 +225,7 @@ class _BookingPageState extends State<BookingPage> {
                       controller: nameController,
                       prefixIcon: Icons.person,
                       keyboardType: TextInputType.name,
-                      onSaved: (value) => _formData['name'] = value,
+                      onSaved: (value) => _formData['patientName'] = value,
                     ),
 
                     const SizedBox(
@@ -405,6 +405,7 @@ class _BookingPageState extends State<BookingPage> {
                     maxHeight: 50,
                   ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     spacing: 15.0,
                     children: [
                       ButtonTCS(

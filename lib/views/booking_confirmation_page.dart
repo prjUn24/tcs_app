@@ -165,12 +165,22 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
                       otpController6.text;
                   debugPrint("Entered OTP: $enteredOtp");
                   _bookingService.confirmBooking(serviceId!, enteredOtp);
+                  Navigator.pushNamed(context, '/');
                 },
                 txtcolor: colorScheme.onPrimary, // Button text color
                 txt: 'Confirm Booking',
                 color: colorScheme.primary, // Button background
               ),
               const SizedBox(height: 25.0),
+              ButtonTCS(
+                onTap: () {
+                  _fetchServiceId();
+                  print("______________________");
+                },
+                txtcolor: colorScheme.onPrimary, // Button text color
+                txt: 'TEST',
+                color: colorScheme.error, // Button background
+              ),
             ],
           ),
         ),

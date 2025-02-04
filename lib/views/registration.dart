@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:tcs/services/auth_service.dart';
+// import 'package:tcs/services/auth_service.dart';
 // import 'package:tcs/views/home_page.dart';
 import 'package:tcs/views/width_and_height.dart';
 import 'package:tcs/widgets/button.dart';
@@ -23,7 +23,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
   final confirmPasswordController = TextEditingController();
   final nameController = TextEditingController();
   final phoneController = TextEditingController();
-  final addressController = TextEditingController();
+  // final addressController = TextEditingController();
 
   @override
   void dispose() {
@@ -32,7 +32,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
     confirmPasswordController.dispose();
     nameController.dispose();
     phoneController.dispose();
-    addressController.dispose();
+    // addressController.dispose();
     super.dispose();
   }
 
@@ -44,7 +44,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
 
     // Set the user data inside the document with UID
     await userDoc.set({
-      'address': addressController.text, // User address from the input field
       'authProvider': 'email', // Since we are registering with email
       'createdAt': FieldValue
           .serverTimestamp(), // Timestamp for when the account is created
@@ -185,8 +184,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 _buildTextField(
                     phoneController, 'Phone Number', false, colorScheme),
                 _buildSpacer(),
-                _buildTextField(
-                    addressController, 'Address', false, colorScheme),
                 SizedBox(height: FrameSize.screenHeight * 0.05),
                 Container(
                   height: FrameSize.screenHeight * 0.07,
@@ -204,37 +201,23 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   ),
                 ),
                 SizedBox(height: FrameSize.screenHeight * 0.05),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: FrameSize.screenWidth * 0.08),
-                  child: Row(
-                    children: [
-                      const Expanded(
-                        child: Divider(thickness: 0.5, color: Colors.blueGrey),
-                      ),
-                      SizedBox(width: FrameSize.screenWidth * 0.02),
-                      Text(
-                        'or continue with',
-                        style: TextStyle(
-                            color: colorScheme.onSurface.withOpacity(0.7)),
-                      ),
-                      SizedBox(width: FrameSize.screenWidth * 0.02),
-                      const Expanded(
-                        child: Divider(thickness: 0.5, color: Colors.blueGrey),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.01),
-                GestureDetector(
-                  onTap: () {
-                    AuthService().signinWithGoogle();
-                  },
-                  child: Image.asset(
-                    'lib/images/google.png',
-                    scale: 15,
-                  ),
-                ),
+                // Padding(
+                //   padding: EdgeInsets.symmetric(
+                //       horizontal: FrameSize.screenWidth * 0.08),
+                //   child: const Expanded(
+                //     child: Divider(thickness: 0.5, color: Colors.blueGrey),
+                //   ),
+                // ),
+                // SizedBox(height: FrameSize.screenHeight * 0.01),
+                // GestureDetector(
+                //   onTap: () {
+                //     AuthService().signinWithGoogle();
+                //   },
+                //   child: Image.asset(
+                //     'lib/images/google.png',
+                //     scale: 15,
+                //   ),
+                // ),
                 SizedBox(height: FrameSize.screenHeight * 0.02),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -243,7 +226,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       'Already have an account?',
                       style: TextStyle(
                           color: colorScheme.onSurface
-                              .withOpacity(0.7)), // Subdued text
+                              .withValues(alpha: 0.7)), // Subdued text
                     ),
                     SizedBox(width: FrameSize.screenWidth * 0.02),
                     GestureDetector(
@@ -273,7 +256,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
         obsureText: obscureText,
         hintText: hintText,
         controller: controller,
-        hintColor: colorScheme.onSurface.withOpacity(0.5), // Hint text color
+        hintColor:
+            colorScheme.onSurface.withValues(alpha: 0.5), // Hint text color
         borderColor: colorScheme.primary, // Border color
       ),
     );

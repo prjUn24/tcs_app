@@ -13,12 +13,11 @@ import 'package:tcs/views/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:tcs/views/test_temp.dart';
 import 'firebase_options.dart';
-// import 'package:flutter/services.dart';
+import 'package:tcs/services/navigation_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
 
   runApp(
     ChangeNotifierProvider(
@@ -38,16 +37,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<ThemeProvider>(
       builder: (context, themeProvider, child) {
-        // Return the AnimatedTheme widget to apply smooth transitions
         return AnimatedTheme(
-          duration: const Duration(
-              milliseconds: 300), // Duration for smooth transition
-          curve: Curves.easeInOut, // Smooth curve for transition
-          data: themeProvider
-              .themeData, // Apply the current theme from the provider
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeInOut,
+          data: themeProvider.themeData,
           child: MaterialApp(
-            theme: themeProvider
-                .themeData, // The themeData comes from ThemeProvider
+            // Assign the global navigator key to MaterialApp
+            navigatorKey: NavigationService.navigatorKey,
+            theme: themeProvider.themeData,
             locale: DevicePreview.locale(context),
             builder: DevicePreview.appBuilder,
             debugShowCheckedModeBanner: false,

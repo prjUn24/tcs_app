@@ -12,22 +12,30 @@ class BookingService {
   Future<void> createBooking(Map<String, dynamic> bookingDetails) async {
     try {
       // Generate a unique service ID
-      String serviceId = _firestore.collection('bookings').doc().id;
+      String serviceId = _firestore.collection('services').doc().id;
 
       // Generate a 6-digit OTP
       String otp = (100000 + (DateTime.now().millisecondsSinceEpoch % 900000))
           .toString();
 
       // Add booking details to Firestore
-      await _firestore.collection('bookings').doc(serviceId).set({
+      await _firestore.collection('services').doc(serviceId).set({
         ...bookingDetails,
         'serviceId': serviceId,
-        'otp': otp,
+        'book_code': otp,
         'status': 'Pending',
         'createdAt': FieldValue.serverTimestamp(),
       });
 
-      updateUserServicesArray(userId, otp, serviceId);
+      updateUserServicesArray(
+        bookingDetails['patientName'],
+        bookingDetails['service'],
+        userId,
+        bookingDetails['endDate'],
+        bookingDetails['startDate'],
+        otp,
+        serviceId,
+      );
 
       print('Sending Email to the address');
 
@@ -50,7 +58,13 @@ class BookingService {
   }
 
   Future<void> updateUserServicesArray(
-      String userId, String otp, String serviceId) async {
+      String name,
+      String service,
+      String userId,
+      String endDate,
+      String startDate,
+      String otp,
+      String serviceId) async {
     try {
       // Reference to the user's document
       DocumentReference userDocRef =
@@ -60,10 +74,14 @@ class BookingService {
       await userDocRef.update({
         'services': FieldValue.arrayUnion([
           {
-            'otp': otp,
+            'patientName': name,
+            'service': service,
+            'startDate': startDate,
+            'endDate': endDate,
+            'book_code': otp,
             'serviceId': serviceId,
             'status': 'pending',
-            'admin_status': 'pending',
+            // 'admin_status': 'pending',
           }
         ]),
       });
@@ -74,7 +92,7 @@ class BookingService {
 
       // Clean up the temporary service if the user update fails
       DocumentReference bookingsDocRef =
-          FirebaseFirestore.instance.collection('bookings').doc(serviceId);
+          FirebaseFirestore.instance.collection('service').doc(serviceId);
       await bookingsDocRef.delete();
 
       throw Exception("Failed to update user services array");
@@ -130,7 +148,7 @@ class BookingService {
       }
 
       // Validate OTP
-      if (service['otp'] != enteredOtp) {
+      if (service['book_code'] != enteredOtp) {
         Fluttertoast.showToast(msg: "Invalid OTP.");
         return;
       }
@@ -154,7 +172,7 @@ class BookingService {
 
       // Update the status in the bookings collection
       await FirebaseFirestore.instance
-          .collection('bookings')
+          .collection('service')
           .doc(serviceId)
           .update({'status': 'confirmed'});
 
