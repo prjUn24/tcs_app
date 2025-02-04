@@ -61,10 +61,10 @@ class _ProfilePageState extends State<ProfilePage> {
 
   // Method to check if email is verified.
   void isEmailVerified() {
-    setState(() {
-      emailVerified = FirebaseAuth.instance.currentUser!.emailVerified;
-    });
-    print("This is the output of email Verification: $emailVerified");
+    // setState(() {
+    emailVerified = FirebaseAuth.instance.currentUser!.emailVerified;
+    // });
+    // print("This is the output of email Verification: $emailVerified");
   }
 
   // Method to send a verification email
@@ -351,37 +351,107 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    // final textTheme = theme.textTheme;
     FrameSize.init(context: context);
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, '/home');
-            },
-            child: const Icon(Icons.arrow_back_ios_outlined)),
-        backgroundColor: const Color(0xffF8E8F5),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            iconSize: FrameSize.screenWidth * 0.09,
-            icon: Icon(
-              Provider.of<ThemeProvider>(context).themeData == lightMode
-                  ? Icons.brightness_7 // Sun Icon for light mode
-                  : Icons.brightness_4, // Moon Icon for dark mode
-              color: Colors.black.withAlpha(150),
+        leading: Container(
+          margin: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Colors.white.withOpacity(0.5),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.pink.shade100,
+                blurRadius: 4,
+                spreadRadius: 1,
+              )
+            ],
+          ),
+          child: GestureDetector(
+            onTap: () => Navigator.pushNamed(context, '/home'),
+            child: Icon(
+              Icons.arrow_back_ios_rounded,
+              color: Colors.pink.shade800,
             ),
-            onPressed: () {
-              // Toggle theme when icon is pressed
-              Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
-            },
-          )
-        ],
-        title: const Text(
+          ),
+        ),
+        backgroundColor: const Color(0xffF8E8F5),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xffF8E8F5),
+                Color(0xffFDF2FA),
+                Color(0xffF8E8F5),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.pink.shade100,
+                blurRadius: 15,
+                spreadRadius: 5,
+              )
+            ],
+            border: Border(
+              bottom: BorderSide(
+                color: Colors.grey.shade200,
+                width: 1,
+              ),
+            ),
+          ),
+        ),
+        centerTitle: true,
+        elevation: 8,
+        title: Text(
           "My Account",
           style: TextStyle(
             fontWeight: FontWeight.bold,
+            fontSize: 20,
+            fontFamily: 'Poppins',
+            letterSpacing: 1.2,
+            shadows: [
+              Shadow(
+                color: Colors.white.withOpacity(0.5),
+                blurRadius: 2,
+                offset: Offset(1, 1),
+              )
+            ],
+            color: Colors.pink.shade800,
           ),
         ),
+        actions: [
+          Container(
+            margin: EdgeInsets.only(right: 15),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.pink.shade100,
+                  blurRadius: 4,
+                  spreadRadius: 1,
+                )
+              ],
+            ),
+            child: IconButton(
+              iconSize: FrameSize.screenWidth * 0.07,
+              icon: Icon(
+                Provider.of<ThemeProvider>(context).themeData == lightMode
+                    ? Icons.brightness_7
+                    : Icons.brightness_4,
+                color: Colors.pink.shade800,
+              ),
+              onPressed: () {
+                Provider.of<ThemeProvider>(context, listen: false)
+                    .toggleTheme();
+              },
+            ),
+          ),
+        ],
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -390,15 +460,6 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                // StreamBuilder<DocumentSnapshot>(
-                //   stream: FirebaseFirestore.instance
-                //       .collection('users')
-                //       .doc(user!.uid)
-                //       .snapshots(),
-                //   builder: (context, userSnapshot) {
-                //     return Text(userSnapshot.data?['name']);
-                //   },
-                // ),
                 Lottie.asset('lib/images/user_new.json',
                     frameRate: const FrameRate(100),
                     repeat: false,
@@ -439,10 +500,10 @@ class _ProfilePageState extends State<ProfilePage> {
                               ),
                             ).animate().fade();
                           } else {
-                            return Text('User document does not exist');
+                            return const Text('User document does not exist');
                           }
                         } else {
-                          return Text('No data available');
+                          return const Text('No data available');
                         }
                       },
                     ),
@@ -1137,8 +1198,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             },
                             txt: 'Verify Email',
                             color: Colors.amber,
-                            txtcolor: Colors.black),
-                      )
+                            txtcolor: Colors.black))
                     : SizedBox(height: FrameSize.screenHeight * 0.05),
               ],
             ),
@@ -1146,24 +1206,49 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 10,
+        backgroundColor: colorScheme.surface,
+        selectedItemColor: colorScheme.primary,
+        unselectedItemColor: colorScheme.onSurface.withOpacity(0.6),
         currentIndex: 1,
-        backgroundColor: const Color(0xffEEE1EF),
-        selectedItemColor: const Color(0xff567A9B),
-        unselectedItemColor: const Color(0xFF403E3E),
         type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
+        selectedLabelStyle: TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: FrameSize.screenWidth * 0.03,
+          color: colorScheme.primary,
+        ),
+        unselectedLabelStyle: TextStyle(
+          fontSize: FrameSize.screenWidth * 0.03,
+        ),
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled),
+            icon: Container(
+              padding: EdgeInsets.all(FrameSize.screenWidth * 0.02),
+              decoration: BoxDecoration(
+                color: colorScheme.primary.withOpacity(0.1),
+                shape: BoxShape.circle,
+              ),
+              child:
+                  Icon(Icons.home_rounded, size: FrameSize.screenWidth * 0.06),
+            ),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_2_rounded),
+            icon: Container(
+              padding: EdgeInsets.all(FrameSize.screenWidth * 0.02),
+              decoration: BoxDecoration(
+                color: colorScheme.secondary.withOpacity(0.1),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(Icons.person_rounded,
+                  size: FrameSize.screenWidth * 0.06),
+            ),
             label: "Account",
           ),
         ],
         onTap: (index) {
           if (index == 0) {
-            Navigator.pushNamed(context, '/home');
+            Navigator.pushNamed(context, '/');
           } else if (index == 1) {
             Navigator.pushNamed(context, '/account_screen');
           }

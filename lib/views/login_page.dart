@@ -2,11 +2,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+// import 'package:provider/provider.dart';
+import 'package:tcs/services/navigation_service.dart';
 import 'package:tcs/services/auth_service.dart';
 import 'package:tcs/views/forgot_password.dart';
 import 'package:tcs/views/width_and_height.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/text_area.dart';
+import 'package:toastification/toastification.dart';
 
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
@@ -21,48 +24,108 @@ class _LoginPageState extends State<LoginPage> {
   final passwordController = TextEditingController();
   final FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-  // Sign in with email and password
+  @override
+  void dispose() {
+    super.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+  }
+
+// In your LoginPage class
   void signUserIn() async {
-    // showDialog(
-    //   context: context,
-    //   builder: (context) {
-    //     return Lottie.asset('lib/images/loading_anim.json');
-    //   },
-    // );
+    NavigationService.navigatorKey.currentState?.push(
+      DialogRoute(
+        context: NavigationService.navigatorKey.currentContext!,
+        builder: (context) => Lottie.asset('lib/images/loading_anim.json'),
+      ),
+    );
+
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
-      // Navigator.of(context).pop();
+      NavigationService.navigatorKey.currentState?.pop();
     } on FirebaseAuthException catch (e) {
-      if (e.code.isNotEmpty) {
-        print('something WRONG!!!!!!!! ${e.code}');
-        // Navigator.of(context).pop();
-        _showErrorDialog('Invalid Credentials',
-            'The Email or password you have entered is incorrect.');
-      }
+      NavigationService.navigatorKey.currentState?.pop();
+      _showErrorDialog(
+        'Invalid Credentials',
+        'The Email or password you have entered is incorrect.',
+      );
     }
   }
 
-  // Sign in with Google
   Future<void> signInWithGoogle() async {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return Lottie.asset('lib/images/loading_anim.json');
-      },
+    NavigationService.navigatorKey.currentState?.push(
+      DialogRoute(
+        context: NavigationService.navigatorKey.currentContext!,
+        builder: (context) => Lottie.asset('lib/images/loading_anim.json'),
+      ),
     );
+
     try {
       UserCredential userCredential = await AuthService().signinWithGoogle();
-      Navigator.of(context).pop();
-      // Add user data to Firestore
+      NavigationService.navigatorKey.currentState?.pop();
       await addGoogleUserToFirestore(userCredential.user);
     } catch (e) {
-      // Navigator.of(context).pop();
-      _showErrorDialog('Google Sign-In Failed', 'Please try again.');
+      NavigationService.navigatorKey.currentState?.pop();
+      showToast(
+        context,
+        'Error',
+        'Google Sign-In Failed',
+        ToastificationType.error,
+      );
+      debugPrint("Error during Google sign-in: $e");
     }
   }
+  // Sign in with email and password
+  // void signUserIn() async {
+  //   showDialog(
+  //     context: context,
+  //     builder: (context) {
+  //       return Lottie.asset('lib/images/loading_anim.json');
+  //     },
+  //   );
+  //   try {
+  //     await FirebaseAuth.instance.signInWithEmailAndPassword(
+  //       email: emailController.text.trim(),
+  //       password: passwordController.text.trim(),
+  //     );
+  //     Navigator.of(context, rootNavigator: true).pop();
+  //     // Navigator.of(context).pop();
+  //   } on FirebaseAuthException catch (e) {
+  //     if (e.code.isNotEmpty) {
+  //       print('something WRONG!!!!!!!! ${e.code}');
+  //       // Navigator.of(context).pop();
+  //       _showErrorDialog('Invalid Credentials',
+  //           'The Email or password you have entered is incorrect.');
+  //     }
+  //   }
+  // }
+
+  // Sign in with Google
+  // Future<void> signInWithGoogle() async {
+  //   showDialog(
+  //     context: context,
+  //     builder: (context) {
+  //       return Lottie.asset('lib/images/loading_anim.json');
+  //     },
+  //   );
+  //   try {
+  //     UserCredential userCredential = await AuthService().signinWithGoogle();
+  //     // Navigator.of(context).pop();
+  //     Navigator.of(context, rootNavigator: true).pop();
+  //     // Add user data to Firestore
+  //     await addGoogleUserToFirestore(userCredential.user);
+  //   } catch (e) {
+  //     // Navigator.of(context, rootNavigator: true).pop();
+  //     // _showErrorDialog('Google Sign-In Failed', 'Please try again.');
+  //     debugPrint(
+  //         "_________________________CATCH IS EXECUTING THE ERROR IS : $e");
+  //     showToast(
+  //         context, 'Error', 'Google Sign-In Failed', ToastificationType.error);
+  //   }
+  // }
 
   // Add Google user to Firestore
   Future<void> addGoogleUserToFirestore(User? user) async {
@@ -90,6 +153,36 @@ class _LoginPageState extends State<LoginPage> {
         });
       }
     }
+  }
+
+  void showToast(BuildContext context, String title, String description,
+      ToastificationType type) {
+    toastification.show(
+      context: context,
+      type: type,
+      title: Text(title),
+      description: Text(description),
+      primaryColor: Colors.white,
+      autoCloseDuration: const Duration(seconds: 3),
+      progressBarTheme: ProgressIndicatorThemeData(
+        color: type == ToastificationType.success
+            ? Colors.green
+            : type == ToastificationType.info
+                ? Colors.blue
+                : type == ToastificationType.warning
+                    ? Colors.orange
+                    : Colors.red,
+      ),
+      showProgressBar: true,
+      backgroundColor: type == ToastificationType.success
+          ? Colors.green
+          : type == ToastificationType.info
+              ? Colors.blue
+              : type == ToastificationType.warning
+                  ? Colors.orange
+                  : Colors.red,
+      foregroundColor: Colors.white,
+    );
   }
 
   // Display error dialog
