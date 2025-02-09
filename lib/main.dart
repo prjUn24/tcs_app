@@ -11,7 +11,7 @@ import 'package:tcs/views/login_page.dart';
 import 'package:tcs/views/profile_page.dart';
 import 'package:tcs/views/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:tcs/views/test_temp.dart';
+// import 'package:tcs/views/test_temp.dart';
 import 'firebase_options.dart';
 import 'package:tcs/services/navigation_service.dart';
 
@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
               '/verification': (context) => const EmailVerificationPage(),
               '/booking_confirmation_page': (context) =>
                   const BookingConfirmationPage(),
-              '/test_temp': (context) => const App(),
+              // '/test_temp': (context) => App(),
             },
           ),
         );

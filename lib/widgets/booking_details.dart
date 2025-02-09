@@ -1,16 +1,16 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:tcs/services/booking_funtion.dart';
+// import 'package:tcs/services/booking_funtion.dart';
 import 'package:emailjs/emailjs.dart' as emailjs;
 import 'package:tcs/services/fetch_booking.dart';
 import 'package:tcs/views/booking_confirmation_pagetwo.dart';
 import 'package:tcs/views/width_and_height.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:tcs/widgets/bottomsheet.dart';
-import 'package:tcs/widgets/button.dart';
+// import 'package:tcs/widgets/button.dart';
 
 class BookingDetails extends StatefulWidget {
   const BookingDetails({super.key});
@@ -47,7 +47,7 @@ class _BookingDetailsState extends State<BookingDetails> {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final textTheme = Theme.of(context).textTheme;
+    // final textTheme = Theme.of(context).textTheme;
 
     return Container(
       padding: EdgeInsets.symmetric(
@@ -58,7 +58,7 @@ class _BookingDetailsState extends State<BookingDetails> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _buildSectionHeader(
-            title: 'Confirmed Booking',
+            title: 'Confirmed Bookings',
             colorScheme: colorScheme,
           ),
           SizedBox(height: FrameSize.screenHeight * 0.015),

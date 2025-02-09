@@ -76,6 +76,7 @@ MERGED from [:geolocator_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new
 MERGED from [:google_sign_in_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:permission_handler_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:shared_preferences_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-90:12
 MERGED from [:url_launcher_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\4ef191f190f09a18aa32baf12acdbb94\transformed\jetified-play-services-location-21.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.preference:preference:1.2.1] C:\Users\ABDF92\.gradle\caches\transforms-3\5612e308fdfd3214699e3060a957f934\transformed\preference-1.2.1\AndroidManifest.xml:17:1-24:12
@@ -199,6 +200,10 @@ MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\ABDF92\.gradle\caches\transfo
 		ADDED from C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:6:22-76
 queries
 ADDED from C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:37:5-46:15
+MERGED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:15
+MERGED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-13:15
+MERGED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-88:15
+MERGED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-88:15
 intent#action:name:android.intent.action.PROCESS_TEXT+data:mimeType:text/plain
 ADDED from C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:38:9-41:18
 action#android.intent.action.PROCESS_TEXT
@@ -239,6 +244,8 @@ MERGED from [:permission_handler_android] C:\Users\ABDF92\Desktop\ProjectUnknown
 MERGED from [:permission_handler_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\4ef191f190f09a18aa32baf12acdbb94\transformed\jetified-play-services-location-21.2.0\AndroidManifest.xml:5:5-44
@@ -449,6 +456,300 @@ ADDED from [:geolocator_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\
 		ADDED from [:geolocator_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-53
 	android:name
 		ADDED from [:geolocator_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-77
+intent#action:name:android.intent.action.VIEW+data:scheme:upi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:18
+package#com.SIBMobile
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-49
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:15:18-46
+package#com.YesBank
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-47
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:16:18-44
+package#com.atomyes
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-47
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:17:18-44
+package#com.aubank.aupay.bhimupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-60
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:18:18-57
+package#com.bankofbaroda.upi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-56
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:19:18-53
+package#com.canarabank.mobility
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-59
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:20:18-56
+package#com.citrus.citruspay
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-56
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:21:18-53
+package#com.csam.icici.bank.imobile
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-63
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:22:18-60
+package#com.cub.plus.gui
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:23:9-52
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:23:18-49
+package#com.cub.wallet.gui
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:24:9-54
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:24:18-51
+package#com.dbs.in.digitalbank
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-58
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:25:18-55
+package#com.dreamplug.androidapp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:26:9-60
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:26:18-57
+package#com.enstage.wibmo.hdfc
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:27:9-58
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:27:18-55
+package#com.equitasbank.upi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-55
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:28:18-52
+package#com.euronet.iobupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:29:9-54
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:29:18-51
+package#com.fampay.in
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:30:9-49
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:30:18-46
+package#com.finacus.jetpay
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:31:9-54
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:31:18-51
+package#com.finacus.tranzapp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:32:9-56
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:32:18-53
+package#com.finopaytech.bpayfino
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:33:9-60
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:33:18-57
+package#com.fisglobal.bandhanupi.app
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:34:9-64
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:34:18-61
+package#com.fisglobal.syndicateupi.app
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:35:9-66
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:35:18-63
+package#com.freecharge.android
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:36:9-58
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:36:18-55
+package#com.fss.idfcpsp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-51
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:37:18-48
+package#com.fss.ippbpsp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:38:9-51
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:38:18-48
+package#com.fss.jnkpsp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:39:9-50
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:39:18-47
+package#com.fss.pnbpsp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-50
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:40:18-47
+package#com.fss.unbipsp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:41:9-51
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:41:18-48
+package#com.fss.vijayapsp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:42:9-53
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:42:18-50
+package#com.google.android.apps.nbu.paisa.user
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-74
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:43:18-71
+package#com.idbibank.paywiz
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:44:9-55
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:44:18-52
+package#com.infra.boiupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:45:9-52
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:45:18-49
+package#com.infrasoft.uboi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:46:9-54
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:46:18-51
+package#com.infrasofttech.centralbankupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:47:9-68
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:47:18-65
+package#com.infrasofttech.indianbankupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:48:9-67
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:48:18-64
+package#com.infrasofttech.mahaupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:49:9-61
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:49:18-58
+package#com.jio.myjio
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:50:9-49
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:50:18-46
+package#com.khaalijeb.inkdrops
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:51:9-58
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:51:18-55
+package#com.lcode.allahabadupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:52:9-58
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:52:18-55
+package#com.lcode.corpupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:53:9-53
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:53:18-50
+package#com.lcode.csbupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:54:9-52
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:54:18-49
+package#com.lcode.dlbupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:55:9-52
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:55:18-49
+package#com.lcode.smartz
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:56:9-52
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:56:18-49
+package#com.lcode.ucoupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:57:9-52
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:57:18-49
+package#com.lvbank.upaay
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:58:9-52
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:58:18-49
+package#com.mgs.hsbcupi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:59:9-51
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:59:18-48
+package#com.mgs.induspsp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:60:9-52
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:60:18-49
+package#com.mgs.obcbank
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:61:9-51
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:61:18-48
+package#com.microlucid.mudrapay.android
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:62:9-67
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:62:18-64
+package#com.mipay.in.wallet
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:63:9-55
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:63:18-52
+package#com.mobikwik_new
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:64:9-52
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:64:18-49
+package#com.mobileware.upipsb
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:65:9-57
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:65:18-54
+package#com.myairtelapp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:66:9-51
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:66:18-48
+package#com.mycompany.kvb
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:67:9-53
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:67:18-50
+package#com.olive.andhra.upi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:68:9-56
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:68:18-53
+package#com.olive.dcb.upi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:69:9-53
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:69:18-50
+package#com.omegaon_internet_pvt_ltd
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:70:9-64
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:70:18-61
+package#com.phonepe.app
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:71:9-51
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:71:18-48
+package#com.rblbank.mobank
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:72:9-54
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:72:18-51
+package#com.rblbank.upi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:73:9-51
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:73:18-48
+package#com.realmepay.payments
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:74:9-58
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:74:18-55
+package#com.sbi.upi
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:75:9-47
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:75:18-44
+package#com.snapwork.hdfc
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:76:9-53
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:76:18-50
+package#com.truecaller
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:77:9-50
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:77:18-47
+package#com.udma.yuvapay.app
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:78:9-56
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:78:18-53
+package#com.ultracash.payment.customer
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:79:9-66
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:79:18-63
+package#com.upi.axispay
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:80:9-51
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:80:18-48
+package#com.upi.federalbank.org.lotza
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:81:9-65
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:81:18-62
+package#com.whatsapp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:82:9-48
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:82:18-45
+package#in.amazon.mShop.android.shopping
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:83:9-68
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:83:18-65
+package#in.cointab.app
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:84:9-50
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:84:18-47
+package#in.org.npci.upiapp
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:85:9-54
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:85:18-51
+package#money.bullet
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:86:9-48
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:86:18-45
+package#net.one97.paytm
+ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:87:9-51
+	android:name
+		ADDED from [:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:87:18-48
 activity#io.flutter.plugins.urllauncher.WebViewActivity
 ADDED from [:url_launcher_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-11:74
 	android:exported
