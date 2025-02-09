@@ -53,6 +53,9 @@ dependencies:
   connectivity_plus: ^6.1.2
   get: ^4.6.6
   internet_connection_checker: ^3.0.1
+  upi_pay: ^1.1.0
+  # flutter_cashfree_pg_sdk: ^2.2.3+41
+  # phonepe_payment_sdk: ^3.0.0
   # google_sign_in_ios: ^5.7.8
 
 dev_dependencies:

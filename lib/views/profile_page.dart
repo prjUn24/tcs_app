@@ -8,7 +8,7 @@ import 'package:tcs/views/width_and_height.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/text_area.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:lottie/lottie.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -45,6 +45,9 @@ class _ProfilePageState extends State<ProfilePage> {
     findIsGoogle();
   }
 
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
+
+  Future<void> _handleSignOut() => _googleSignIn.disconnect();
   late bool emailVerified;
 
   bool toEdit = false;
@@ -59,12 +62,69 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+    phoneController.dispose();
+    addressController.dispose();
+    newEmail.dispose();
+    oldEmail.dispose();
+    oldEmailPass.dispose();
+    oldPass.dispose();
+    newPass.dispose();
+    confirmPass.dispose();
+    changeName.dispose();
+  }
+
   // Method to check if email is verified.
   void isEmailVerified() {
     // setState(() {
     emailVerified = FirebaseAuth.instance.currentUser!.emailVerified;
     // });
     // print("This is the output of email Verification: $emailVerified");
+  }
+
+  void _showAddressDialog(BuildContext context, User user) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text(
+            'Enter Address',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          content: TextField(
+            controller: addressController,
+            maxLines: 3,
+            decoration: InputDecoration(
+              hintText: 'Full Address',
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text(
+                'Cancel',
+                style: TextStyle(color: Colors.red),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                updateAddress(user);
+                Navigator.pop(context);
+              },
+              child: const Text(
+                'Save',
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   // Method to send a verification email
@@ -346,6 +406,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   void signUserOut() {
     FirebaseAuth.instance.signOut();
+    _handleSignOut();
     Navigator.pushNamed(context, '/');
   }
 
@@ -361,89 +422,71 @@ class _ProfilePageState extends State<ProfilePage> {
           margin: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.white.withOpacity(0.5),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.pink.shade100,
-                blurRadius: 4,
-                spreadRadius: 1,
-              )
-            ],
+            color: Colors.white.withOpacity(0.2),
           ),
-          child: GestureDetector(
-            onTap: () => Navigator.pushNamed(context, '/home'),
-            child: Icon(
+          child: IconButton(
+            icon: Icon(
               Icons.arrow_back_ios_rounded,
               color: Colors.pink.shade800,
+              size: 24,
             ),
+            onPressed: () => Navigator.pushNamed(context, '/home'),
           ),
         ),
-        backgroundColor: const Color(0xffF8E8F5),
+        backgroundColor:
+            Colors.transparent, // Transparent background for gradient
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0xffF8E8F5),
-                Color(0xffFDF2FA),
-                Color(0xffF8E8F5),
+                Colors.blue.shade50,
+                Colors.blue.shade100,
+                Colors.blue.shade50,
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.pink.shade100,
-                blurRadius: 15,
-                spreadRadius: 5,
-              )
-            ],
             border: Border(
               bottom: BorderSide(
-                color: Colors.grey.shade200,
+                color: Colors.blue.shade200,
                 width: 1,
               ),
             ),
           ),
         ),
         centerTitle: true,
-        elevation: 8,
-        title: Text(
-          "My Account",
+        elevation: 0, // Remove elevation shadow
+        title: AnimatedDefaultTextStyle(
+          duration: const Duration(milliseconds: 300),
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 20,
+            fontSize: 22,
             fontFamily: 'Poppins',
             letterSpacing: 1.2,
-            shadows: [
-              Shadow(
-                color: Colors.white.withOpacity(0.5),
-                blurRadius: 2,
-                offset: Offset(1, 1),
-              )
-            ],
-            color: Colors.pink.shade800,
+            color: Colors.blue.shade800,
           ),
+          child: const Text("My Account"),
         ),
         actions: [
           Container(
-            margin: EdgeInsets.only(right: 15),
+            margin: const EdgeInsets.only(right: 15),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.pink.shade100,
-                  blurRadius: 4,
-                  spreadRadius: 1,
-                )
-              ],
+              color: Colors.white.withOpacity(0.2),
             ),
             child: IconButton(
               iconSize: FrameSize.screenWidth * 0.07,
-              icon: Icon(
-                Provider.of<ThemeProvider>(context).themeData == lightMode
-                    ? Icons.brightness_7
-                    : Icons.brightness_4,
-                color: Colors.pink.shade800,
+              icon: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                child: Icon(
+                  Provider.of<ThemeProvider>(context).themeData == lightMode
+                      ? Icons.brightness_7
+                      : Icons.brightness_4,
+                  key: ValueKey<bool>(
+                      Provider.of<ThemeProvider>(context).themeData ==
+                          lightMode),
+                  color: Colors.blue.shade800,
+                ),
               ),
               onPressed: () {
                 Provider.of<ThemeProvider>(context, listen: false)
@@ -605,30 +648,54 @@ class _ProfilePageState extends State<ProfilePage> {
                   builder: (context, userSnapshot) {
                     if (userSnapshot.connectionState ==
                         ConnectionState.waiting) {
-                      return const SizedBox.shrink();
+                      return const Center(
+                        child: CircularProgressIndicator(
+                          valueColor:
+                              AlwaysStoppedAnimation<Color>(Colors.blue),
+                        ),
+                      );
                     }
 
                     // Handle error if the stream has an error
                     if (userSnapshot.hasError) {
-                      return Text('Error: ${userSnapshot.error}');
+                      return Center(
+                        child: Text(
+                          'Error: ${userSnapshot.error}',
+                          style:
+                              const TextStyle(color: Colors.red, fontSize: 16),
+                        ),
+                      );
                     }
+
                     if (userSnapshot.hasData && userSnapshot.data != null) {
                       var userData = userSnapshot.data!;
 
-                      isGoogle = userData['authProvider'] == 'Google';
+                      bool isGoogle = userData['authProvider'] == 'Google';
 
-                      // String email = userData['email'] ?? '';
                       return ListTile(
                         subtitle: emailVerified
-                            ? const Text('Email')
+                            ? const Text(
+                                'Email Verified',
+                                style: TextStyle(
+                                    color: Colors.green, fontSize: 14),
+                              )
                             : Row(
                                 children: [
-                                  const Text('Not Verified'),
+                                  const Text(
+                                    'Email Not Verified',
+                                    style: TextStyle(
+                                        color: Colors.red, fontSize: 14),
+                                  ),
                                   SizedBox(
                                       width: FrameSize.screenWidth * 0.009),
                                   GestureDetector(
-                                      onTap: verifyEmail,
-                                      child: const Icon(Icons.error_outline))
+                                    onTap: verifyEmail,
+                                    child: const Icon(
+                                      Icons.error_outline,
+                                      color: Colors.red,
+                                      size: 20,
+                                    ),
+                                  ),
                                 ],
                               ),
                         trailing: toEdit && userData['authProvider'] != 'Google'
@@ -638,30 +705,54 @@ class _ProfilePageState extends State<ProfilePage> {
                                     context: context,
                                     builder: (BuildContext context) {
                                       return AlertDialog(
-                                        title: const Text('Change New Email'),
+                                        title: const Text(
+                                          'Change New Email',
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                         content: Column(
                                           mainAxisSize: MainAxisSize.min,
                                           children: [
-                                            TextArea(
-                                              hintText: 'New Email Address',
+                                            TextField(
+                                              decoration: InputDecoration(
+                                                hintText: 'New Email Address',
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                ),
+                                              ),
                                               controller: newEmail,
-                                              obsureText: false,
+                                              obscureText: false,
                                             ),
                                             SizedBox(
                                                 height: FrameSize.screenHeight *
                                                     0.02),
-                                            TextArea(
-                                              hintText: 'Current Email Address',
+                                            TextField(
+                                              decoration: InputDecoration(
+                                                hintText:
+                                                    'Current Email Address',
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                ),
+                                              ),
                                               controller: oldEmail,
-                                              obsureText: false,
+                                              obscureText: false,
                                             ),
                                             SizedBox(
                                                 height: FrameSize.screenHeight *
                                                     0.02),
-                                            TextArea(
-                                              hintText: 'Password',
+                                            TextField(
+                                              decoration: InputDecoration(
+                                                hintText: 'Password',
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                ),
+                                              ),
                                               controller: oldEmailPass,
-                                              obsureText: true,
+                                              obscureText: true,
                                             ),
                                           ],
                                         ),
@@ -670,7 +761,11 @@ class _ProfilePageState extends State<ProfilePage> {
                                             onPressed: () {
                                               Navigator.of(context).pop();
                                             },
-                                            child: const Text('Cancel'),
+                                            child: const Text(
+                                              'Cancel',
+                                              style:
+                                                  TextStyle(color: Colors.red),
+                                            ),
                                           ),
                                           TextButton(
                                             onPressed: () {
@@ -682,19 +777,27 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 toEdit = !toEdit;
                                               });
                                             },
-                                            child: const Text('Save'),
+                                            child: const Text(
+                                              'Save',
+                                              style:
+                                                  TextStyle(color: Colors.blue),
+                                            ),
                                           ),
                                         ],
                                       );
                                     },
                                   );
                                 },
-                                child: const Icon(Icons.edit).animate().fade(),
+                                child: const Icon(
+                                  Icons.edit,
+                                  color: Colors.blue,
+                                ).animate().fade(),
                               )
                             : null,
                         leading: Icon(
                           Icons.email,
                           size: FrameSize.screenWidth * 0.09,
+                          color: Colors.blue,
                         ),
                         minLeadingWidth: FrameSize.screenWidth * 0.15,
                         title: StreamBuilder<DocumentSnapshot>(
@@ -703,39 +806,55 @@ class _ProfilePageState extends State<ProfilePage> {
                               .doc(user!.uid)
                               .snapshots(),
                           builder: (context, userSnapshot) {
-                            // Check if the connection is still loading
                             if (userSnapshot.connectionState ==
                                 ConnectionState.waiting) {
                               return const SizedBox.shrink();
                             }
 
-                            // Handle error if the stream has an error
                             if (userSnapshot.hasError) {
-                              return Text('Error: ${userSnapshot.error}');
+                              return Text(
+                                'Error: ${userSnapshot.error}',
+                                style: const TextStyle(
+                                    color: Colors.red, fontSize: 14),
+                              );
                             }
 
-                            // Check if the data exists in the snapshot
                             if (userSnapshot.hasData &&
                                 userSnapshot.data != null) {
                               var userData = userSnapshot.data!;
                               if (userData.exists) {
-                                // Safely access the 'name' field
-                                var name = userData['email'] ??
-                                    'No name available'; // Fallback if 'name' is null
+                                var name =
+                                    userData['email'] ?? 'No email available';
                                 return Text(
                                   name,
+                                  style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold),
                                 ).animate().fade();
                               } else {
-                                return Text('User document does not exist');
+                                return const Text(
+                                  'User document does not exist',
+                                  style: TextStyle(
+                                      color: Colors.red, fontSize: 14),
+                                );
                               }
                             } else {
-                              return Text('No data available');
+                              return const Text(
+                                'No data available',
+                                style:
+                                    TextStyle(color: Colors.red, fontSize: 14),
+                              );
                             }
                           },
                         ),
                       );
                     }
-                    return const Text('No data available');
+                    return const Center(
+                      child: Text(
+                        'No data available',
+                        style: TextStyle(color: Colors.red, fontSize: 16),
+                      ),
+                    );
                   },
                 ),
 
@@ -752,22 +871,35 @@ class _ProfilePageState extends State<ProfilePage> {
                     // Check if the connection is still loading
                     if (userSnapshot.connectionState ==
                         ConnectionState.waiting) {
-                      return const SizedBox.shrink();
+                      return const Center(
+                        child: CircularProgressIndicator(
+                          valueColor:
+                              AlwaysStoppedAnimation<Color>(Colors.blue),
+                        ),
+                      );
                     }
 
                     // Handle error if the stream has an error
                     if (userSnapshot.hasError) {
-                      return Text('Error: ${userSnapshot.error}');
+                      return Center(
+                        child: Text(
+                          'Error: ${userSnapshot.error}',
+                          style:
+                              const TextStyle(color: Colors.red, fontSize: 16),
+                        ),
+                      );
                     }
 
                     // Check if the data exists in the snapshot
                     if (userSnapshot.hasData && userSnapshot.data != null) {
                       var userData = userSnapshot.data!;
-                      false; // Assuming 'toEdit' is a boolean field that controls edit mode
                       String mobileNumber = userData['number'] ?? '';
 
                       return ListTile(
-                        subtitle: const Text('Phone Number'),
+                        subtitle: const Text(
+                          'Phone Number',
+                          style: TextStyle(color: Colors.grey, fontSize: 14),
+                        ),
                         trailing: toEdit
                             ? GestureDetector(
                                 onTap: () {
@@ -775,11 +907,20 @@ class _ProfilePageState extends State<ProfilePage> {
                                     context: context,
                                     builder: (BuildContext context) {
                                       return AlertDialog(
-                                        title: const Text('Enter Phone Number'),
+                                        title: const Text(
+                                          'Enter Phone Number',
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
+                                        ),
                                         content: TextField(
                                           controller: phoneController,
-                                          decoration: const InputDecoration(
+                                          decoration: InputDecoration(
                                             hintText: 'Phone Number',
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
                                           ),
                                         ),
                                         actions: <Widget>[
@@ -787,22 +928,34 @@ class _ProfilePageState extends State<ProfilePage> {
                                             onPressed: () {
                                               Navigator.of(context).pop();
                                             },
-                                            child: const Text('Cancel'),
+                                            child: const Text(
+                                              'Cancel',
+                                              style:
+                                                  TextStyle(color: Colors.red),
+                                            ),
                                           ),
                                           TextButton(
                                             onPressed: () {
                                               addPhoneNumber(user);
                                               Navigator.of(context).pop();
                                             },
-                                            child: const Text('Save'),
+                                            child: const Text(
+                                              'Save',
+                                              style:
+                                                  TextStyle(color: Colors.blue),
+                                            ),
                                           ),
                                         ],
                                       );
                                     },
                                   );
                                 },
-                                child: const Icon(Icons.edit).animate().fade())
-                            : mobileNumber == ''
+                                child: const Icon(
+                                  Icons.edit,
+                                  color: Colors.blue,
+                                ).animate().fade(),
+                              )
+                            : mobileNumber.isEmpty
                                 ? GestureDetector(
                                     onTap: () {
                                       showDialog(
@@ -810,11 +963,19 @@ class _ProfilePageState extends State<ProfilePage> {
                                         builder: (BuildContext context) {
                                           return AlertDialog(
                                             title: const Text(
-                                                'Enter Phone Number'),
+                                              'Enter Phone Number',
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
                                             content: TextField(
                                               controller: phoneController,
-                                              decoration: const InputDecoration(
+                                              decoration: InputDecoration(
                                                 hintText: 'Phone Number',
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                ),
                                               ),
                                             ),
                                             actions: <Widget>[
@@ -822,14 +983,22 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 onPressed: () {
                                                   Navigator.of(context).pop();
                                                 },
-                                                child: const Text('Cancel'),
+                                                child: const Text(
+                                                  'Cancel',
+                                                  style: TextStyle(
+                                                      color: Colors.red),
+                                                ),
                                               ),
                                               TextButton(
                                                 onPressed: () {
                                                   addPhoneNumber(user);
                                                   Navigator.of(context).pop();
                                                 },
-                                                child: const Text('Save'),
+                                                child: const Text(
+                                                  'Save',
+                                                  style: TextStyle(
+                                                      color: Colors.blue),
+                                                ),
                                               ),
                                             ],
                                           );
@@ -839,16 +1008,22 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Icon(
                                       Icons.add_circle_outline_outlined,
                                       size: FrameSize.screenWidth * 0.095,
+                                      color: Colors.blue,
                                     ).animate().fade(),
                                   )
                                 : null,
                         leading: Icon(
                           Icons.phone,
                           size: FrameSize.screenWidth * 0.09,
+                          color: Colors.blue,
                         ),
                         minLeadingWidth: FrameSize.screenWidth * 0.15,
-                        title: mobileNumber == ''
-                            ? const Text('Not Available')
+                        title: mobileNumber.isEmpty
+                            ? const Text(
+                                'Not Available',
+                                style:
+                                    TextStyle(color: Colors.grey, fontSize: 16),
+                              )
                             : StreamBuilder<DocumentSnapshot>(
                                 stream: FirebaseFirestore.instance
                                     .collection('users')
@@ -863,7 +1038,11 @@ class _ProfilePageState extends State<ProfilePage> {
 
                                   // Handle error if the stream has an error
                                   if (userSnapshot.hasError) {
-                                    return Text('Error: ${userSnapshot.error}');
+                                    return Text(
+                                      'Error: ${userSnapshot.error}',
+                                      style: const TextStyle(
+                                          color: Colors.red, fontSize: 14),
+                                    );
                                   }
 
                                   // Check if the data exists in the snapshot
@@ -871,29 +1050,42 @@ class _ProfilePageState extends State<ProfilePage> {
                                       userSnapshot.data != null) {
                                     var userData = userSnapshot.data!;
                                     if (userData.exists) {
-                                      // Safely access the 'name' field
-                                      var name = userData['number'] ??
-                                          'No name available'; // Fallback if 'name' is null
+                                      var number = userData['number'] ??
+                                          'No number available';
                                       return Text(
-                                        name,
+                                        number,
+                                        style: const TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold),
                                       ).animate().fade();
                                     } else {
-                                      return Text(
-                                          'User document does not exist');
+                                      return const Text(
+                                        'User document does not exist',
+                                        style: TextStyle(
+                                            color: Colors.red, fontSize: 14),
+                                      );
                                     }
                                   } else {
-                                    return Text('No data available');
+                                    return const Text(
+                                      'No data available',
+                                      style: TextStyle(
+                                          color: Colors.red, fontSize: 14),
+                                    );
                                   }
                                 },
                               ),
                       );
                     }
-                    return const Text('No data available');
+                    return const Center(
+                      child: Text(
+                        'No data available',
+                        style: TextStyle(color: Colors.red, fontSize: 16),
+                      ),
+                    );
                   },
                 ),
 
                 // THIS IS ADDRESS AREA TILE
-
                 StreamBuilder<DocumentSnapshot>(
                   stream: FirebaseFirestore.instance
                       .collection('users')
@@ -902,175 +1094,114 @@ class _ProfilePageState extends State<ProfilePage> {
                   builder: (context, userSnapshot) {
                     if (userSnapshot.connectionState ==
                         ConnectionState.waiting) {
-                      return const SizedBox.shrink();
+                      return const Center(
+                        child: CircularProgressIndicator(
+                          valueColor:
+                              AlwaysStoppedAnimation<Color>(Colors.blue),
+                        ),
+                      );
                     }
 
-                    // Handle error if the stream has an error
                     if (userSnapshot.hasError) {
-                      return Text('Error: ${userSnapshot.error}');
+                      return Center(
+                        child: Text(
+                          'Error: ${userSnapshot.error}',
+                          style:
+                              const TextStyle(color: Colors.red, fontSize: 16),
+                        ),
+                      );
                     }
 
-                    // Check if the data exists in the snapshot
                     if (userSnapshot.hasData && userSnapshot.data != null) {
                       var userData = userSnapshot.data!;
                       String address = userData['address'] ?? '';
+
                       return ListTile(
-                        subtitle: const Text('Address'),
+                        subtitle: const Text(
+                          'Address',
+                          style: TextStyle(color: Colors.grey, fontSize: 14),
+                        ),
                         trailing: toEdit
                             ? GestureDetector(
-                                onTap: () {
-                                  showDialog(
-                                    context: context,
-                                    builder: (BuildContext context) {
-                                      return AlertDialog(
-                                        title: const Text('Enter Address'),
-                                        content: TextField(
-                                          controller: addressController,
-                                          decoration: const InputDecoration(
-                                            hintText: 'Address',
-                                          ),
-                                        ),
-                                        actions: <Widget>[
-                                          TextButton(
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: const Text('Cancel'),
-                                          ),
-                                          TextButton(
-                                            onPressed: () {
-                                              updateAddress(user);
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: const Text('Save'),
-                                          ),
-                                        ],
-                                      );
-                                    },
-                                  );
-                                },
-                                child: const Icon(Icons.edit).animate().fade())
+                                onTap: () => _showAddressDialog(context, user!),
+                                child: const Icon(
+                                  Icons.edit,
+                                  color: Colors.blue,
+                                ).animate().fade(),
+                              )
                             : address.isEmpty
                                 ? GestureDetector(
-                                    onTap: () {
-                                      showDialog(
-                                        context: context,
-                                        builder: (BuildContext context) {
-                                          return AlertDialog(
-                                            title: const Text('Enter Address'),
-                                            content: TextField(
-                                              controller: addressController,
-                                              decoration: const InputDecoration(
-                                                hintText: 'Address',
-                                              ),
-                                            ),
-                                            actions: <Widget>[
-                                              TextButton(
-                                                onPressed: () {
-                                                  Navigator.of(context).pop();
-                                                },
-                                                child: const Text('Cancel'),
-                                              ),
-                                              TextButton(
-                                                onPressed: () {
-                                                  updateAddress(user);
-                                                  Navigator.of(context).pop();
-                                                },
-                                                child: const Text('Save'),
-                                              ),
-                                            ],
-                                          );
-                                        },
-                                      );
-                                    },
-                                    child: GestureDetector(
-                                      onTap: () {
-                                        showDialog(
-                                          context: context,
-                                          builder: (BuildContext context) {
-                                            return AlertDialog(
-                                              title:
-                                                  const Text('Enter Address'),
-                                              content: TextField(
-                                                controller: addressController,
-                                                decoration:
-                                                    const InputDecoration(
-                                                  hintText: 'Address',
-                                                ),
-                                              ),
-                                              actions: <Widget>[
-                                                TextButton(
-                                                  onPressed: () {
-                                                    Navigator.of(context).pop();
-                                                  },
-                                                  child: const Text('Cancel'),
-                                                ),
-                                                TextButton(
-                                                  onPressed: () {
-                                                    updateAddress(user);
-                                                    Navigator.of(context).pop();
-                                                  },
-                                                  child: const Text('Save'),
-                                                ),
-                                              ],
-                                            );
-                                          },
-                                        );
-                                      },
-                                      child: Icon(
-                                        Icons.add_circle_outline_outlined,
-                                        size: FrameSize.screenWidth * 0.095,
-                                      ).animate().fade(),
-                                    ),
+                                    onTap: () =>
+                                        _showAddressDialog(context, user!),
+                                    child: Icon(
+                                      Icons.add_circle_outline_outlined,
+                                      size: FrameSize.screenWidth * 0.095,
+                                      color: Colors.blue,
+                                    ).animate().fade(),
                                   )
                                 : null,
                         leading: Icon(
                           Icons.home,
                           size: FrameSize.screenWidth * 0.09,
+                          color: Colors.blue,
                         ),
                         minLeadingWidth: FrameSize.screenWidth * 0.15,
-                        title: address == ''
-                            ? const Text('Not Available')
+                        title: address.isEmpty
+                            ? const Text(
+                                'Not Available',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontStyle: FontStyle.italic,
+                                  fontSize: 16,
+                                ),
+                              )
                             : StreamBuilder<DocumentSnapshot>(
                                 stream: FirebaseFirestore.instance
                                     .collection('users')
                                     .doc(user!.uid)
                                     .snapshots(),
                                 builder: (context, userSnapshot) {
-                                  // Check if the connection is still loading
                                   if (userSnapshot.connectionState ==
                                       ConnectionState.waiting) {
                                     return const SizedBox.shrink();
                                   }
 
-                                  // Handle error if the stream has an error
                                   if (userSnapshot.hasError) {
-                                    return Text('Error: ${userSnapshot.error}');
+                                    return Text(
+                                      'Error: ${userSnapshot.error}',
+                                      style: const TextStyle(
+                                          color: Colors.red, fontSize: 14),
+                                    );
                                   }
 
-                                  // Check if the data exists in the snapshot
                                   if (userSnapshot.hasData &&
                                       userSnapshot.data != null) {
                                     var userData = userSnapshot.data!;
-                                    if (userData.exists) {
-                                      // Safely access the 'name' field
-                                      var name = userData['address'] ??
-                                          'No name available'; // Fallback if 'name' is null
-                                      return Text(
-                                        name,
-                                      ).animate().fade();
-                                    } else {
-                                      return const Text(
-                                          'User document does not exist');
-                                    }
-                                  } else {
-                                    return const Text('No data available');
+                                    return Text(
+                                      userData['address'] ??
+                                          'No address available',
+                                      style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black87,
+                                      ),
+                                    ).animate().fade();
                                   }
+                                  return const Text(
+                                    'No data available',
+                                    style: TextStyle(
+                                        color: Colors.red, fontSize: 14),
+                                  );
                                 },
                               ),
                       );
                     }
-                    return const Text('No data available');
+                    return const Center(
+                      child: Text(
+                        'No data available',
+                        style: TextStyle(color: Colors.red, fontSize: 16),
+                      ),
+                    );
                   },
                 ),
 
