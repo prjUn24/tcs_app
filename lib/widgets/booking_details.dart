@@ -1,16 +1,13 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:emailjs/emailjs.dart' as emailjs;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:tcs/services/booking_funtion.dart';
-import 'package:emailjs/emailjs.dart' as emailjs;
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:tcs/services/fetch_booking.dart';
 import 'package:tcs/views/booking_confirmation_pagetwo.dart';
 import 'package:tcs/views/width_and_height.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:tcs/widgets/bottomsheet.dart';
-import 'package:tcs/widgets/button.dart';
 
 class BookingDetails extends StatefulWidget {
   const BookingDetails({super.key});
@@ -84,7 +81,7 @@ class _BookingDetailsState extends State<BookingDetails> {
             filter: (service) => service['status'] != "assigned",
             emptyMessage: 'No pending requests',
             colorScheme: colorScheme,
-            buildTrailing: (value) => value['status'] != 'Confirmed'
+            buildTrailing: (value) => value['status'] != 'confirmed'
                 ? _buildVerifyButton(value)
                 : _buildPendingIndicator(),
           ),

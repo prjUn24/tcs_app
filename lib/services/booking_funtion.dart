@@ -23,7 +23,7 @@ class BookingService {
         ...bookingDetails,
         'serviceId': serviceId,
         'book_code': otp,
-        'status': 'Pending',
+        'status': 'pending',
         'createdAt': FieldValue.serverTimestamp(),
       });
 
@@ -158,7 +158,7 @@ class BookingService {
         if (item['serviceId'] == serviceId) {
           return {
             ...item,
-            'status': 'Confirmed',
+            'status': 'confirmed',
           };
         }
         return item;

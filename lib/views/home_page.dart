@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tcs/services/fetch_booking.dart';
+import 'package:tcs/services/push_notification_service.dart';
 import 'package:tcs/views/width_and_height.dart';
 import 'package:tcs/widgets/appbar.dart';
 import 'package:tcs/widgets/booking_details.dart';
-import 'package:tcs/widgets/button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,10 +19,14 @@ class _HomePageState extends State<HomePage> {
   final firestoreService = FirestoreService();
   bool _hasCallSupport = false;
 
+  PushNotificationService _notificationService = PushNotificationService();
+
   @override
   void initState() {
     super.initState();
     _checkCallSupport();
+    _notificationService
+        .setupLocalNotifications(); // Initialize local notifications
   }
 
   void _checkCallSupport() async {
@@ -42,7 +46,6 @@ class _HomePageState extends State<HomePage> {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final textTheme = theme.textTheme;
-
     FrameSize.init(context: context);
 
     return Scaffold(
@@ -86,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                           'Hi ${user!.displayName ?? user!.email ?? 'User'}!',
                           style: textTheme.titleLarge?.copyWith(
                             fontWeight: FontWeight.w800,
-                            color: colorScheme.onBackground,
+                            color: colorScheme.onSurface,
                           ),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
@@ -98,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     "Get quality nursing care with just one tap!",
                     style: textTheme.bodyLarge?.copyWith(
-                      color: colorScheme.onBackground.withOpacity(0.8),
+                      color: colorScheme.onSurface.withOpacity(0.8),
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -152,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                       "Your Bookings",
                       style: textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.w700,
-                        color: colorScheme.onBackground,
+                        color: colorScheme.onSurface,
                       ),
                     ),
                   ),
