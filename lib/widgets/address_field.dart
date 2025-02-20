@@ -29,10 +29,25 @@ class _AddressFieldState extends State<AddressField> {
   void initState() {
     super.initState();
     // _showPermissionDialog();
+    // controller.addListener((){
+    //   _onChange();
+    // })
     _determinePosition();
   }
 
+  // var uuid = const Uuid();
+  List<dynamic> listOfLocation = [];
+
   bool _isLoading = false;
+
+  // _onChange(){
+  //   placeSuggestion(controller.text);
+  // }
+
+  // void placeSuggestion(String input) async{
+  //   const String apiKey = ""
+
+  // }
 
   /// Determine the current position of the device.
   ///

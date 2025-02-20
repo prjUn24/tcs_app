@@ -4,6 +4,7 @@ import 'package:tcs/services/fetch_booking.dart';
 import 'package:tcs/views/width_and_height.dart';
 import 'package:tcs/widgets/appbar.dart';
 import 'package:tcs/widgets/booking_details.dart';
+import 'package:tcs/services/push_notification_service.dart';
 // import 'package:tcs/widgets/button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -19,10 +20,14 @@ class _HomePageState extends State<HomePage> {
   final firestoreService = FirestoreService();
   bool _hasCallSupport = false;
 
+  final PushNotificationService _notificationService =
+      PushNotificationService();
+
   @override
   void initState() {
     super.initState();
     _checkCallSupport();
+    _notificationService.setupLocalNotifications();
   }
 
   void _checkCallSupport() async {

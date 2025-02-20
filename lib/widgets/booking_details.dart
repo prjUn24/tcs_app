@@ -84,7 +84,7 @@ class _BookingDetailsState extends State<BookingDetails> {
             filter: (service) => service['status'] != "assigned",
             emptyMessage: 'No pending requests',
             colorScheme: colorScheme,
-            buildTrailing: (value) => value['status'] != 'Confirmed'
+            buildTrailing: (value) => value['status'] != 'confirmed'
                 ? _buildVerifyButton(value)
                 : _buildPendingIndicator(),
           ),
@@ -360,6 +360,7 @@ class _BookingDetailsState extends State<BookingDetails> {
           service: value['service'],
           startDate: value['startDate'],
           endDate: value['endDate'],
+          consultation: value['consultation'],
         );
       },
     );

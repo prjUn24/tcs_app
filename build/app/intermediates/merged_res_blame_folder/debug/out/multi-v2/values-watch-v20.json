@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.thecaringsouls.tcs.app-mergeDebugResources-47:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "com.thecaringsouls.tcs.app-mergeDebugResources-50:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ABDF92\\.gradle\\caches\\transforms-3\\10cec2e65fb842c581020a4679a9d374\\transformed\\jetified-play-services-auth-21.0.0\\res\\values-watch-v20\\values.xml",

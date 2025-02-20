@@ -120,6 +120,7 @@
     <color name="material_grey_900">#ff212121</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <color name="notification_material_background_media_default_color">#ff424242</color>
     <color name="preference_fallback_accent_color">#ff008577</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
@@ -265,6 +266,10 @@
     <dimen name="preference_seekbar_value_minWidth">36dp</dimen>
     <dimen name="preferences_detail_width">300dp</dimen>
     <dimen name="preferences_header_width">384dp</dimen>
+    <dimen name="subtitle_corner_radius">2dp</dimen>
+    <dimen name="subtitle_outline_width">2dp</dimen>
+    <dimen name="subtitle_shadow_offset">2dp</dimen>
+    <dimen name="subtitle_shadow_radius">2dp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
     <dimen name="tooltip_margin">8dp</dimen>
@@ -427,6 +432,7 @@
     <string name="fallback_menu_item_copy_link">Copy link</string>
     <string name="fallback_menu_item_open_in_browser">Open in browser</string>
     <string name="fallback_menu_item_share_link">Share link</string>
+    <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="gcm_defaultSenderId" translatable="false">801398051846</string>
     <string name="google_api_key" translatable="false">AIzaSyDIhzfQ3_qt76DqlVmUYvKxHfk0RIRzzG8</string>
     <string name="google_app_id" translatable="false">1:801398051846:android:6ef763a21cb1d5de5a9f87</string>
@@ -1965,12 +1971,17 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
+    <style name="TextAppearance.Compat.Notification.Info.Media"/>
     <style name="TextAppearance.Compat.Notification.Line2" parent="TextAppearance.Compat.Notification.Info"/>
+    <style name="TextAppearance.Compat.Notification.Line2.Media" parent="TextAppearance.Compat.Notification.Info.Media"/>
+    <style name="TextAppearance.Compat.Notification.Media"/>
     <style name="TextAppearance.Compat.Notification.Time">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
+    <style name="TextAppearance.Compat.Notification.Time.Media"/>
     <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title"/>
+    <style name="TextAppearance.Compat.Notification.Title.Media"/>
     <style name="TextAppearance.Widget.AppCompat.ExpandedMenu.Item" parent="Base.TextAppearance.Widget.AppCompat.ExpandedMenu.Item">
     </style>
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle">

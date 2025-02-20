@@ -172,15 +172,15 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
                 color: colorScheme.primary, // Button background
               ),
               const SizedBox(height: 25.0),
-              ButtonTCS(
-                onTap: () {
-                  _fetchServiceId();
-                  print("______________________");
-                },
-                txtcolor: colorScheme.onPrimary, // Button text color
-                txt: 'TEST',
-                color: colorScheme.error, // Button background
-              ),
+              // ButtonTCS(
+              //   onTap: () {
+              //     _fetchServiceId();
+              //     print("______________________");
+              //   },
+              //   txtcolor: colorScheme.onPrimary, // Button text color
+              //   txt: 'TEST',
+              //   color: colorScheme.error, // Button background
+              // ),
             ],
           ),
         ),

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.thecaringsouls.tcs.app-mergeDebugResources-47:/values-v21/values-v21.xml",
+            "outputFile": "com.thecaringsouls.tcs.app-mergeDebugResources-50:/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ABDF92\\.gradle\\caches\\transforms-3\\3dfa22729c64fce729d1f195fdc0b320\\transformed\\jetified-credentials-play-services-auth-1.2.0-rc01\\res\\values-v21\\values-v21.xml",
@@ -14,12 +14,12 @@
                         "endOffsets": "543"
                     },
                     "to": {
-                        "startLines": "275",
+                        "startLines": "287",
                         "startColumns": "4",
-                        "startOffsets": "19550",
-                        "endLines": "282",
+                        "startOffsets": "20216",
+                        "endLines": "294",
                         "endColumns": "12",
-                        "endOffsets": "20038"
+                        "endOffsets": "20704"
                     }
                 },
                 {
@@ -33,12 +33,12 @@
                         "endOffsets": "168,232,299,363,479,605,731,859,1031,1383"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,271,272,273,274,283,286",
+                        "startLines": "2,3,4,5,271,272,279,283,295,298",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,173,237,304,19054,19170,19296,19422,20043,20215",
-                        "endLines": "2,3,4,5,271,272,273,274,285,290",
+                        "startOffsets": "55,173,237,304,19054,19170,19627,19921,20709,20881",
+                        "endLines": "2,3,4,5,271,272,279,283,297,302",
                         "endColumns": "117,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "168,232,299,363,19165,19291,19417,19545,20210,20562"
+                        "endOffsets": "168,232,299,363,19165,19291,19748,20044,20876,21228"
                     }
                 },
                 {
@@ -58,6 +58,25 @@
                         "endLines": "6,267,270",
                         "endColumns": "64,12,12",
                         "endOffsets": "428,18871,19049"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ABDF92\\.gradle\\caches\\transforms-3\\d1acf0b4772596719b39589aec9c38f0\\transformed\\media-1.1.0\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,5,8,11",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,223,386,554",
+                        "endLines": "4,7,10,13",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "218,381,549,716"
+                    },
+                    "to": {
+                        "startLines": "273,276,280,284",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "19296,19464,19753,20049",
+                        "endLines": "275,278,282,286",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "19459,19622,19916,20211"
                     }
                 },
                 {
