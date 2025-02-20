@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.thecaringsouls.tcs.app-mergeDebugResources-47:/values-pt/values-pt.xml",
+            "outputFile": "com.thecaringsouls.tcs.app-mergeDebugResources-50:/values-pt/values-pt.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ABDF92\\.gradle\\caches\\transforms-3\\568a789046b134f567d42926531757c6\\transformed\\core-1.13.1\\res\\values-pt\\values-pt.xml",

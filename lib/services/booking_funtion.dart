@@ -30,6 +30,7 @@ class BookingService {
       updateUserServicesArray(
         bookingDetails['patientName'],
         bookingDetails['service'],
+        bookingDetails['condition'],
         userId,
         bookingDetails['endDate'],
         bookingDetails['startDate'],
@@ -60,6 +61,7 @@ class BookingService {
   Future<void> updateUserServicesArray(
       String name,
       String service,
+      String consultation,
       String userId,
       String endDate,
       String startDate,
@@ -77,6 +79,7 @@ class BookingService {
             'patientName': name,
             'service': service,
             'startDate': startDate,
+            'consultation': consultation,
             'endDate': endDate,
             'book_code': otp,
             'serviceId': serviceId,
@@ -158,7 +161,7 @@ class BookingService {
         if (item['serviceId'] == serviceId) {
           return {
             ...item,
-            'status': 'Confirmed',
+            'status': 'confirmed',
           };
         }
         return item;

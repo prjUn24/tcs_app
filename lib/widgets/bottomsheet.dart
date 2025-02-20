@@ -6,12 +6,14 @@ class Bottomsheet extends StatefulWidget {
   final String service;
   final String startDate;
   final String endDate;
+  final String consultation;
   const Bottomsheet({
     super.key,
     required this.name,
     required this.service,
     required this.startDate,
     required this.endDate,
+    required this.consultation,
   });
 
   @override
@@ -74,13 +76,21 @@ class _BottomsheetState extends State<Bottomsheet> {
                   _buildDetailItem(
                     icon: Icons.person_outline,
                     label: "Patient Name:",
-                    value: widget.name,
+                    value: widget.name.isEmpty ? "N/A" : widget.name,
                     colorScheme: colorScheme,
                   ),
                   _buildDetailItem(
                     icon: Icons.medical_services_outlined,
                     label: "Service:",
-                    value: widget.service,
+                    value: widget.service.isEmpty ? "N/A" : widget.service,
+                    colorScheme: colorScheme,
+                  ),
+                  _buildDetailItem(
+                    icon: Icons.local_hospital_outlined,
+                    label: "Consultation:",
+                    value: widget.consultation.isEmpty
+                        ? "N/A"
+                        : widget.consultation,
                     colorScheme: colorScheme,
                   ),
                   SizedBox(height: FrameSize.screenHeight * 0.02),

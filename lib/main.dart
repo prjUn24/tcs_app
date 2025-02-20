@@ -1,4 +1,5 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -12,12 +13,21 @@ import 'package:tcs/views/profile_page.dart';
 import 'package:tcs/views/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 // import 'package:tcs/views/test_temp.dart';
+import 'package:tcs/services/push_notification_service.dart';
 import 'firebase_options.dart';
 import 'package:tcs/services/navigation_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  await PushNotificationService().requestNotificationPermission();
+
+  final currentUser = FirebaseAuth.instance.currentUser;
+  if (currentUser != null) {
+    final userId = currentUser.uid;
+    PushNotificationService().setupBookingListener(userId);
+  }
 
   runApp(
     ChangeNotifierProvider(

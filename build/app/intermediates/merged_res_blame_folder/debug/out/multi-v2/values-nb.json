@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.thecaringsouls.tcs.app-mergeDebugResources-47:/values-nb/values-nb.xml",
+            "outputFile": "com.thecaringsouls.tcs.app-mergeDebugResources-50:/values-nb/values-nb.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ABDF92\\.gradle\\caches\\transforms-3\\111d964310c4589e1b6c2782557c944d\\transformed\\jetified-credentials-1.2.0-rc01\\res\\values-nb\\values-nb.xml",
