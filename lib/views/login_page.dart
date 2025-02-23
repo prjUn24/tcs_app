@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-// import 'package:provider/provider.dart';
 import 'package:tcs/services/navigation_service.dart';
 import 'package:tcs/services/auth_service.dart';
 import 'package:tcs/views/forgot_password.dart';
@@ -31,7 +30,6 @@ class _LoginPageState extends State<LoginPage> {
     passwordController.dispose();
   }
 
-// In your LoginPage class
   void signUserIn() async {
     NavigationService.navigatorKey.currentState?.push(
       DialogRoute(
@@ -78,61 +76,11 @@ class _LoginPageState extends State<LoginPage> {
       debugPrint("Error during Google sign-in: $e");
     }
   }
-  // Sign in with email and password
-  // void signUserIn() async {
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) {
-  //       return Lottie.asset('lib/images/loading_anim.json');
-  //     },
-  //   );
-  //   try {
-  //     await FirebaseAuth.instance.signInWithEmailAndPassword(
-  //       email: emailController.text.trim(),
-  //       password: passwordController.text.trim(),
-  //     );
-  //     Navigator.of(context, rootNavigator: true).pop();
-  //     // Navigator.of(context).pop();
-  //   } on FirebaseAuthException catch (e) {
-  //     if (e.code.isNotEmpty) {
-  //       print('something WRONG!!!!!!!! ${e.code}');
-  //       // Navigator.of(context).pop();
-  //       _showErrorDialog('Invalid Credentials',
-  //           'The Email or password you have entered is incorrect.');
-  //     }
-  //   }
-  // }
 
-  // Sign in with Google
-  // Future<void> signInWithGoogle() async {
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) {
-  //       return Lottie.asset('lib/images/loading_anim.json');
-  //     },
-  //   );
-  //   try {
-  //     UserCredential userCredential = await AuthService().signinWithGoogle();
-  //     // Navigator.of(context).pop();
-  //     Navigator.of(context, rootNavigator: true).pop();
-  //     // Add user data to Firestore
-  //     await addGoogleUserToFirestore(userCredential.user);
-  //   } catch (e) {
-  //     // Navigator.of(context, rootNavigator: true).pop();
-  //     // _showErrorDialog('Google Sign-In Failed', 'Please try again.');
-  //     debugPrint(
-  //         "_________________________CATCH IS EXECUTING THE ERROR IS : $e");
-  //     showToast(
-  //         context, 'Error', 'Google Sign-In Failed', ToastificationType.error);
-  //   }
-  // }
-
-  // Add Google user to Firestore
   Future<void> addGoogleUserToFirestore(User? user) async {
     if (user != null) {
       final userDoc = firestore.collection('users').doc(user.uid);
 
-      // Check if the user already exists in Firestore
       final docSnapshot = await userDoc.get();
       if (!docSnapshot.exists) {
         await userDoc.set({
@@ -147,7 +95,6 @@ class _LoginPageState extends State<LoginPage> {
           'emailVerified': user.emailVerified,
         });
       } else {
-        // Update the `lastLogin` field if the user exists
         await userDoc.update({
           'lastLogin': FieldValue.serverTimestamp(),
         });
@@ -185,7 +132,6 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  // Display error dialog
   void _showErrorDialog(String title, String message) {
     showDialog(
       context: context,
@@ -208,131 +154,147 @@ class _LoginPageState extends State<LoginPage> {
     FrameSize.init(context: context);
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: colorScheme.surface, // Surface for background
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(height: FrameSize.screenHeight * 0.1),
-                Image.asset(
-                  'lib/images/tcs.png',
-                  scale: 1.5,
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.02),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: TextArea(
-                    obsureText: false,
-                    hintText: 'Email',
-                    controller: emailController,
-                  ),
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.02),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: TextArea(
-                    obsureText: true,
-                    hintText: 'Password',
-                    controller: passwordController,
-                  ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const ForgotPassword(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          'Forgot Password?',
-                          style: TextStyle(
-                              color: colorScheme.onSurface
-                                  .withOpacity(0.6)), // Subdued text
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.02),
-                SizedBox(
-                  width: FrameSize.screenWidth * 0.8,
-                  child: ButtonTCS(
-                    txt: 'L O G I N',
-                    onTap: signUserIn,
-                    txtcolor: colorScheme.onPrimary, // Text color on buttons
-                    color: colorScheme.primary
-                        .withOpacity(0.8), // Primary for button background
-                  ),
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.05),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: Row(
-                    children: [
-                      const Expanded(
-                        child: Divider(
-                          thickness: 0.5,
-                          color: Colors.blueGrey,
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Text(
-                        'or continue with',
-                        style: TextStyle(
-                            color: colorScheme.onSurface.withOpacity(0.7)),
-                      ),
-                      const SizedBox(width: 10),
-                      const Expanded(
-                        child: Divider(
-                          thickness: 0.5,
-                          color: Colors.blueGrey,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 30),
-                GestureDetector(
-                  onTap: signInWithGoogle,
-                  child: Image.asset(
-                    'lib/images/google.png',
-                    scale: 15,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Not a member',
-                      style: TextStyle(
-                          color: colorScheme.onSurface.withOpacity(0.6)),
-                    ),
-                    const SizedBox(width: 10),
-                    GestureDetector(
-                      onTap: widget.onTap,
-                      child: const Text(
-                        'Register Now',
-                        style: TextStyle(
-                            color: Colors.blue), // Secondary color for links
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+      backgroundColor: const Color(0xFFF8E8F5), // Updated background color
+      body: SizedBox.expand(
+        child: Stack(
+          children: [
+            // Background image
+            Positioned.fill(
+              child: Image.asset(
+                'lib/images/bg.png', // Add your image
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
+            // Existing content
+            SingleChildScrollView(
+              child: SafeArea(
+                child: Center(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(height: FrameSize.screenHeight * 0.1),
+                      Image.asset(
+                        'lib/images/tcs.png',
+                        scale: 2,
+                      ),
+                      SizedBox(height: FrameSize.screenHeight * 0.02),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: TextArea(
+                          obsureText: false,
+                          hintText: 'Email',
+                          controller: emailController,
+                        ),
+                      ),
+                      SizedBox(height: FrameSize.screenHeight * 0.02),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: TextArea(
+                          obsureText: true,
+                          hintText: 'Password',
+                          controller: passwordController,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 30, vertical: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ForgotPassword(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                'Forgot Password?',
+                                style: TextStyle(
+                                    color:
+                                        colorScheme.onSurface.withOpacity(0.6)),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: FrameSize.screenHeight * 0.02),
+                      SizedBox(
+                        width: FrameSize.screenWidth * 0.8,
+                        child: ButtonTCS(
+                          txt: 'L O G I N',
+                          onTap: signUserIn,
+                          txtcolor: Colors.white,
+                          color: const Color.fromARGB(255, 86, 122, 155),
+                          // rgb(86, 122, 155)
+                        ),
+                      ),
+                      SizedBox(height: FrameSize.screenHeight * 0.05),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: Row(
+                          children: [
+                            const Expanded(
+                              child: Divider(
+                                thickness: 0.5,
+                                color: Colors.blueGrey,
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                            Text(
+                              'or continue with',
+                              style: TextStyle(
+                                  color:
+                                      colorScheme.onSurface.withOpacity(0.7)),
+                            ),
+                            const SizedBox(width: 10),
+                            const Expanded(
+                              child: Divider(
+                                thickness: 0.5,
+                                color: Colors.blueGrey,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 30),
+                      GestureDetector(
+                        onTap: signInWithGoogle,
+                        child: Image.asset(
+                          'lib/images/google.png',
+                          scale: 20,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'Not a member',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                          const SizedBox(width: 10),
+                          GestureDetector(
+                            onTap: widget.onTap,
+                            child: const Text(
+                              'Register Now',
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

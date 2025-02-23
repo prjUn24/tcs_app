@@ -15,7 +15,7 @@ import 'package:firebase_core/firebase_core.dart';
 // import 'package:tcs/views/test_temp.dart';
 import 'package:tcs/services/push_notification_service.dart';
 import 'firebase_options.dart';
-import 'package:tcs/services/navigation_service.dart';
+// import 'package:tcs/services/navigation_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,34 +45,38 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeProvider>(
-      builder: (context, themeProvider, child) {
-        return AnimatedTheme(
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeInOut,
-          data: themeProvider.themeData,
-          child: MaterialApp(
-            // Assign the global navigator key to MaterialApp
-            navigatorKey: NavigationService.navigatorKey,
-            theme: themeProvider.themeData,
-            locale: DevicePreview.locale(context),
-            builder: DevicePreview.appBuilder,
-            debugShowCheckedModeBanner: false,
-            initialRoute: '/',
-            routes: {
-              '/': (context) => const SplashScreen(),
-              '/login': (context) => const LoginPage(),
-              '/home': (context) => const HomePage(),
-              '/booking_screen': (context) => const BookingPage(),
-              '/account_screen': (context) => const ProfilePage(),
-              '/verification': (context) => const EmailVerificationPage(),
-              '/booking_confirmation_page': (context) =>
-                  const BookingConfirmationPage(),
-              // '/test_temp': (context) => App(),
-            },
-          ),
-        );
-      },
+    // return Consumer<ThemeProvider>(
+    // builder: (context, themeProvider, child) {
+    return AnimatedTheme(
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+      data: ThemeData(
+        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      // data: themeProvider.themeData,
+      child: MaterialApp(
+        theme: ThemeData(fontFamily: 'ProximaNova'),
+        // Assign the global navigator key to MaterialApp
+        // navigatorKey: NavigationService.navigatorKey,
+        // theme: themeProvider.themeData,
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
+        debugShowCheckedModeBanner: false,
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const SplashScreen(),
+          '/login': (context) => const LoginPage(),
+          '/home': (context) => const HomePage(),
+          '/booking_screen': (context) => const BookingPage(),
+          '/account_screen': (context) => const ProfilePage(),
+          '/verification': (context) => const EmailVerificationPage(),
+          '/booking_confirmation_page': (context) =>
+              const BookingConfirmationPage(),
+          // '/test_temp': (context) => App(),
+        },
+      ),
     );
   }
 }

@@ -149,100 +149,95 @@ class _RegistrationPageState extends State<RegistrationPage> {
 
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: colorScheme.surface, // Use surface for background
-      body: SingleChildScrollView(
-        child: SafeArea(
-          minimum: EdgeInsets.only(top: FrameSize.screenHeight * 0.05),
-          child: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'lib/images/tcs.png',
-                  scale: 1.5,
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.05),
-                Text(
-                  "Let's create an account for you",
-                  style: TextStyle(
-                      color: colorScheme.onSurface
-                          .withOpacity(0.7)), // Subdued text color
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.02),
-                _buildTextField(
-                    emailRegisterController, 'Email', false, colorScheme),
-                _buildSpacer(),
-                _buildTextField(nameController, 'Name', false, colorScheme),
-                _buildSpacer(),
-                _buildTextField(
-                    passwordRegisterController, 'Password', true, colorScheme),
-                _buildSpacer(),
-                _buildTextField(confirmPasswordController, 'Confirm Password',
-                    true, colorScheme),
-                _buildSpacer(),
-                _buildTextField(
-                    phoneController, 'Phone Number', false, colorScheme),
-                _buildSpacer(),
-                SizedBox(height: FrameSize.screenHeight * 0.05),
-                Container(
-                  height: FrameSize.screenHeight * 0.07,
-                  margin: EdgeInsets.symmetric(
-                      horizontal: FrameSize.screenWidth * 0.08),
-                  child: SizedBox(
-                    width: FrameSize.screenWidth * 0.8,
-                    child: ButtonTCS(
-                      txtcolor: colorScheme.onPrimary, // Text color on button
-                      txt: 'REGISTER',
-                      onTap: registerUser,
-                      color: colorScheme
-                          .primary, // Primary color for button background
-                    ),
+      backgroundColor: const Color(0xFFF8E8F5),
+      body: SizedBox.expand(
+        child: Stack(
+          children: [
+            // Background image
+            Positioned.fill(
+              child: Image.asset(
+                'lib/images/bg.png', // Add your image
+                fit: BoxFit.cover,
+              ),
+            ),
+            SingleChildScrollView(
+              child: SafeArea(
+                minimum: EdgeInsets.only(top: FrameSize.screenHeight * 0.05),
+                child: Center(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'lib/images/tcs.png',
+                        scale: 2,
+                      ),
+                      SizedBox(height: FrameSize.screenHeight * 0.05),
+
+                      SizedBox(height: FrameSize.screenHeight * 0.0009),
+                      _buildTextField(
+                          emailRegisterController, 'Email', false, colorScheme),
+                      _buildSpacer(),
+                      _buildTextField(
+                          nameController, 'Name', false, colorScheme),
+                      _buildSpacer(),
+                      _buildTextField(passwordRegisterController, 'Password',
+                          true, colorScheme),
+                      _buildSpacer(),
+                      _buildTextField(confirmPasswordController,
+                          'Confirm Password', true, colorScheme),
+                      _buildSpacer(),
+                      _buildTextField(
+                          phoneController, 'Phone Number', false, colorScheme),
+                      _buildSpacer(),
+                      SizedBox(height: FrameSize.screenHeight * 0.05),
+                      Container(
+                        height: FrameSize.screenHeight * 0.07,
+                        margin: EdgeInsets.symmetric(
+                            horizontal: FrameSize.screenWidth * 0.08),
+                        child: SizedBox(
+                          width: FrameSize.screenWidth * 0.8,
+                          child: ButtonTCS(
+                            txtcolor:
+                                colorScheme.onPrimary, // Text color on button
+                            txt: 'R E G I S T E R',
+                            onTap: registerUser,
+                            color: const Color.fromARGB(255, 86, 122,
+                                155), // Primary color for button background
+                          ),
+                        ),
+                      ),
+                      // SizedBox(height: FrameSize.screenHeight * 0.05),
+                      SizedBox(height: FrameSize.screenHeight * 0.02),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Already have an account?',
+                            style: TextStyle(
+                                color: colorScheme.onSurface
+                                    .withValues(alpha: 0.7)), // Subdued text
+                          ),
+                          SizedBox(width: FrameSize.screenWidth * 0.02),
+                          GestureDetector(
+                            onTap: widget.onTap,
+                            child: const Text(
+                              'Login',
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight:
+                                      FontWeight.bold), // Secondary for link
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: FrameSize.screenHeight * 0.02),
+                    ],
                   ),
                 ),
-                SizedBox(height: FrameSize.screenHeight * 0.05),
-                // Padding(
-                //   padding: EdgeInsets.symmetric(
-                //       horizontal: FrameSize.screenWidth * 0.08),
-                //   child: const Expanded(
-                //     child: Divider(thickness: 0.5, color: Colors.blueGrey),
-                //   ),
-                // ),
-                // SizedBox(height: FrameSize.screenHeight * 0.01),
-                // GestureDetector(
-                //   onTap: () {
-                //     AuthService().signinWithGoogle();
-                //   },
-                //   child: Image.asset(
-                //     'lib/images/google.png',
-                //     scale: 15,
-                //   ),
-                // ),
-                SizedBox(height: FrameSize.screenHeight * 0.02),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Already have an account?',
-                      style: TextStyle(
-                          color: colorScheme.onSurface
-                              .withValues(alpha: 0.7)), // Subdued text
-                    ),
-                    SizedBox(width: FrameSize.screenWidth * 0.02),
-                    GestureDetector(
-                      onTap: widget.onTap,
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                            color: colorScheme.secondary), // Secondary for link
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.02),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
@@ -264,6 +259,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
   }
 
   Widget _buildSpacer() {
-    return SizedBox(height: FrameSize.screenHeight * 0.03);
+    return SizedBox(height: FrameSize.screenHeight * 0.02);
   }
 }
