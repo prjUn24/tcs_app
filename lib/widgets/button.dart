@@ -34,7 +34,8 @@ class ButtonTCS extends StatelessWidget {
           child: Text(
             txt,
             style: TextStyle(
-                fontSize: width * 0.08,
+                fontFamily: 'ProximaNova',
+                fontSize: width * 0.099,
                 fontWeight: FontWeight.bold,
                 color: txtcolor),
           ),

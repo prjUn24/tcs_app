@@ -44,31 +44,33 @@ class _TextAreaState extends State<TextArea> {
 
     return Material(
       borderRadius: const BorderRadius.all(Radius.circular(50)),
-      elevation: 3,
+      elevation: 1,
       child: TextField(
         obscureText: _isPasswordVisible,
         controller: widget.controller,
-        style: TextStyle(
-          color: widget.textColor ?? colorScheme.onSurface,
+        style: const TextStyle(
+          fontFamily: 'ProximaNova',
+          color: Colors.black,
         ),
         decoration: InputDecoration(
           hintText: widget.hintText,
-          hintStyle: TextStyle(
-            color: widget.hintColor ?? colorScheme.onSurface.withOpacity(0.5),
+          hintStyle: const TextStyle(
+            fontFamily: 'ProximaNova',
+            color: Colors.grey,
           ),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(
               width: 3,
-              color: widget.borderColor ?? colorScheme.primary,
+              color: Colors.transparent,
             ),
-            borderRadius: const BorderRadius.all(Radius.circular(50)),
+            borderRadius: BorderRadius.all(Radius.circular(50)),
           ),
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(
-              width: 3,
-              color: widget.borderColor ?? colorScheme.primary,
+              width: .5,
+              color: Colors.transparent,
             ),
-            borderRadius: const BorderRadius.all(Radius.circular(50)),
+            borderRadius: BorderRadius.all(Radius.circular(50)),
           ),
           border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(50)),
@@ -79,7 +81,7 @@ class _TextAreaState extends State<TextArea> {
                     _isPasswordVisible
                         ? Icons.visibility
                         : Icons.visibility_off,
-                    color: colorScheme.onSurface,
+                    color: Colors.grey,
                   ),
                   onPressed: _togglePasswordVisibility,
                 )

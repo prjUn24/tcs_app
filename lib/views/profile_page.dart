@@ -496,263 +496,985 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ],
       ),
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Lottie.asset('lib/images/user_new.json',
-                    frameRate: const FrameRate(100),
-                    repeat: false,
-                    width: FrameSize.screenWidth * 0.2),
-                SizedBox(height: FrameSize.screenHeight * 0.01),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    StreamBuilder<DocumentSnapshot>(
-                      stream: FirebaseFirestore.instance
-                          .collection('users')
-                          .doc(user!.uid)
-                          .snapshots(),
-                      builder: (context, userSnapshot) {
-                        // Check if the connection is still loading
-                        if (userSnapshot.connectionState ==
-                            ConnectionState.waiting) {
-                          return const SizedBox.shrink();
-                        }
+      backgroundColor: const Color(0xFFF8E8F5),
+      body: SizedBox.expand(
+        child: Stack(
+          children: [
+            // Background image
+            Positioned.fill(
+              child: Image.asset(
+                'lib/images/bg.png', // Add your image
+                fit: BoxFit.cover,
+              ),
+            ),
+            SingleChildScrollView(
+              child: SafeArea(
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(height: FrameSize.screenHeight * 0.03),
+                      Container(
+                        width: FrameSize.screenWidth * 0.18,
+                        height: FrameSize.screenWidth *
+                            0.18, // Make height equal to width
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF545B63),
+                          shape: BoxShape.circle, // Make the container circular
+                        ),
+                        child: Icon(
+                          Icons.person,
+                          color: Colors.white,
+                          size: FrameSize.screenWidth * 0.09,
+                        ),
+                        // Lottie.asset('lib/images/user_new.json',
+                        //     height: FrameSize.screenWidth * 0.18,
+                        //     frameRate: const FrameRate(100),
+                        //     repeat: false,
+                        //     width: FrameSize.screenWidth * 0.18),
+                      ),
+                      SizedBox(height: FrameSize.screenHeight * 0.01),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          StreamBuilder<DocumentSnapshot>(
+                            stream: FirebaseFirestore.instance
+                                .collection('users')
+                                .doc(user!.uid)
+                                .snapshots(),
+                            builder: (context, userSnapshot) {
+                              // Check if the connection is still loading
+                              if (userSnapshot.connectionState ==
+                                  ConnectionState.waiting) {
+                                return const SizedBox.shrink();
+                              }
 
-                        // Handle error if the stream has an error
-                        if (userSnapshot.hasError) {
-                          return Text('Error: ${userSnapshot.error}');
-                        }
+                              // Handle error if the stream has an error
+                              if (userSnapshot.hasError) {
+                                return Text('Error: ${userSnapshot.error}');
+                              }
 
-                        // Check if the data exists in the snapshot
-                        if (userSnapshot.hasData && userSnapshot.data != null) {
-                          var userData = userSnapshot.data!;
-                          if (userData.exists) {
-                            // Safely access the 'name' field
-                            var name = userData['name'] ??
-                                'No name available'; // Fallback if 'name' is null
-                            return Text(
-                              name,
-                              style: TextStyle(
-                                fontSize: FrameSize.screenWidth * 0.08,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ).animate().fade();
-                          } else {
-                            return const Text('User document does not exist');
-                          }
-                        } else {
-                          return const Text('No data available');
-                        }
-                      },
-                    ),
-                    toEdit
-                        ? GestureDetector(
-                            onTap: () {
-                              showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return AlertDialog(
-                                    title: const Text('Change Name'),
-                                    content: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        TextArea(
-                                          hintText: 'New Name',
-                                          controller: changeName,
-                                          obsureText: false,
-                                        ),
-                                      ],
+                              // Check if the data exists in the snapshot
+                              if (userSnapshot.hasData &&
+                                  userSnapshot.data != null) {
+                                var userData = userSnapshot.data!;
+                                if (userData.exists) {
+                                  // Safely access the 'name' field
+                                  var name = userData['name'] ??
+                                      'No name available'; // Fallback if 'name' is null
+                                  return Text(
+                                    name,
+                                    style: TextStyle(
+                                      color: const Color.fromARGB(
+                                          255, 86, 122, 155),
+                                      fontSize: FrameSize.screenWidth * 0.09,
+                                      fontWeight: FontWeight.w900,
                                     ),
-                                    actions: [
-                                      TextButton(
-                                        onPressed: () {
-                                          Navigator.of(context).pop();
-                                        },
-                                        child: const Text('Cancel'),
-                                      ),
-                                      TextButton(
-                                        onPressed: () {
-                                          Navigator.of(context).pop();
-                                          updateNewName(user);
-                                          showDialog(
-                                              context: context,
-                                              builder: (BuildContext context) {
-                                                return AlertDialog(
-                                                  title: const Text('Success'),
-                                                  content: const Text(
-                                                      'Name has been updated successfully.'),
-                                                  actions: [
-                                                    TextButton(
-                                                      onPressed: () {
-                                                        setState(() {
-                                                          toEdit = !toEdit;
-                                                          user = FirebaseAuth
-                                                              .instance
-                                                              .currentUser;
-                                                        });
-                                                        Navigator.of(context)
-                                                            .pop();
-                                                      },
-                                                      child: const Text('OK'),
+                                  ).animate().fade();
+                                } else {
+                                  return const Text(
+                                      'User document does not exist');
+                                }
+                              } else {
+                                return const Text('No data available');
+                              }
+                            },
+                          ),
+                          toEdit
+                              ? GestureDetector(
+                                  onTap: () {
+                                    showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return AlertDialog(
+                                          title: const Text('Change Name'),
+                                          content: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              TextArea(
+                                                hintText: 'New Name',
+                                                controller: changeName,
+                                                obsureText: false,
+                                              ),
+                                            ],
+                                          ),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                              child: const Text('Cancel'),
+                                            ),
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                                updateNewName(user);
+                                                showDialog(
+                                                    context: context,
+                                                    builder:
+                                                        (BuildContext context) {
+                                                      return AlertDialog(
+                                                        title: const Text(
+                                                            'Success'),
+                                                        content: const Text(
+                                                            'Name has been updated successfully.'),
+                                                        actions: [
+                                                          TextButton(
+                                                            onPressed: () {
+                                                              setState(() {
+                                                                toEdit =
+                                                                    !toEdit;
+                                                                user = FirebaseAuth
+                                                                    .instance
+                                                                    .currentUser;
+                                                              });
+                                                              Navigator.of(
+                                                                      context)
+                                                                  .pop();
+                                                            },
+                                                            child: const Text(
+                                                                'OK'),
+                                                          ),
+                                                        ],
+                                                      );
+                                                    });
+                                              },
+                                              child: const Text('Save'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  },
+                                  child: const Icon(
+                                    Icons.edit,
+                                    color: Colors.grey,
+                                  ).animate().fade(),
+                                )
+                              : const SizedBox.shrink(),
+                        ],
+                      ),
+                      SizedBox(height: FrameSize.screenHeight * 0.01),
+                      toEdit
+                          ? ButtonTCS(
+                              onTap: () {
+                                toEdit = !toEdit;
+                                setState(() {});
+                              },
+                              txtcolor: Colors.black,
+                              txt: "Done",
+                              color: const Color(0xffBDCFE7),
+                            )
+                          : ButtonTCS(
+                              onTap: () {
+                                toEdit = !toEdit;
+                                setState(() {});
+                              },
+                              txtcolor: Colors.black,
+                              txt: "Edit Profile",
+                              color: const Color(0xffBDCFE7),
+                            ),
+                      SizedBox(height: FrameSize.screenHeight * 0.03),
+                      Center(
+                        child: SizedBox(
+                          width: FrameSize.screenWidth * 0.9,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white, // white background
+                              borderRadius:
+                                  BorderRadius.circular(20), // border radius
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  // EMAIL LIST TILE STARTS HERE
+
+                                  StreamBuilder<DocumentSnapshot>(
+                                    stream: FirebaseFirestore.instance
+                                        .collection('users')
+                                        .doc(user!.uid)
+                                        .snapshots(),
+                                    builder: (context, userSnapshot) {
+                                      if (userSnapshot.connectionState ==
+                                          ConnectionState.waiting) {
+                                        return const Center(
+                                          child: CircularProgressIndicator(
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                                    Colors.blue),
+                                          ),
+                                        );
+                                      }
+
+                                      // Handle error if the stream has an error
+                                      if (userSnapshot.hasError) {
+                                        return Center(
+                                          child: Text(
+                                            'Error: ${userSnapshot.error}',
+                                            style: const TextStyle(
+                                                color: Colors.red,
+                                                fontSize: 16),
+                                          ),
+                                        );
+                                      }
+
+                                      if (userSnapshot.hasData &&
+                                          userSnapshot.data != null) {
+                                        var userData = userSnapshot.data!;
+
+                                        bool isGoogle =
+                                            userData['authProvider'] ==
+                                                'Google';
+
+                                        return ListTile(
+                                          subtitle: emailVerified
+                                              ? const Text(
+                                                  'Email Verified',
+                                                  style: TextStyle(
+                                                      color: Colors.green,
+                                                      fontSize: 14),
+                                                )
+                                              : Row(
+                                                  children: [
+                                                    const Text(
+                                                      'Email Not Verified',
+                                                      style: TextStyle(
+                                                          color: Colors.red,
+                                                          fontSize: 14),
+                                                    ),
+                                                    SizedBox(
+                                                        width: FrameSize
+                                                                .screenWidth *
+                                                            0.009),
+                                                    GestureDetector(
+                                                      onTap: verifyEmail,
+                                                      child: const Icon(
+                                                        Icons.error_outline,
+                                                        color: Colors.red,
+                                                        size: 20,
+                                                      ),
                                                     ),
                                                   ],
+                                                ),
+                                          trailing: toEdit &&
+                                                  userData['authProvider'] !=
+                                                      'Google'
+                                              ? GestureDetector(
+                                                  onTap: () {
+                                                    showDialog(
+                                                      context: context,
+                                                      builder: (BuildContext
+                                                          context) {
+                                                        return AlertDialog(
+                                                          title: const Text(
+                                                            'Change New Email',
+                                                            style: TextStyle(
+                                                                fontSize: 18,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                          ),
+                                                          content: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .min,
+                                                            children: [
+                                                              TextField(
+                                                                decoration:
+                                                                    InputDecoration(
+                                                                  hintText:
+                                                                      'New Email Address',
+                                                                  border:
+                                                                      OutlineInputBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            10),
+                                                                  ),
+                                                                ),
+                                                                controller:
+                                                                    newEmail,
+                                                                obscureText:
+                                                                    false,
+                                                              ),
+                                                              SizedBox(
+                                                                  height: FrameSize
+                                                                          .screenHeight *
+                                                                      0.02),
+                                                              TextField(
+                                                                decoration:
+                                                                    InputDecoration(
+                                                                  hintText:
+                                                                      'Current Email Address',
+                                                                  border:
+                                                                      OutlineInputBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            10),
+                                                                  ),
+                                                                ),
+                                                                controller:
+                                                                    oldEmail,
+                                                                obscureText:
+                                                                    false,
+                                                              ),
+                                                              SizedBox(
+                                                                  height: FrameSize
+                                                                          .screenHeight *
+                                                                      0.02),
+                                                              TextField(
+                                                                decoration:
+                                                                    InputDecoration(
+                                                                  hintText:
+                                                                      'Password',
+                                                                  border:
+                                                                      OutlineInputBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            10),
+                                                                  ),
+                                                                ),
+                                                                controller:
+                                                                    oldEmailPass,
+                                                                obscureText:
+                                                                    true,
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          actions: [
+                                                            TextButton(
+                                                              onPressed: () {
+                                                                Navigator.of(
+                                                                        context)
+                                                                    .pop();
+                                                              },
+                                                              child: const Text(
+                                                                'Cancel',
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .red),
+                                                              ),
+                                                            ),
+                                                            TextButton(
+                                                              onPressed: () {
+                                                                Navigator.of(
+                                                                        context)
+                                                                    .pop();
+                                                                updateNewEmail();
+                                                                user = FirebaseAuth
+                                                                    .instance
+                                                                    .currentUser;
+                                                                setState(() {
+                                                                  toEdit =
+                                                                      !toEdit;
+                                                                });
+                                                              },
+                                                              child: const Text(
+                                                                'Save',
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .blue),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        );
+                                                      },
+                                                    );
+                                                  },
+                                                  child: const Icon(
+                                                    Icons.edit,
+                                                    color: Colors.blue,
+                                                  ).animate().fade(),
+                                                )
+                                              : null,
+                                          leading: Container(
+                                            decoration: const BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Color.fromRGBO(
+                                                  105, 133, 140, 1),
+                                            ),
+                                            padding: const EdgeInsets.all(8),
+                                            child: Icon(
+                                              Icons.email,
+                                              size:
+                                                  FrameSize.screenWidth * 0.07,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          minLeadingWidth:
+                                              FrameSize.screenWidth * 0.15,
+                                          title:
+                                              StreamBuilder<DocumentSnapshot>(
+                                            stream: FirebaseFirestore.instance
+                                                .collection('users')
+                                                .doc(user!.uid)
+                                                .snapshots(),
+                                            builder: (context, userSnapshot) {
+                                              if (userSnapshot
+                                                      .connectionState ==
+                                                  ConnectionState.waiting) {
+                                                return const SizedBox.shrink();
+                                              }
+
+                                              if (userSnapshot.hasError) {
+                                                return Text(
+                                                  'Error: ${userSnapshot.error}',
+                                                  style: const TextStyle(
+                                                      color: Colors.red,
+                                                      fontSize: 14),
                                                 );
-                                              });
-                                        },
-                                        child: const Text('Save'),
-                                      ),
-                                    ],
-                                  );
-                                },
-                              );
-                            },
-                            child: const Icon(Icons.edit).animate().fade(),
-                          )
-                        : const SizedBox.shrink(),
-                  ],
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.01),
-                toEdit
-                    ? ButtonTCS(
-                        onTap: () {
-                          toEdit = !toEdit;
-                          setState(() {});
-                        },
-                        txtcolor: Colors.black,
-                        txt: "Done",
-                        color: const Color(0xffBDCFE7),
-                      )
-                    : ButtonTCS(
-                        onTap: () {
-                          toEdit = !toEdit;
-                          setState(() {});
-                        },
-                        txtcolor: Colors.black,
-                        txt: "Edit Profile",
-                        color: const Color(0xffBDCFE7),
-                      ),
-                SizedBox(height: FrameSize.screenHeight * 0.009),
+                                              }
 
-                // EMAIL LIST TILE STARTS HERE
-
-                StreamBuilder<DocumentSnapshot>(
-                  stream: FirebaseFirestore.instance
-                      .collection('users')
-                      .doc(user!.uid)
-                      .snapshots(),
-                  builder: (context, userSnapshot) {
-                    if (userSnapshot.connectionState ==
-                        ConnectionState.waiting) {
-                      return const Center(
-                        child: CircularProgressIndicator(
-                          valueColor:
-                              AlwaysStoppedAnimation<Color>(Colors.blue),
-                        ),
-                      );
-                    }
-
-                    // Handle error if the stream has an error
-                    if (userSnapshot.hasError) {
-                      return Center(
-                        child: Text(
-                          'Error: ${userSnapshot.error}',
-                          style:
-                              const TextStyle(color: Colors.red, fontSize: 16),
-                        ),
-                      );
-                    }
-
-                    if (userSnapshot.hasData && userSnapshot.data != null) {
-                      var userData = userSnapshot.data!;
-
-                      bool isGoogle = userData['authProvider'] == 'Google';
-
-                      return ListTile(
-                        subtitle: emailVerified
-                            ? const Text(
-                                'Email Verified',
-                                style: TextStyle(
-                                    color: Colors.green, fontSize: 14),
-                              )
-                            : Row(
-                                children: [
-                                  const Text(
-                                    'Email Not Verified',
-                                    style: TextStyle(
-                                        color: Colors.red, fontSize: 14),
+                                              if (userSnapshot.hasData &&
+                                                  userSnapshot.data != null) {
+                                                var userData =
+                                                    userSnapshot.data!;
+                                                if (userData.exists) {
+                                                  var name =
+                                                      userData['email'] ??
+                                                          'No email available';
+                                                  return Text(
+                                                    name,
+                                                    style: const TextStyle(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ).animate().fade();
+                                                } else {
+                                                  return const Text(
+                                                    'User document does not exist',
+                                                    style: TextStyle(
+                                                        color: Colors.red,
+                                                        fontSize: 14),
+                                                  );
+                                                }
+                                              } else {
+                                                return const Text(
+                                                  'No data available',
+                                                  style: TextStyle(
+                                                      color: Colors.red,
+                                                      fontSize: 14),
+                                                );
+                                              }
+                                            },
+                                          ),
+                                        );
+                                      }
+                                      return const Center(
+                                        child: Text(
+                                          'No data available',
+                                          style: TextStyle(
+                                              color: Colors.red, fontSize: 16),
+                                        ),
+                                      );
+                                    },
                                   ),
-                                  SizedBox(
-                                      width: FrameSize.screenWidth * 0.009),
-                                  GestureDetector(
-                                    onTap: verifyEmail,
-                                    child: const Icon(
-                                      Icons.error_outline,
-                                      color: Colors.red,
-                                      size: 20,
-                                    ),
+                                  // EMAIL LIST TILE END HERE
+                                  _fadeDivider(),
+                                  // THIS IS MOBILE NUMBER TILE
+
+                                  StreamBuilder<DocumentSnapshot>(
+                                    stream: FirebaseFirestore.instance
+                                        .collection('users')
+                                        .doc(user!.uid)
+                                        .snapshots(),
+                                    builder: (context, userSnapshot) {
+                                      // Check if the connection is still loading
+                                      if (userSnapshot.connectionState ==
+                                          ConnectionState.waiting) {
+                                        return const Center(
+                                          child: CircularProgressIndicator(
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                                    Colors.blue),
+                                          ),
+                                        );
+                                      }
+
+                                      // Handle error if the stream has an error
+                                      if (userSnapshot.hasError) {
+                                        return Center(
+                                          child: Text(
+                                            'Error: ${userSnapshot.error}',
+                                            style: const TextStyle(
+                                                color: Colors.red,
+                                                fontSize: 16),
+                                          ),
+                                        );
+                                      }
+
+                                      // Check if the data exists in the snapshot
+                                      if (userSnapshot.hasData &&
+                                          userSnapshot.data != null) {
+                                        var userData = userSnapshot.data!;
+                                        String mobileNumber =
+                                            userData['number'] ?? '';
+
+                                        return ListTile(
+                                          subtitle: const Text(
+                                            'Phone Number',
+                                            style: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 14),
+                                          ),
+                                          trailing: toEdit
+                                              ? GestureDetector(
+                                                  onTap: () {
+                                                    showDialog(
+                                                      context: context,
+                                                      builder: (BuildContext
+                                                          context) {
+                                                        return AlertDialog(
+                                                          title: const Text(
+                                                            'Enter Phone Number',
+                                                            style: TextStyle(
+                                                                fontSize: 18,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                          ),
+                                                          content: TextField(
+                                                            controller:
+                                                                phoneController,
+                                                            decoration:
+                                                                InputDecoration(
+                                                              hintText:
+                                                                  'Phone Number',
+                                                              border:
+                                                                  OutlineInputBorder(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            10),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          actions: <Widget>[
+                                                            TextButton(
+                                                              onPressed: () {
+                                                                Navigator.of(
+                                                                        context)
+                                                                    .pop();
+                                                              },
+                                                              child: const Text(
+                                                                'Cancel',
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .red),
+                                                              ),
+                                                            ),
+                                                            TextButton(
+                                                              onPressed: () {
+                                                                addPhoneNumber(
+                                                                    user);
+                                                                Navigator.of(
+                                                                        context)
+                                                                    .pop();
+                                                              },
+                                                              child: const Text(
+                                                                'Save',
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .blue),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        );
+                                                      },
+                                                    );
+                                                  },
+                                                  child: const Icon(
+                                                    Icons.edit,
+                                                    color: Colors.blue,
+                                                  ).animate().fade(),
+                                                )
+                                              : mobileNumber.isEmpty
+                                                  ? GestureDetector(
+                                                      onTap: () {
+                                                        showDialog(
+                                                          context: context,
+                                                          builder: (BuildContext
+                                                              context) {
+                                                            return AlertDialog(
+                                                              title: const Text(
+                                                                'Enter Phone Number',
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        18,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
+                                                              ),
+                                                              content:
+                                                                  TextField(
+                                                                controller:
+                                                                    phoneController,
+                                                                decoration:
+                                                                    InputDecoration(
+                                                                  hintText:
+                                                                      'Phone Number',
+                                                                  border:
+                                                                      OutlineInputBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            10),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              actions: <Widget>[
+                                                                TextButton(
+                                                                  onPressed:
+                                                                      () {
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      const Text(
+                                                                    'Cancel',
+                                                                    style: TextStyle(
+                                                                        color: Colors
+                                                                            .red),
+                                                                  ),
+                                                                ),
+                                                                TextButton(
+                                                                  onPressed:
+                                                                      () {
+                                                                    addPhoneNumber(
+                                                                        user);
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      const Text(
+                                                                    'Save',
+                                                                    style: TextStyle(
+                                                                        color: Colors
+                                                                            .blue),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            );
+                                                          },
+                                                        );
+                                                      },
+                                                      child: Icon(
+                                                        Icons
+                                                            .add_circle_outline_outlined,
+                                                        size: FrameSize
+                                                                .screenWidth *
+                                                            0.095,
+                                                        color: Colors.blue,
+                                                      ).animate().fade(),
+                                                    )
+                                                  : null,
+                                          leading: Container(
+                                            decoration: const BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Color.fromRGBO(
+                                                  105, 133, 140, 1),
+                                            ),
+                                            padding: const EdgeInsets.all(8),
+                                            child: Icon(
+                                              Icons.phone,
+                                              size:
+                                                  FrameSize.screenWidth * 0.07,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          minLeadingWidth:
+                                              FrameSize.screenWidth * 0.15,
+                                          title: mobileNumber.isEmpty
+                                              ? const Text(
+                                                  'Not Available',
+                                                  style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontSize: 16),
+                                                )
+                                              : StreamBuilder<DocumentSnapshot>(
+                                                  stream: FirebaseFirestore
+                                                      .instance
+                                                      .collection('users')
+                                                      .doc(user!.uid)
+                                                      .snapshots(),
+                                                  builder:
+                                                      (context, userSnapshot) {
+                                                    // Check if the connection is still loading
+                                                    if (userSnapshot
+                                                            .connectionState ==
+                                                        ConnectionState
+                                                            .waiting) {
+                                                      return const SizedBox
+                                                          .shrink();
+                                                    }
+
+                                                    // Handle error if the stream has an error
+                                                    if (userSnapshot.hasError) {
+                                                      return Text(
+                                                        'Error: ${userSnapshot.error}',
+                                                        style: const TextStyle(
+                                                            color: Colors.red,
+                                                            fontSize: 14),
+                                                      );
+                                                    }
+
+                                                    // Check if the data exists in the snapshot
+                                                    if (userSnapshot.hasData &&
+                                                        userSnapshot.data !=
+                                                            null) {
+                                                      var userData =
+                                                          userSnapshot.data!;
+                                                      if (userData.exists) {
+                                                        var number = userData[
+                                                                'number'] ??
+                                                            'No number available';
+                                                        return Text(
+                                                          number,
+                                                          style: const TextStyle(
+                                                              fontSize: 16,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold),
+                                                        ).animate().fade();
+                                                      } else {
+                                                        return const Text(
+                                                          'User document does not exist',
+                                                          style: TextStyle(
+                                                              color: Colors.red,
+                                                              fontSize: 14),
+                                                        );
+                                                      }
+                                                    } else {
+                                                      return const Text(
+                                                        'No data available',
+                                                        style: TextStyle(
+                                                            color: Colors.red,
+                                                            fontSize: 14),
+                                                      );
+                                                    }
+                                                  },
+                                                ),
+                                        );
+                                      }
+                                      return const Center(
+                                        child: Text(
+                                          'No data available',
+                                          style: TextStyle(
+                                              color: Colors.red, fontSize: 16),
+                                        ),
+                                      );
+                                    },
                                   ),
+
+                                  // MOBILE NUMBER TILE ENDS HERE
+                                  _fadeDivider(),
+                                  // THIS IS ADDRESS AREA TILE
+                                  StreamBuilder<DocumentSnapshot>(
+                                    stream: FirebaseFirestore.instance
+                                        .collection('users')
+                                        .doc(user!.uid)
+                                        .snapshots(),
+                                    builder: (context, userSnapshot) {
+                                      if (userSnapshot.connectionState ==
+                                          ConnectionState.waiting) {
+                                        return const Center(
+                                          child: CircularProgressIndicator(
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                                    Colors.blue),
+                                          ),
+                                        );
+                                      }
+
+                                      if (userSnapshot.hasError) {
+                                        return Center(
+                                          child: Text(
+                                            'Error: ${userSnapshot.error}',
+                                            style: const TextStyle(
+                                                color: Colors.red,
+                                                fontSize: 16),
+                                          ),
+                                        );
+                                      }
+
+                                      if (userSnapshot.hasData &&
+                                          userSnapshot.data != null) {
+                                        var userData = userSnapshot.data!;
+                                        String address =
+                                            userData['address'] ?? '';
+
+                                        return ListTile(
+                                          subtitle: const Text(
+                                            'Address',
+                                            style: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 14),
+                                          ),
+                                          trailing: toEdit
+                                              ? GestureDetector(
+                                                  onTap: () =>
+                                                      _showAddressDialog(
+                                                          context, user!),
+                                                  child: const Icon(
+                                                    Icons.edit,
+                                                    color: Colors.blue,
+                                                  ).animate().fade(),
+                                                )
+                                              : address.isEmpty
+                                                  ? GestureDetector(
+                                                      onTap: () =>
+                                                          _showAddressDialog(
+                                                              context, user!),
+                                                      child: Icon(
+                                                        Icons
+                                                            .add_circle_outline_outlined,
+                                                        size: FrameSize
+                                                                .screenWidth *
+                                                            0.095,
+                                                        color: Colors.blue,
+                                                      ).animate().fade(),
+                                                    )
+                                                  : null,
+                                          leading: Container(
+                                            decoration: const BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Color.fromRGBO(
+                                                  105, 133, 140, 1),
+                                            ),
+                                            padding: const EdgeInsets.all(8),
+                                            child: Icon(
+                                              Icons.location_on,
+                                              size:
+                                                  FrameSize.screenWidth * 0.07,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          minLeadingWidth:
+                                              FrameSize.screenWidth * 0.15,
+                                          title: address.isEmpty
+                                              ? const Text(
+                                                  'Not Available',
+                                                  style: TextStyle(
+                                                    color: Colors.grey,
+                                                    fontStyle: FontStyle.italic,
+                                                    fontSize: 16,
+                                                  ),
+                                                )
+                                              : StreamBuilder<DocumentSnapshot>(
+                                                  stream: FirebaseFirestore
+                                                      .instance
+                                                      .collection('users')
+                                                      .doc(user!.uid)
+                                                      .snapshots(),
+                                                  builder:
+                                                      (context, userSnapshot) {
+                                                    if (userSnapshot
+                                                            .connectionState ==
+                                                        ConnectionState
+                                                            .waiting) {
+                                                      return const SizedBox
+                                                          .shrink();
+                                                    }
+
+                                                    if (userSnapshot.hasError) {
+                                                      return Text(
+                                                        'Error: ${userSnapshot.error}',
+                                                        style: const TextStyle(
+                                                            color: Colors.red,
+                                                            fontSize: 14),
+                                                      );
+                                                    }
+
+                                                    if (userSnapshot.hasData &&
+                                                        userSnapshot.data !=
+                                                            null) {
+                                                      var userData =
+                                                          userSnapshot.data!;
+                                                      return Text(
+                                                        userData['address'] ??
+                                                            'No address available',
+                                                        style: const TextStyle(
+                                                          fontSize: 16,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color: Colors.black87,
+                                                        ),
+                                                      ).animate().fade();
+                                                    }
+                                                    return const Text(
+                                                      'No data available',
+                                                      style: TextStyle(
+                                                          color: Colors.red,
+                                                          fontSize: 14),
+                                                    );
+                                                  },
+                                                ),
+                                        );
+                                      }
+                                      return const Center(
+                                        child: Text(
+                                          'No data available',
+                                          style: TextStyle(
+                                              color: Colors.red, fontSize: 16),
+                                        ),
+                                      );
+                                    },
+                                  ),
+
+                                  //ADDRESSS AREA ENDS HERE
                                 ],
                               ),
-                        trailing: toEdit && userData['authProvider'] != 'Google'
-                            ? GestureDetector(
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: FrameSize.screenHeight * 0.025),
+                      !isGoogle
+                          ? SizedBox(
+                              width: FrameSize.screenWidth * 0.8,
+                              child: ButtonTCS(
                                 onTap: () {
                                   showDialog(
                                     context: context,
                                     builder: (BuildContext context) {
                                       return AlertDialog(
-                                        title: const Text(
-                                          'Change New Email',
-                                          style: TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.bold),
-                                        ),
+                                        title: const Text('Change New Email'),
                                         content: Column(
                                           mainAxisSize: MainAxisSize.min,
                                           children: [
-                                            TextField(
-                                              decoration: InputDecoration(
-                                                hintText: 'New Email Address',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                ),
-                                              ),
-                                              controller: newEmail,
-                                              obscureText: false,
-                                            ),
                                             SizedBox(
                                                 height: FrameSize.screenHeight *
                                                     0.02),
-                                            TextField(
-                                              decoration: InputDecoration(
-                                                hintText:
-                                                    'Current Email Address',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                ),
-                                              ),
+                                            TextArea(
+                                              hintText: 'Current Email',
                                               controller: oldEmail,
-                                              obscureText: false,
+                                              obsureText: false,
                                             ),
                                             SizedBox(
                                                 height: FrameSize.screenHeight *
                                                     0.02),
-                                            TextField(
-                                              decoration: InputDecoration(
-                                                hintText: 'Password',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                ),
-                                              ),
-                                              controller: oldEmailPass,
-                                              obscureText: true,
+                                            TextArea(
+                                              hintText: 'Old Password',
+                                              controller: oldPass,
+                                              obsureText: false,
+                                            ),
+                                            SizedBox(
+                                                height: FrameSize.screenHeight *
+                                                    0.02),
+                                            TextArea(
+                                              hintText: 'New Password',
+                                              controller: newPass,
+                                              obsureText: false,
+                                            ),
+                                            SizedBox(
+                                                height: FrameSize.screenHeight *
+                                                    0.02),
+                                            TextArea(
+                                              hintText: 'Confirm Password',
+                                              controller: confirmPass,
+                                              obsureText: true,
                                             ),
                                           ],
                                         ),
@@ -761,579 +1483,84 @@ class _ProfilePageState extends State<ProfilePage> {
                                             onPressed: () {
                                               Navigator.of(context).pop();
                                             },
-                                            child: const Text(
-                                              'Cancel',
-                                              style:
-                                                  TextStyle(color: Colors.red),
-                                            ),
+                                            child: const Text('Cancel'),
                                           ),
                                           TextButton(
                                             onPressed: () {
                                               Navigator.of(context).pop();
-                                              updateNewEmail();
-                                              user = FirebaseAuth
-                                                  .instance.currentUser;
-                                              setState(() {
-                                                toEdit = !toEdit;
-                                              });
+                                              updatePassword();
                                             },
-                                            child: const Text(
-                                              'Save',
-                                              style:
-                                                  TextStyle(color: Colors.blue),
-                                            ),
+                                            child: const Text('Save'),
                                           ),
                                         ],
                                       );
                                     },
                                   );
                                 },
-                                child: const Icon(
-                                  Icons.edit,
-                                  color: Colors.blue,
-                                ).animate().fade(),
-                              )
-                            : null,
-                        leading: Icon(
-                          Icons.email,
-                          size: FrameSize.screenWidth * 0.09,
-                          color: Colors.blue,
-                        ),
-                        minLeadingWidth: FrameSize.screenWidth * 0.15,
-                        title: StreamBuilder<DocumentSnapshot>(
-                          stream: FirebaseFirestore.instance
-                              .collection('users')
-                              .doc(user!.uid)
-                              .snapshots(),
-                          builder: (context, userSnapshot) {
-                            if (userSnapshot.connectionState ==
-                                ConnectionState.waiting) {
-                              return const SizedBox.shrink();
-                            }
-
-                            if (userSnapshot.hasError) {
-                              return Text(
-                                'Error: ${userSnapshot.error}',
-                                style: const TextStyle(
-                                    color: Colors.red, fontSize: 14),
-                              );
-                            }
-
-                            if (userSnapshot.hasData &&
-                                userSnapshot.data != null) {
-                              var userData = userSnapshot.data!;
-                              if (userData.exists) {
-                                var name =
-                                    userData['email'] ?? 'No email available';
-                                return Text(
-                                  name,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold),
-                                ).animate().fade();
-                              } else {
-                                return const Text(
-                                  'User document does not exist',
-                                  style: TextStyle(
-                                      color: Colors.red, fontSize: 14),
-                                );
-                              }
-                            } else {
-                              return const Text(
-                                'No data available',
-                                style:
-                                    TextStyle(color: Colors.red, fontSize: 14),
-                              );
-                            }
-                          },
-                        ),
-                      );
-                    }
-                    return const Center(
-                      child: Text(
-                        'No data available',
-                        style: TextStyle(color: Colors.red, fontSize: 16),
-                      ),
-                    );
-                  },
-                ),
-
-                // EMAIL LIST TILE END HERE
-
-                // THIS IS MOBILE NUMBER TILE
-
-                StreamBuilder<DocumentSnapshot>(
-                  stream: FirebaseFirestore.instance
-                      .collection('users')
-                      .doc(user!.uid)
-                      .snapshots(),
-                  builder: (context, userSnapshot) {
-                    // Check if the connection is still loading
-                    if (userSnapshot.connectionState ==
-                        ConnectionState.waiting) {
-                      return const Center(
-                        child: CircularProgressIndicator(
-                          valueColor:
-                              AlwaysStoppedAnimation<Color>(Colors.blue),
-                        ),
-                      );
-                    }
-
-                    // Handle error if the stream has an error
-                    if (userSnapshot.hasError) {
-                      return Center(
-                        child: Text(
-                          'Error: ${userSnapshot.error}',
-                          style:
-                              const TextStyle(color: Colors.red, fontSize: 16),
-                        ),
-                      );
-                    }
-
-                    // Check if the data exists in the snapshot
-                    if (userSnapshot.hasData && userSnapshot.data != null) {
-                      var userData = userSnapshot.data!;
-                      String mobileNumber = userData['number'] ?? '';
-
-                      return ListTile(
-                        subtitle: const Text(
-                          'Phone Number',
-                          style: TextStyle(color: Colors.grey, fontSize: 14),
-                        ),
-                        trailing: toEdit
-                            ? GestureDetector(
-                                onTap: () {
-                                  showDialog(
-                                    context: context,
-                                    builder: (BuildContext context) {
-                                      return AlertDialog(
-                                        title: const Text(
-                                          'Enter Phone Number',
-                                          style: TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        content: TextField(
-                                          controller: phoneController,
-                                          decoration: InputDecoration(
-                                            hintText: 'Phone Number',
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                          ),
-                                        ),
-                                        actions: <Widget>[
-                                          TextButton(
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: const Text(
-                                              'Cancel',
-                                              style:
-                                                  TextStyle(color: Colors.red),
-                                            ),
-                                          ),
-                                          TextButton(
-                                            onPressed: () {
-                                              addPhoneNumber(user);
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: const Text(
-                                              'Save',
-                                              style:
-                                                  TextStyle(color: Colors.blue),
-                                            ),
-                                          ),
-                                        ],
-                                      );
-                                    },
-                                  );
-                                },
-                                child: const Icon(
-                                  Icons.edit,
-                                  color: Colors.blue,
-                                ).animate().fade(),
-                              )
-                            : mobileNumber.isEmpty
-                                ? GestureDetector(
-                                    onTap: () {
-                                      showDialog(
-                                        context: context,
-                                        builder: (BuildContext context) {
-                                          return AlertDialog(
-                                            title: const Text(
-                                              'Enter Phone Number',
-                                              style: TextStyle(
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            content: TextField(
-                                              controller: phoneController,
-                                              decoration: InputDecoration(
-                                                hintText: 'Phone Number',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                ),
-                                              ),
-                                            ),
-                                            actions: <Widget>[
-                                              TextButton(
-                                                onPressed: () {
-                                                  Navigator.of(context).pop();
-                                                },
-                                                child: const Text(
-                                                  'Cancel',
-                                                  style: TextStyle(
-                                                      color: Colors.red),
-                                                ),
-                                              ),
-                                              TextButton(
-                                                onPressed: () {
-                                                  addPhoneNumber(user);
-                                                  Navigator.of(context).pop();
-                                                },
-                                                child: const Text(
-                                                  'Save',
-                                                  style: TextStyle(
-                                                      color: Colors.blue),
-                                                ),
-                                              ),
-                                            ],
-                                          );
-                                        },
-                                      );
-                                    },
-                                    child: Icon(
-                                      Icons.add_circle_outline_outlined,
-                                      size: FrameSize.screenWidth * 0.095,
-                                      color: Colors.blue,
-                                    ).animate().fade(),
-                                  )
-                                : null,
-                        leading: Icon(
-                          Icons.phone,
-                          size: FrameSize.screenWidth * 0.09,
-                          color: Colors.blue,
-                        ),
-                        minLeadingWidth: FrameSize.screenWidth * 0.15,
-                        title: mobileNumber.isEmpty
-                            ? const Text(
-                                'Not Available',
-                                style:
-                                    TextStyle(color: Colors.grey, fontSize: 16),
-                              )
-                            : StreamBuilder<DocumentSnapshot>(
-                                stream: FirebaseFirestore.instance
-                                    .collection('users')
-                                    .doc(user!.uid)
-                                    .snapshots(),
-                                builder: (context, userSnapshot) {
-                                  // Check if the connection is still loading
-                                  if (userSnapshot.connectionState ==
-                                      ConnectionState.waiting) {
-                                    return const SizedBox.shrink();
-                                  }
-
-                                  // Handle error if the stream has an error
-                                  if (userSnapshot.hasError) {
-                                    return Text(
-                                      'Error: ${userSnapshot.error}',
-                                      style: const TextStyle(
-                                          color: Colors.red, fontSize: 14),
-                                    );
-                                  }
-
-                                  // Check if the data exists in the snapshot
-                                  if (userSnapshot.hasData &&
-                                      userSnapshot.data != null) {
-                                    var userData = userSnapshot.data!;
-                                    if (userData.exists) {
-                                      var number = userData['number'] ??
-                                          'No number available';
-                                      return Text(
-                                        number,
-                                        style: const TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold),
-                                      ).animate().fade();
-                                    } else {
-                                      return const Text(
-                                        'User document does not exist',
-                                        style: TextStyle(
-                                            color: Colors.red, fontSize: 14),
-                                      );
-                                    }
-                                  } else {
-                                    return const Text(
-                                      'No data available',
-                                      style: TextStyle(
-                                          color: Colors.red, fontSize: 14),
-                                    );
-                                  }
-                                },
+                                txtcolor: Colors.black,
+                                txt: 'CHANGE PASSWORD',
+                                color: const Color(0xffBDCFE7),
                               ),
-                      );
-                    }
-                    return const Center(
-                      child: Text(
-                        'No data available',
-                        style: TextStyle(color: Colors.red, fontSize: 16),
-                      ),
-                    );
-                  },
-                ),
-
-                // THIS IS ADDRESS AREA TILE
-                StreamBuilder<DocumentSnapshot>(
-                  stream: FirebaseFirestore.instance
-                      .collection('users')
-                      .doc(user!.uid)
-                      .snapshots(),
-                  builder: (context, userSnapshot) {
-                    if (userSnapshot.connectionState ==
-                        ConnectionState.waiting) {
-                      return const Center(
-                        child: CircularProgressIndicator(
-                          valueColor:
-                              AlwaysStoppedAnimation<Color>(Colors.blue),
-                        ),
-                      );
-                    }
-
-                    if (userSnapshot.hasError) {
-                      return Center(
-                        child: Text(
-                          'Error: ${userSnapshot.error}',
-                          style:
-                              const TextStyle(color: Colors.red, fontSize: 16),
-                        ),
-                      );
-                    }
-
-                    if (userSnapshot.hasData && userSnapshot.data != null) {
-                      var userData = userSnapshot.data!;
-                      String address = userData['address'] ?? '';
-
-                      return ListTile(
-                        subtitle: const Text(
-                          'Address',
-                          style: TextStyle(color: Colors.grey, fontSize: 14),
-                        ),
-                        trailing: toEdit
-                            ? GestureDetector(
-                                onTap: () => _showAddressDialog(context, user!),
-                                child: const Icon(
-                                  Icons.edit,
-                                  color: Colors.blue,
-                                ).animate().fade(),
-                              )
-                            : address.isEmpty
-                                ? GestureDetector(
-                                    onTap: () =>
-                                        _showAddressDialog(context, user!),
-                                    child: Icon(
-                                      Icons.add_circle_outline_outlined,
-                                      size: FrameSize.screenWidth * 0.095,
-                                      color: Colors.blue,
-                                    ).animate().fade(),
-                                  )
-                                : null,
-                        leading: Icon(
-                          Icons.home,
-                          size: FrameSize.screenWidth * 0.09,
-                          color: Colors.blue,
-                        ),
-                        minLeadingWidth: FrameSize.screenWidth * 0.15,
-                        title: address.isEmpty
-                            ? const Text(
-                                'Not Available',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontStyle: FontStyle.italic,
-                                  fontSize: 16,
-                                ),
-                              )
-                            : StreamBuilder<DocumentSnapshot>(
-                                stream: FirebaseFirestore.instance
-                                    .collection('users')
-                                    .doc(user!.uid)
-                                    .snapshots(),
-                                builder: (context, userSnapshot) {
-                                  if (userSnapshot.connectionState ==
-                                      ConnectionState.waiting) {
-                                    return const SizedBox.shrink();
-                                  }
-
-                                  if (userSnapshot.hasError) {
-                                    return Text(
-                                      'Error: ${userSnapshot.error}',
-                                      style: const TextStyle(
-                                          color: Colors.red, fontSize: 14),
-                                    );
-                                  }
-
-                                  if (userSnapshot.hasData &&
-                                      userSnapshot.data != null) {
-                                    var userData = userSnapshot.data!;
-                                    return Text(
-                                      userData['address'] ??
-                                          'No address available',
-                                      style: const TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black87,
-                                      ),
-                                    ).animate().fade();
-                                  }
-                                  return const Text(
-                                    'No data available',
-                                    style: TextStyle(
-                                        color: Colors.red, fontSize: 14),
-                                  );
-                                },
+                            )
+                          : const SizedBox.shrink(),
+                      SizedBox(height: FrameSize.screenHeight * 0.025),
+                      Row(
+                        spacing: 10,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          // SizedBox(height: FrameSize.screenHeight * 0.05),
+                          SizedBox(
+                            width: FrameSize.screenWidth * 0.4,
+                            child: Container(
+                              height: FrameSize.screenHeight * 0.07,
+                              margin: EdgeInsets.symmetric(
+                                horizontal: FrameSize.screenWidth * 0.001,
                               ),
-                      );
-                    }
-                    return const Center(
-                      child: Text(
-                        'No data available',
-                        style: TextStyle(color: Colors.red, fontSize: 16),
+                              child: ButtonTCS(
+                                onTap: signUserOut,
+                                txtcolor: Colors.white,
+                                txt: 'Sign Out',
+                                color: const Color.fromARGB(255, 86, 122, 155),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: FrameSize.screenWidth * 0.4,
+                            child: Container(
+                              height: FrameSize.screenHeight * 0.07,
+                              margin: EdgeInsets.symmetric(
+                                horizontal: FrameSize.screenWidth * 0.001,
+                              ),
+                              child: ButtonTCS(
+                                onTap: deleteUser,
+                                txt: 'Delete User',
+                                txtcolor: Colors.white,
+                                color: Colors.red,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    );
-                  },
+                      SizedBox(height: FrameSize.screenHeight * 0.05),
+                      !emailVerified
+                          ? SizedBox(
+                              width: FrameSize.screenWidth * 0.8,
+                              child: ButtonTCS(
+                                  onTap: () {
+                                    Navigator.pushNamed(
+                                        context, '/verification');
+                                  },
+                                  txt: 'Verify Email',
+                                  color: Colors.amber,
+                                  txtcolor: Colors.black))
+                          : SizedBox(height: FrameSize.screenHeight * 0.05),
+                    ],
+                  ),
                 ),
-
-                //ADDRESSS AREA ENDS HERE
-
-                SizedBox(height: FrameSize.screenHeight * 0.025),
-                !isGoogle
-                    ? SizedBox(
-                        width: FrameSize.screenWidth * 0.8,
-                        child: ButtonTCS(
-                          onTap: () {
-                            showDialog(
-                              context: context,
-                              builder: (BuildContext context) {
-                                return AlertDialog(
-                                  title: const Text('Change New Email'),
-                                  content: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      SizedBox(
-                                          height:
-                                              FrameSize.screenHeight * 0.02),
-                                      TextArea(
-                                        hintText: 'Current Email',
-                                        controller: oldEmail,
-                                        obsureText: false,
-                                      ),
-                                      SizedBox(
-                                          height:
-                                              FrameSize.screenHeight * 0.02),
-                                      TextArea(
-                                        hintText: 'Old Password',
-                                        controller: oldPass,
-                                        obsureText: false,
-                                      ),
-                                      SizedBox(
-                                          height:
-                                              FrameSize.screenHeight * 0.02),
-                                      TextArea(
-                                        hintText: 'New Password',
-                                        controller: newPass,
-                                        obsureText: false,
-                                      ),
-                                      SizedBox(
-                                          height:
-                                              FrameSize.screenHeight * 0.02),
-                                      TextArea(
-                                        hintText: 'Confirm Password',
-                                        controller: confirmPass,
-                                        obsureText: true,
-                                      ),
-                                    ],
-                                  ),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.of(context).pop();
-                                      },
-                                      child: const Text('Cancel'),
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.of(context).pop();
-                                        updatePassword();
-                                      },
-                                      child: const Text('Save'),
-                                    ),
-                                  ],
-                                );
-                              },
-                            );
-                          },
-                          txtcolor: Colors.black,
-                          txt: 'CHANGE PASSWORD',
-                          color: const Color(0xffBDCFE7),
-                        ),
-                      )
-                    : const SizedBox.shrink(),
-                SizedBox(height: FrameSize.screenHeight * 0.025),
-                Row(
-                  spacing: 10,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // SizedBox(height: FrameSize.screenHeight * 0.05),
-                    SizedBox(
-                      width: FrameSize.screenWidth * 0.4,
-                      child: Container(
-                        height: FrameSize.screenHeight * 0.07,
-                        margin: EdgeInsets.symmetric(
-                          horizontal: FrameSize.screenWidth * 0.001,
-                        ),
-                        child: ButtonTCS(
-                          onTap: signUserOut,
-                          txtcolor: Colors.black,
-                          txt: 'SIGN OUT',
-                          color: const Color(0xffBDCFE7),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: FrameSize.screenWidth * 0.4,
-                      child: Container(
-                        height: FrameSize.screenHeight * 0.07,
-                        margin: EdgeInsets.symmetric(
-                          horizontal: FrameSize.screenWidth * 0.001,
-                        ),
-                        child: ButtonTCS(
-                          onTap: deleteUser,
-                          txt: 'DELETE USER',
-                          txtcolor: Colors.red,
-                          color: const Color(0xffBDCFE7),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: FrameSize.screenHeight * 0.05),
-                !emailVerified
-                    ? SizedBox(
-                        width: FrameSize.screenWidth * 0.8,
-                        child: ButtonTCS(
-                            onTap: () {
-                              Navigator.pushNamed(context, '/verification');
-                            },
-                            txt: 'Verify Email',
-                            color: Colors.amber,
-                            txtcolor: Colors.black))
-                    : SizedBox(height: FrameSize.screenHeight * 0.05),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -1384,6 +1611,25 @@ class _ProfilePageState extends State<ProfilePage> {
             Navigator.pushNamed(context, '/account_screen');
           }
         },
+      ),
+    );
+  }
+
+  Widget _fadeDivider() {
+    return Container(
+      height: 1,
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.transparent,
+            Color.fromARGB(255, 86, 122, 155),
+            Colors.transparent
+          ],
+          stops: [0.0, 0.5, 1.0],
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+        ),
       ),
     );
   }
