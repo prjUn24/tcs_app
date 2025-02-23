@@ -1,10 +1,11 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tcs/services/fetch_booking.dart';
-import 'package:tcs/views/width_and_height.dart';
-import 'package:tcs/widgets/appbar.dart';
-import 'package:tcs/widgets/booking_details.dart';
 import 'package:tcs/services/push_notification_service.dart';
+import 'package:tcs/views/width_and_height.dart';
+import 'package:tcs/widgets/booking_details.dart';
 // import 'package:tcs/widgets/button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -51,134 +52,167 @@ class _HomePageState extends State<HomePage> {
     FrameSize.init(context: context);
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
-      appBar: const GradientAppBarWidget(),
-      body: SafeArea(
-        maintainBottomViewPadding: true,
-        top: true,
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Header Section
-              Container(
-                margin: EdgeInsets.all(FrameSize.screenWidth * 0.04),
-                padding: EdgeInsets.symmetric(
-                  horizontal: FrameSize.screenWidth * 0.04,
-                  vertical: FrameSize.screenHeight * 0.03,
-                ),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.black.withValues(alpha: .09),
-                      Colors.black.withValues(alpha: .55),
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius:
-                      BorderRadius.circular(FrameSize.screenWidth * 0.05),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Icon(Icons.waving_hand_rounded,
-                            color: colorScheme.primary,
-                            size: FrameSize.screenWidth * 0.07),
-                        SizedBox(width: FrameSize.screenWidth * 0.03),
-                        Expanded(
-                          child: Text(
-                            'Hi ${user!.displayName ?? user!.email ?? 'User'}!',
-                            style: textTheme.titleLarge?.copyWith(
-                              fontWeight: FontWeight.w800,
-                              color: colorScheme.onBackground,
-                            ),
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: FrameSize.screenHeight * 0.015),
-                    Text(
-                      "Get quality nursing care with just one tap!",
-                      style: textTheme.bodyLarge?.copyWith(
-                        color: colorScheme.onBackground.withOpacity(0.8),
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    SizedBox(height: FrameSize.screenHeight * 0.04),
-                    // Responsive Button Row
-                    LayoutBuilder(
-                      builder: (context, constraints) {
-                        final buttonWidth = constraints.maxWidth * 0.45;
-                        final buttonHeight = FrameSize.screenHeight * 0.065;
-
-                        return Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            _buildResponsiveButton(
-                              width: buttonWidth,
-                              height: buttonHeight,
-                              icon: Icons.phone_in_talk_rounded,
-                              label: "Call Now",
-                              color: colorScheme.primary,
-                              onPressed: () => _hasCallSupport
-                                  ? _makePhoneCall('123')
-                                  : null,
-                            ),
-                            _buildResponsiveButton(
-                              width: buttonWidth,
-                              height: buttonHeight,
-                              icon: Icons.calendar_month_rounded,
-                              label: "Book Now",
-                              color: colorScheme.primary,
-                              onPressed: () => Navigator.pushNamed(
-                                  context, '/booking_screen'),
-                            ),
-                          ],
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              ),
-
-              // Services Section
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: FrameSize.screenWidth * 0.04),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding:
-                          EdgeInsets.only(left: FrameSize.screenWidth * 0.02),
-                      child: Text(
-                        "Your Bookings",
-                        style: textTheme.titleLarge?.copyWith(
-                          fontWeight: FontWeight.w700,
-                          color: colorScheme.onBackground,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: FrameSize.screenHeight * 0.015),
-                    const BookingDetails(),
-                  ],
-                ),
-              ),
-              // ButtonTCS(
-              //     onTap: () {
-              //       Navigator.pushNamed(context, '/test_temp');
-              //     },
-              //     txt: 'Test Button',
-              //     color: Colors.amberAccent,
-              //     txtcolor: Colors.black)
-            ],
+      backgroundColor: const Color(0xffF8E8F5),
+      appBar: AppBar(
+        backgroundColor: const Color(0xffF8E8F5),
+        elevation: 4.0,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: Image.asset(
+            "lib/images/heart-logo.png",
+            width: 40.0,
           ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.history,
+                color: Colors.white,
+              ),
+              style: ButtonStyle(
+                backgroundColor: const WidgetStatePropertyAll(
+                  Color(
+                    0xffA7C9D3,
+                  ),
+                ),
+                shape: WidgetStatePropertyAll(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Header Section
+            Container(
+              margin: EdgeInsets.all(FrameSize.screenWidth * 0.06),
+              padding: EdgeInsets.symmetric(
+                horizontal: FrameSize.screenWidth * 0.04,
+                vertical: FrameSize.screenHeight * 0.03,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2), // Shadow color
+                    spreadRadius: 1, // Spread radius
+                    blurRadius: 5, // Blur radius
+                    offset: const Offset(2, 2), // Shadow offset (x, y)
+                  ),
+                ],
+                borderRadius:
+                    BorderRadius.circular(FrameSize.screenWidth * 0.05),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.waving_hand_rounded,
+                          color: Colors.amber,
+                          size: FrameSize.screenWidth * 0.07),
+                      SizedBox(width: FrameSize.screenWidth * 0.03),
+                      Expanded(
+                        child: Text(
+                          'Hi ${user!.displayName ?? user!.email ?? 'User'}!',
+                          style: textTheme.titleLarge?.copyWith(
+                              fontWeight: FontWeight.w800,
+                              color: const Color(0xff567A9B),
+                              fontSize: 25.0),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: FrameSize.screenHeight * 0.015),
+                  Text(
+                    "Get quality nursing care with just one tap!",
+                    style: textTheme.bodyLarge?.copyWith(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14.0),
+                  ),
+                  SizedBox(height: FrameSize.screenHeight * 0.04),
+                  // Responsive Button Row
+                  LayoutBuilder(
+                    builder: (context, constraints) {
+                      final buttonWidth = constraints.maxWidth * 0.45;
+                      final buttonHeight = FrameSize.screenHeight * 0.065;
+
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          _buildResponsiveButton(
+                            buttonColor: const Color(0xff567A9B),
+                            width: buttonWidth,
+                            height: buttonHeight,
+                            icon: Icons.phone_in_talk_rounded,
+                            label: "Call Now",
+                            color: Colors.white,
+                            onPressed: () =>
+                                _hasCallSupport ? _makePhoneCall('123') : null,
+                          ),
+                          _buildResponsiveButton(
+                            buttonColor: const Color(0xff69858C),
+                            width: buttonWidth,
+                            height: buttonHeight,
+                            icon: Icons.calendar_month_rounded,
+                            label: "Book Now",
+                            color: Colors.white,
+                            onPressed: () =>
+                                Navigator.pushNamed(context, '/booking_screen'),
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+
+            // Services Section
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: FrameSize.screenWidth * 0.04,
+                  vertical: FrameSize.screenWidth * 0.06),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding:
+                        EdgeInsets.only(left: FrameSize.screenWidth * 0.02),
+                    child: Text(
+                      "Your Bookings",
+                      style: textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.w700,
+                        color: colorScheme.onBackground,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: FrameSize.screenHeight * 0.01),
+                  const BookingDetails(),
+                ],
+              ),
+            ),
+            // ButtonTCS(
+            //     onTap: () {
+            //       Navigator.pushNamed(context, '/test_temp');
+            //     },
+            //     txt: 'Test Button',
+            //     color: Colors.amberAccent,
+            //     txtcolor: Colors.black)
+          ],
         ),
       ),
       bottomNavigationBar: _buildBottomNavBar(context),
@@ -191,6 +225,7 @@ class _HomePageState extends State<HomePage> {
     required IconData icon,
     required String label,
     required Color color,
+    required Color buttonColor,
     required VoidCallback? onPressed,
   }) {
     return SizedBox(
@@ -207,7 +242,7 @@ class _HomePageState extends State<HomePage> {
               horizontal: FrameSize.screenWidth * 0.02,
             ),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.15),
+              color: buttonColor,
               borderRadius: BorderRadius.circular(FrameSize.screenWidth * 0.03),
             ),
             child: Row(
@@ -267,23 +302,24 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Container(
               padding: EdgeInsets.all(FrameSize.screenWidth * 0.02),
-              decoration: BoxDecoration(
-                color: colorScheme.primary.withOpacity(0.1),
+              decoration: const BoxDecoration(
+                color: Color(0xff567A9B),
                 shape: BoxShape.circle,
               ),
-              child:
-                  Icon(Icons.home_rounded, size: FrameSize.screenWidth * 0.06),
+              child: Icon(Icons.home_filled,
+                  color: Colors.white, size: FrameSize.screenWidth * 0.06),
             ),
             label: "Home",
           ),
           BottomNavigationBarItem(
             icon: Container(
               padding: EdgeInsets.all(FrameSize.screenWidth * 0.02),
-              decoration: BoxDecoration(
-                color: colorScheme.secondary.withOpacity(0.1),
+              decoration: const BoxDecoration(
+                color: Color(0xffA5B7C7),
                 shape: BoxShape.circle,
               ),
               child: Icon(Icons.person_rounded,
+              color: Colors.white,
                   size: FrameSize.screenWidth * 0.06),
             ),
             label: "Account",

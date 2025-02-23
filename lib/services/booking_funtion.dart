@@ -184,6 +184,7 @@ class BookingService {
     } catch (error) {
       // Handle errors
       Fluttertoast.showToast(msg: "Error confirming booking: $error");
+      print(error);
     }
   }
 }
