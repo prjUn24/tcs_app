@@ -806,11 +806,7 @@
       "languageVersion": "3.5"
     }
   ],
-<<<<<<< HEAD
-  "generated": "2025-02-22T07:49:59.800251Z",
-=======
-  "generated": "2025-02-22T08:08:04.460930Z",
->>>>>>> df7f3ec (HomePage UI updated)
+  "generated": "2025-02-25T04:46:19.422859Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///C:/Flutter/flutter",
