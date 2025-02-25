@@ -1,14 +1,14 @@
 // import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:tcs/services/booking_funtion.dart';
+import 'package:emailjs/emailjs.dart' as emailjs;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-// import 'package:tcs/services/booking_funtion.dart';
-import 'package:emailjs/emailjs.dart' as emailjs;
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:tcs/services/fetch_booking.dart';
 import 'package:tcs/views/booking_confirmation_pagetwo.dart';
 import 'package:tcs/views/width_and_height.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:tcs/widgets/bottomsheet.dart';
 // import 'package:tcs/widgets/button.dart';
 
@@ -52,7 +52,7 @@ class _BookingDetailsState extends State<BookingDetails> {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: FrameSize.screenWidth * 0.04,
-        vertical: FrameSize.screenHeight * 0.02,
+        vertical: FrameSize.screenHeight * 0.01,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,6 +63,7 @@ class _BookingDetailsState extends State<BookingDetails> {
           ),
           SizedBox(height: FrameSize.screenHeight * 0.015),
           _buildServicesContainer(
+            backgroundColor: const Color(0xffB4D1B3),
             stream: firestoreService.fetchServices(),
             filter: (service) => service['status'] == "assigned",
             emptyMessage: 'No confirmed bookings',
@@ -80,6 +81,7 @@ class _BookingDetailsState extends State<BookingDetails> {
           ),
           SizedBox(height: FrameSize.screenHeight * 0.015),
           _buildServicesContainer(
+            backgroundColor: const Color(0xffBDCFE7),
             stream: firestoreService.fetchServices(),
             filter: (service) => service['status'] != "assigned",
             emptyMessage: 'No pending requests',
@@ -112,12 +114,13 @@ class _BookingDetailsState extends State<BookingDetails> {
     required bool Function(Map<String, dynamic>) filter,
     required String emptyMessage,
     required ColorScheme colorScheme,
+    required Color backgroundColor,
     required Widget Function(Map<String, dynamic>) buildTrailing,
   }) {
     return Container(
       padding: EdgeInsets.all(FrameSize.screenWidth * 0.04),
       decoration: BoxDecoration(
-        color: Colors.black26,
+        color: backgroundColor,
         borderRadius: BorderRadius.circular(FrameSize.screenWidth * 0.03),
         boxShadow: [
           BoxShadow(
@@ -181,6 +184,7 @@ class _BookingDetailsState extends State<BookingDetails> {
     return Container(
       margin: EdgeInsets.only(bottom: FrameSize.screenHeight * 0.015),
       child: Material(
+        color: Colors.white,
         borderRadius: BorderRadius.circular(FrameSize.screenWidth * 0.02),
         elevation: 2,
         child: InkWell(
@@ -205,7 +209,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: FrameSize.screenWidth * 0.045,
-                            color: colorScheme.onSurface,
+                            color: const Color(0xff567A9B),
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -304,6 +308,7 @@ class _BookingDetailsState extends State<BookingDetails> {
             ),
             decoration: BoxDecoration(
               border: Border.all(color: Colors.blue),
+              color: Colors.white,
               borderRadius:
                   BorderRadius.circular(FrameSize.screenWidth * 0.015),
             ),

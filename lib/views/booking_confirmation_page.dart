@@ -165,7 +165,8 @@ class _BookingConfirmationPageState extends State<BookingConfirmationPage> {
                       otpController6.text;
                   debugPrint("Entered OTP: $enteredOtp");
                   _bookingService.confirmBooking(serviceId!, enteredOtp);
-                  Navigator.pushNamed(context, '/');
+                  Navigator.pop(context);
+                  Navigator.pop(context);
                 },
                 txtcolor: colorScheme.onPrimary, // Button text color
                 txt: 'Confirm Booking',

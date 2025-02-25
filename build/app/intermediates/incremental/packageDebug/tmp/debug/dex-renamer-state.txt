@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Sat Feb 22 14:18:15 IST 2025
 base.0=C\:\\Users\\ABDF92\\Desktop\\ProjectUnknown\\tcs_new\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\ABDF92\\Desktop\\ProjectUnknown\\tcs_new\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
@@ -6,6 +7,16 @@ base.3=C\:\\Users\\ABDF92\\Desktop\\ProjectUnknown\\tcs_new\\tcs_app\\build\\app
 base.4=C\:\\Users\\ABDF92\\Desktop\\ProjectUnknown\\tcs_new\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
 base.5=C\:\\Users\\ABDF92\\Desktop\\ProjectUnknown\\tcs_new\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.6=C\:\\Users\\ABDF92\\Desktop\\ProjectUnknown\\tcs_new\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+=======
+#Sat Feb 22 23:58:24 IST 2025
+base.0=D\:\\Project Unknown\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=D\:\\Project Unknown\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
+base.2=D\:\\Project Unknown\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.3=D\:\\Project Unknown\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.4=D\:\\Project Unknown\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.5=D\:\\Project Unknown\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.6=D\:\\Project Unknown\\tcs_app\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+>>>>>>> df7f3ec (HomePage UI updated)
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=0/classes.dex

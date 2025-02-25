@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
         password: passwordController.text.trim(),
       );
       NavigationService.navigatorKey.currentState?.pop();
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException {
       NavigationService.navigatorKey.currentState?.pop();
       _showErrorDialog(
         'Invalid Credentials',
