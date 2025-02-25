@@ -13,302 +13,302 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:5:5-67
-15-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:5:22-64
+15-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:5:5-67
+15-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:5:22-64
 16    <!-- Permissions should be declared outside the application tag -->
 17    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-17-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:3:5-79
-17-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:3:22-76
+17-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:3:5-79
+17-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:3:22-76
 18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-18-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:4:5-81
-18-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:4:22-78
+18-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:4:5-81
+18-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:4:22-78
 19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-19-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:6:5-79
-19-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:6:22-76
+19-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:6:5-79
+19-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:6:22-76
 20
 21    <queries>
-21-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:37:5-46:15
+21-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:37:5-46:15
 22        <intent>
-22-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:38:9-41:18
+22-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:38:9-41:18
 23            <action android:name="android.intent.action.PROCESS_TEXT" />
-23-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:39:13-72
-23-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:39:21-70
+23-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:39:13-72
+23-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:39:21-70
 24
 25            <data android:mimeType="text/plain" />
-25-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:40:13-50
-25-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:40:19-48
+25-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:40:13-50
+25-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:40:19-48
 26        </intent>
 27        <intent>
-27-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:42:9-45:18
+27-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:42:9-45:18
 28            <action android:name="android.intent.action.VIEW" />
-28-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:43:13-65
-28-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:43:21-62
+28-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:43:13-65
+28-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:43:21-62
 29
 30            <data android:scheme="tel" />
-30-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:40:13-50
+30-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:40:13-50
 31        </intent>
 32        <intent>
-32-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:18
+32-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:18
 33            <action android:name="android.intent.action.VIEW" />
-33-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:43:13-65
-33-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:43:21-62
+33-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:43:13-65
+33-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:43:21-62
 34
 35            <data android:scheme="upi" />
-35-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:40:13-50
+35-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:40:13-50
 36        </intent>
 37
 38        <package android:name="com.SIBMobile" />
-38-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-49
-38-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:15:18-46
+38-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-49
+38-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:15:18-46
 39        <package android:name="com.YesBank" />
-39-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-47
-39-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:16:18-44
+39-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-47
+39-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:16:18-44
 40        <package android:name="com.atomyes" />
-40-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-47
-40-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:17:18-44
+40-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-47
+40-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:17:18-44
 41        <package android:name="com.aubank.aupay.bhimupi" />
-41-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-60
-41-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:18:18-57
+41-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-60
+41-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:18:18-57
 42        <package android:name="com.bankofbaroda.upi" />
-42-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-56
-42-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:19:18-53
+42-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-56
+42-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:19:18-53
 43        <package android:name="com.canarabank.mobility" />
-43-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-59
-43-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:20:18-56
+43-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-59
+43-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:20:18-56
 44        <package android:name="com.citrus.citruspay" />
-44-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-56
-44-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:21:18-53
+44-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-56
+44-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:21:18-53
 45        <package android:name="com.csam.icici.bank.imobile" />
-45-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-63
-45-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:22:18-60
+45-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-63
+45-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:22:18-60
 46        <package android:name="com.cub.plus.gui" />
-46-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:23:9-52
-46-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:23:18-49
+46-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:23:9-52
+46-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:23:18-49
 47        <package android:name="com.cub.wallet.gui" />
-47-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:24:9-54
-47-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:24:18-51
+47-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:24:9-54
+47-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:24:18-51
 48        <package android:name="com.dbs.in.digitalbank" />
-48-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-58
-48-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:25:18-55
+48-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-58
+48-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:25:18-55
 49        <package android:name="com.dreamplug.androidapp" />
-49-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:26:9-60
-49-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:26:18-57
+49-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:26:9-60
+49-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:26:18-57
 50        <package android:name="com.enstage.wibmo.hdfc" />
-50-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:27:9-58
-50-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:27:18-55
+50-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:27:9-58
+50-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:27:18-55
 51        <package android:name="com.equitasbank.upi" />
-51-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-55
-51-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:28:18-52
+51-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-55
+51-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:28:18-52
 52        <package android:name="com.euronet.iobupi" />
-52-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:29:9-54
-52-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:29:18-51
+52-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:29:9-54
+52-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:29:18-51
 53        <package android:name="com.fampay.in" />
-53-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:30:9-49
-53-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:30:18-46
+53-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:30:9-49
+53-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:30:18-46
 54        <package android:name="com.finacus.jetpay" />
-54-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:31:9-54
-54-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:31:18-51
+54-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:31:9-54
+54-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:31:18-51
 55        <package android:name="com.finacus.tranzapp" />
-55-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:32:9-56
-55-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:32:18-53
+55-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:32:9-56
+55-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:32:18-53
 56        <package android:name="com.finopaytech.bpayfino" />
-56-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:33:9-60
-56-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:33:18-57
+56-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:33:9-60
+56-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:33:18-57
 57        <package android:name="com.fisglobal.bandhanupi.app" />
-57-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:34:9-64
-57-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:34:18-61
+57-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:34:9-64
+57-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:34:18-61
 58        <package android:name="com.fisglobal.syndicateupi.app" />
-58-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:35:9-66
-58-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:35:18-63
+58-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:35:9-66
+58-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:35:18-63
 59        <package android:name="com.freecharge.android" />
-59-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:36:9-58
-59-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:36:18-55
+59-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:36:9-58
+59-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:36:18-55
 60        <package android:name="com.fss.idfcpsp" />
-60-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-51
-60-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:37:18-48
+60-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-51
+60-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:37:18-48
 61        <package android:name="com.fss.ippbpsp" />
-61-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:38:9-51
-61-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:38:18-48
+61-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:38:9-51
+61-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:38:18-48
 62        <package android:name="com.fss.jnkpsp" />
-62-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:39:9-50
-62-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:39:18-47
+62-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:39:9-50
+62-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:39:18-47
 63        <package android:name="com.fss.pnbpsp" />
-63-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-50
-63-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:40:18-47
+63-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-50
+63-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:40:18-47
 64        <package android:name="com.fss.unbipsp" />
-64-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:41:9-51
-64-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:41:18-48
+64-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:41:9-51
+64-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:41:18-48
 65        <package android:name="com.fss.vijayapsp" />
-65-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:42:9-53
-65-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:42:18-50
+65-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:42:9-53
+65-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:42:18-50
 66        <package android:name="com.google.android.apps.nbu.paisa.user" />
-66-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-74
-66-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:43:18-71
+66-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-74
+66-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:43:18-71
 67        <package android:name="com.idbibank.paywiz" />
-67-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:44:9-55
-67-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:44:18-52
+67-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:44:9-55
+67-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:44:18-52
 68        <package android:name="com.infra.boiupi" />
-68-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:45:9-52
-68-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:45:18-49
+68-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:45:9-52
+68-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:45:18-49
 69        <package android:name="com.infrasoft.uboi" />
-69-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:46:9-54
-69-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:46:18-51
+69-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:46:9-54
+69-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:46:18-51
 70        <package android:name="com.infrasofttech.centralbankupi" />
-70-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:47:9-68
-70-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:47:18-65
+70-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:47:9-68
+70-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:47:18-65
 71        <package android:name="com.infrasofttech.indianbankupi" />
-71-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:48:9-67
-71-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:48:18-64
+71-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:48:9-67
+71-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:48:18-64
 72        <package android:name="com.infrasofttech.mahaupi" />
-72-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:49:9-61
-72-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:49:18-58
+72-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:49:9-61
+72-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:49:18-58
 73        <package android:name="com.jio.myjio" />
-73-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:50:9-49
-73-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:50:18-46
+73-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:50:9-49
+73-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:50:18-46
 74        <package android:name="com.khaalijeb.inkdrops" />
-74-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:51:9-58
-74-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:51:18-55
+74-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:51:9-58
+74-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:51:18-55
 75        <package android:name="com.lcode.allahabadupi" />
-75-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:52:9-58
-75-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:52:18-55
+75-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:52:9-58
+75-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:52:18-55
 76        <package android:name="com.lcode.corpupi" />
-76-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:53:9-53
-76-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:53:18-50
+76-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:53:9-53
+76-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:53:18-50
 77        <package android:name="com.lcode.csbupi" />
-77-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:54:9-52
-77-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:54:18-49
+77-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:54:9-52
+77-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:54:18-49
 78        <package android:name="com.lcode.dlbupi" />
-78-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:55:9-52
-78-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:55:18-49
+78-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:55:9-52
+78-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:55:18-49
 79        <package android:name="com.lcode.smartz" />
-79-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:56:9-52
-79-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:56:18-49
+79-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:56:9-52
+79-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:56:18-49
 80        <package android:name="com.lcode.ucoupi" />
-80-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:57:9-52
-80-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:57:18-49
+80-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:57:9-52
+80-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:57:18-49
 81        <package android:name="com.lvbank.upaay" />
-81-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:58:9-52
-81-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:58:18-49
+81-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:58:9-52
+81-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:58:18-49
 82        <package android:name="com.mgs.hsbcupi" />
-82-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:59:9-51
-82-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:59:18-48
+82-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:59:9-51
+82-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:59:18-48
 83        <package android:name="com.mgs.induspsp" />
-83-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:60:9-52
-83-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:60:18-49
+83-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:60:9-52
+83-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:60:18-49
 84        <package android:name="com.mgs.obcbank" />
-84-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:61:9-51
-84-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:61:18-48
+84-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:61:9-51
+84-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:61:18-48
 85        <package android:name="com.microlucid.mudrapay.android" />
-85-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:62:9-67
-85-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:62:18-64
+85-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:62:9-67
+85-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:62:18-64
 86        <package android:name="com.mipay.in.wallet" />
-86-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:63:9-55
-86-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:63:18-52
+86-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:63:9-55
+86-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:63:18-52
 87        <package android:name="com.mobikwik_new" />
-87-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:64:9-52
-87-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:64:18-49
+87-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:64:9-52
+87-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:64:18-49
 88        <package android:name="com.mobileware.upipsb" />
-88-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:65:9-57
-88-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:65:18-54
+88-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:65:9-57
+88-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:65:18-54
 89        <package android:name="com.myairtelapp" />
-89-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:66:9-51
-89-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:66:18-48
+89-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:66:9-51
+89-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:66:18-48
 90        <package android:name="com.mycompany.kvb" />
-90-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:67:9-53
-90-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:67:18-50
+90-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:67:9-53
+90-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:67:18-50
 91        <package android:name="com.olive.andhra.upi" />
-91-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:68:9-56
-91-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:68:18-53
+91-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:68:9-56
+91-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:68:18-53
 92        <package android:name="com.olive.dcb.upi" />
-92-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:69:9-53
-92-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:69:18-50
+92-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:69:9-53
+92-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:69:18-50
 93        <package android:name="com.omegaon_internet_pvt_ltd" />
-93-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:70:9-64
-93-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:70:18-61
+93-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:70:9-64
+93-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:70:18-61
 94        <package android:name="com.phonepe.app" />
-94-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:71:9-51
-94-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:71:18-48
+94-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:71:9-51
+94-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:71:18-48
 95        <package android:name="com.rblbank.mobank" />
-95-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:72:9-54
-95-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:72:18-51
+95-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:72:9-54
+95-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:72:18-51
 96        <package android:name="com.rblbank.upi" />
-96-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:73:9-51
-96-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:73:18-48
+96-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:73:9-51
+96-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:73:18-48
 97        <package android:name="com.realmepay.payments" />
-97-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:74:9-58
-97-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:74:18-55
+97-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:74:9-58
+97-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:74:18-55
 98        <package android:name="com.sbi.upi" />
-98-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:75:9-47
-98-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:75:18-44
+98-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:75:9-47
+98-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:75:18-44
 99        <package android:name="com.snapwork.hdfc" />
-99-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:76:9-53
-99-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:76:18-50
+99-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:76:9-53
+99-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:76:18-50
 100        <package android:name="com.truecaller" />
-100-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:77:9-50
-100-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:77:18-47
+100-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:77:9-50
+100-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:77:18-47
 101        <package android:name="com.udma.yuvapay.app" />
-101-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:78:9-56
-101-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:78:18-53
+101-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:78:9-56
+101-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:78:18-53
 102        <package android:name="com.ultracash.payment.customer" />
-102-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:79:9-66
-102-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:79:18-63
+102-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:79:9-66
+102-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:79:18-63
 103        <package android:name="com.upi.axispay" />
-103-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:80:9-51
-103-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:80:18-48
+103-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:80:9-51
+103-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:80:18-48
 104        <package android:name="com.upi.federalbank.org.lotza" />
-104-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:81:9-65
-104-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:81:18-62
+104-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:81:9-65
+104-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:81:18-62
 105        <package android:name="com.whatsapp" />
-105-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:82:9-48
-105-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:82:18-45
+105-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:82:9-48
+105-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:82:18-45
 106        <package android:name="in.amazon.mShop.android.shopping" />
-106-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:83:9-68
-106-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:83:18-65
+106-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:83:9-68
+106-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:83:18-65
 107        <package android:name="in.cointab.app" />
-107-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:84:9-50
-107-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:84:18-47
+107-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:84:9-50
+107-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:84:18-47
 108        <package android:name="in.org.npci.upiapp" />
-108-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:85:9-54
-108-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:85:18-51
+108-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:85:9-54
+108-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:85:18-51
 109        <package android:name="money.bullet" />
-109-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:86:9-48
-109-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:86:18-45
+109-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:86:9-48
+109-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:86:18-45
 110        <package android:name="net.one97.paytm" />
-110-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:87:9-51
-110-->[:upi_pay] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:87:18-48
+110-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:87:9-51
+110-->[:upi_pay] D:\Project Unknown\tcs_app\build\upi_pay\intermediates\merged_manifest\debug\AndroidManifest.xml:87:18-48
 111    </queries>
 112
 113    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Permissions options for the `notification` group -->
-113-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-68
-113-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-65
+113-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-68
+113-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-65
 114    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-114-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-77
-114-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-74
+114-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-77
+114-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-74
 115    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-115-->[:flutter_local_notifications] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-66
-115-->[:flutter_local_notifications] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-63
+115-->[:flutter_local_notifications] D:\Project Unknown\tcs_app\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-66
+115-->[:flutter_local_notifications] D:\Project Unknown\tcs_app\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-63
 116    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-116-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:26:5-82
-116-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:26:22-79
+116-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:26:5-82
+116-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:26:22-79
 117    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-117-->[com.google.android.recaptcha:recaptcha:18.5.1] C:\Users\ABDF92\.gradle\caches\transforms-3\0e9c5c5e07866f9b4185d5371b384ce0\transformed\jetified-recaptcha-18.5.1\AndroidManifest.xml:9:5-98
-117-->[com.google.android.recaptcha:recaptcha:18.5.1] C:\Users\ABDF92\.gradle\caches\transforms-3\0e9c5c5e07866f9b4185d5371b384ce0\transformed\jetified-recaptcha-18.5.1\AndroidManifest.xml:9:22-95
+117-->[com.google.android.recaptcha:recaptcha:18.5.1] C:\Users\moham\.gradle\caches\8.9\transforms\c64f316d6ace1d072f5ab6d727228d81\transformed\jetified-recaptcha-18.5.1\AndroidManifest.xml:9:5-98
+117-->[com.google.android.recaptcha:recaptcha:18.5.1] C:\Users\moham\.gradle\caches\8.9\transforms\c64f316d6ace1d072f5ab6d727228d81\transformed\jetified-recaptcha-18.5.1\AndroidManifest.xml:9:22-95
 118
 119    <permission
-119-->[androidx.core:core:1.13.1] C:\Users\ABDF92\.gradle\caches\transforms-3\568a789046b134f567d42926531757c6\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+119-->[androidx.core:core:1.13.1] C:\Users\moham\.gradle\caches\8.9\transforms\7597ffe0830fc887d86bed4808f70f11\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
 120        android:name="com.thecaringsouls.tcs.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-120-->[androidx.core:core:1.13.1] C:\Users\ABDF92\.gradle\caches\transforms-3\568a789046b134f567d42926531757c6\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+120-->[androidx.core:core:1.13.1] C:\Users\moham\.gradle\caches\8.9\transforms\7597ffe0830fc887d86bed4808f70f11\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
 121        android:protectionLevel="signature" />
-121-->[androidx.core:core:1.13.1] C:\Users\ABDF92\.gradle\caches\transforms-3\568a789046b134f567d42926531757c6\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+121-->[androidx.core:core:1.13.1] C:\Users\moham\.gradle\caches\8.9\transforms\7597ffe0830fc887d86bed4808f70f11\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
 122
 123    <uses-permission android:name="com.thecaringsouls.tcs.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-123-->[androidx.core:core:1.13.1] C:\Users\ABDF92\.gradle\caches\transforms-3\568a789046b134f567d42926531757c6\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
-123-->[androidx.core:core:1.13.1] C:\Users\ABDF92\.gradle\caches\transforms-3\568a789046b134f567d42926531757c6\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+123-->[androidx.core:core:1.13.1] C:\Users\moham\.gradle\caches\8.9\transforms\7597ffe0830fc887d86bed4808f70f11\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+123-->[androidx.core:core:1.13.1] C:\Users\moham\.gradle\caches\8.9\transforms\7597ffe0830fc887d86bed4808f70f11\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 124
 125    <application
 126        android:name="android.app.Application"
 127        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-127-->[androidx.core:core:1.13.1] C:\Users\ABDF92\.gradle\caches\transforms-3\568a789046b134f567d42926531757c6\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+127-->[androidx.core:core:1.13.1] C:\Users\moham\.gradle\caches\8.9\transforms\7597ffe0830fc887d86bed4808f70f11\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 128        android:debuggable="true"
 129        android:extractNativeLibs="false"
 130        android:icon="@mipmap/ic_launcher"
@@ -338,225 +338,225 @@
 154            android:value="2" />
 155
 156        <service
-156-->[:cloud_firestore] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
+156-->[:cloud_firestore] D:\Project Unknown\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
 157            android:name="com.google.firebase.components.ComponentDiscoveryService"
-157-->[:cloud_firestore] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:8:18-89
+157-->[:cloud_firestore] D:\Project Unknown\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:8:18-89
 158            android:directBootAware="true"
-158-->[com.google.firebase:firebase-common:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\b85d27c685baee922b854f54d9d97ab6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+158-->[com.google.firebase:firebase-common:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\99029ce48a35c3f7fe2834010e964b8e\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:32:13-43
 159            android:exported="false" >
-159-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:68:13-37
+159-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:68:13-37
 160            <meta-data
-160-->[:cloud_firestore] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
+160-->[:cloud_firestore] D:\Project Unknown\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
 161                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-161-->[:cloud_firestore] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-134
+161-->[:cloud_firestore] D:\Project Unknown\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-134
 162                android:value="com.google.firebase.components.ComponentRegistrar" />
-162-->[:cloud_firestore] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
+162-->[:cloud_firestore] D:\Project Unknown\tcs_app\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
 163            <meta-data
-163-->[:firebase_auth] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
+163-->[:firebase_auth] D:\Project Unknown\tcs_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
 164                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-164-->[:firebase_auth] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-124
+164-->[:firebase_auth] D:\Project Unknown\tcs_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-124
 165                android:value="com.google.firebase.components.ComponentRegistrar" />
-165-->[:firebase_auth] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
+165-->[:firebase_auth] D:\Project Unknown\tcs_app\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
 166            <meta-data
-166-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-38:85
+166-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-38:85
 167                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
-167-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:17-128
+167-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:17-128
 168                android:value="com.google.firebase.components.ComponentRegistrar" />
-168-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:38:17-82
+168-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:38:17-82
 169            <meta-data
-169-->[:firebase_core] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
+169-->[:firebase_core] D:\Project Unknown\tcs_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
 170                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-170-->[:firebase_core] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-124
+170-->[:firebase_core] D:\Project Unknown\tcs_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-124
 171                android:value="com.google.firebase.components.ComponentRegistrar" />
-171-->[:firebase_core] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
+171-->[:firebase_core] D:\Project Unknown\tcs_app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
 172            <meta-data
-172-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:69:13-71:85
+172-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:69:13-71:85
 173                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-173-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:70:17-109
+173-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:70:17-109
 174                android:value="com.google.firebase.components.ComponentRegistrar" />
-174-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:71:17-82
+174-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:71:17-82
 175            <meta-data
-175-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\ABDF92\.gradle\caches\transforms-3\dae1ff23a32465a14ef30d4620f40ff6\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:17:13-19:85
+175-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\moham\.gradle\caches\8.9\transforms\85e80610f2798c448f6e0397a96852b5\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:17:13-19:85
 176                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
-176-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\ABDF92\.gradle\caches\transforms-3\dae1ff23a32465a14ef30d4620f40ff6\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:18:17-122
+176-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\moham\.gradle\caches\8.9\transforms\85e80610f2798c448f6e0397a96852b5\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:18:17-122
 177                android:value="com.google.firebase.components.ComponentRegistrar" />
-177-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\ABDF92\.gradle\caches\transforms-3\dae1ff23a32465a14ef30d4620f40ff6\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:19:17-82
+177-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\moham\.gradle\caches\8.9\transforms\85e80610f2798c448f6e0397a96852b5\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:19:17-82
 178            <meta-data
-178-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\ABDF92\.gradle\caches\transforms-3\dae1ff23a32465a14ef30d4620f40ff6\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:20:13-22:85
+178-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\moham\.gradle\caches\8.9\transforms\85e80610f2798c448f6e0397a96852b5\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:20:13-22:85
 179                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-179-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\ABDF92\.gradle\caches\transforms-3\dae1ff23a32465a14ef30d4620f40ff6\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:21:17-111
+179-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\moham\.gradle\caches\8.9\transforms\85e80610f2798c448f6e0397a96852b5\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:21:17-111
 180                android:value="com.google.firebase.components.ComponentRegistrar" />
-180-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\ABDF92\.gradle\caches\transforms-3\dae1ff23a32465a14ef30d4620f40ff6\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:22:17-82
+180-->[com.google.firebase:firebase-firestore:25.1.1] C:\Users\moham\.gradle\caches\8.9\transforms\85e80610f2798c448f6e0397a96852b5\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:22:17-82
 181            <meta-data
-181-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:57:13-59:85
+181-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:57:13-59:85
 182                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
-182-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:58:17-122
+182-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:58:17-122
 183                android:value="com.google.firebase.components.ComponentRegistrar" />
-183-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:59:17-82
+183-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:59:17-82
 184            <meta-data
-184-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:60:13-62:85
+184-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:60:13-62:85
 185                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-185-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:61:17-119
+185-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:61:17-119
 186                android:value="com.google.firebase.components.ComponentRegistrar" />
-186-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:62:17-82
+186-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:62:17-82
 187            <meta-data
-187-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\39f7c61e522c8c1b66b7ea2c2dfa232e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:15:13-17:85
+187-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\90a7a05aab41f639d914b516e2297f12\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:15:13-17:85
 188                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
-188-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\39f7c61e522c8c1b66b7ea2c2dfa232e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:16:17-130
+188-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\90a7a05aab41f639d914b516e2297f12\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:16:17-130
 189                android:value="com.google.firebase.components.ComponentRegistrar" />
-189-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\39f7c61e522c8c1b66b7ea2c2dfa232e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:17:17-82
+189-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\90a7a05aab41f639d914b516e2297f12\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:17:17-82
 190            <meta-data
-190-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\39f7c61e522c8c1b66b7ea2c2dfa232e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:18:13-20:85
+190-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\90a7a05aab41f639d914b516e2297f12\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:18:13-20:85
 191                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-191-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\39f7c61e522c8c1b66b7ea2c2dfa232e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:19:17-127
+191-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\90a7a05aab41f639d914b516e2297f12\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:19:17-127
 192                android:value="com.google.firebase.components.ComponentRegistrar" />
-192-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\39f7c61e522c8c1b66b7ea2c2dfa232e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:20:17-82
+192-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\90a7a05aab41f639d914b516e2297f12\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:20:17-82
 193            <meta-data
-193-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\6dc593f369800c241316b79b7cc8a942\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+193-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0fb90022790f7201e1a19cc5ab237a\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
 194                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-194-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\6dc593f369800c241316b79b7cc8a942\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+194-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0fb90022790f7201e1a19cc5ab237a\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
 195                android:value="com.google.firebase.components.ComponentRegistrar" />
-195-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\6dc593f369800c241316b79b7cc8a942\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+195-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0fb90022790f7201e1a19cc5ab237a\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
 196            <meta-data
-196-->[com.google.firebase:firebase-common:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\b85d27c685baee922b854f54d9d97ab6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+196-->[com.google.firebase:firebase-common:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\99029ce48a35c3f7fe2834010e964b8e\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
 197                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-197-->[com.google.firebase:firebase-common:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\b85d27c685baee922b854f54d9d97ab6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+197-->[com.google.firebase:firebase-common:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\99029ce48a35c3f7fe2834010e964b8e\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:36:17-109
 198                android:value="com.google.firebase.components.ComponentRegistrar" />
-198-->[com.google.firebase:firebase-common:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\b85d27c685baee922b854f54d9d97ab6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+198-->[com.google.firebase:firebase-common:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\99029ce48a35c3f7fe2834010e964b8e\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:37:17-82
 199            <meta-data
-199-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\990719f108d567174bc9247a15192b33\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:25:13-27:85
+199-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\moham\.gradle\caches\8.9\transforms\9c9c58bac8815fb219b3b8c8a9171dad\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:25:13-27:85
 200                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-200-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\990719f108d567174bc9247a15192b33\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:26:17-115
+200-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\moham\.gradle\caches\8.9\transforms\9c9c58bac8815fb219b3b8c8a9171dad\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:26:17-115
 201                android:value="com.google.firebase.components.ComponentRegistrar" />
-201-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\990719f108d567174bc9247a15192b33\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:27:17-82
+201-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\moham\.gradle\caches\8.9\transforms\9c9c58bac8815fb219b3b8c8a9171dad\transformed\jetified-firebase-datatransport-18.2.0\AndroidManifest.xml:27:17-82
 202        </service>
 203        <service
-203-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-17:72
+203-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-17:72
 204            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
-204-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-107
+204-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-107
 205            android:exported="false"
-205-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
+205-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
 206            android:permission="android.permission.BIND_JOB_SERVICE" />
-206-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-69
+206-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-69
 207        <service
-207-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-24:19
+207-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-24:19
 208            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
-208-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-97
+208-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-97
 209            android:exported="false" >
-209-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-37
+209-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-37
 210            <intent-filter>
-210-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-23:29
+210-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-23:29
 211                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-211-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:17-78
-211-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:25-75
+211-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:17-78
+211-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:25-75
 212            </intent-filter>
 213        </service>
 214
 215        <receiver
-215-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:26:9-33:20
+215-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:26:9-33:20
 216            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
-216-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-98
+216-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-98
 217            android:exported="true"
-217-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-36
+217-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-36
 218            android:permission="com.google.android.c2dm.permission.SEND" >
-218-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-73
+218-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-73
 219            <intent-filter>
-219-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-32:29
+219-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-32:29
 220                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-220-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-81
-220-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:25-78
+220-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-81
+220-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:25-78
 221            </intent-filter>
 222        </receiver>
 223
 224        <provider
-224-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:41:9-45:38
+224-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:41:9-45:38
 225            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
-225-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:42:13-102
+225-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:42:13-102
 226            android:authorities="com.thecaringsouls.tcs.flutterfirebasemessaginginitprovider"
-226-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:43:13-88
+226-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:43:13-88
 227            android:exported="false"
-227-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:44:13-37
+227-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:44:13-37
 228            android:initOrder="99" />
-228-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-35
+228-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-35
 229
 230        <service
-230-->[:geolocator_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:56
+230-->[:geolocator_android] D:\Project Unknown\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:56
 231            android:name="com.baseflow.geolocator.GeolocatorLocationService"
-231-->[:geolocator_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-77
+231-->[:geolocator_android] D:\Project Unknown\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-77
 232            android:enabled="true"
-232-->[:geolocator_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-35
+232-->[:geolocator_android] D:\Project Unknown\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-35
 233            android:exported="false"
-233-->[:geolocator_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-37
+233-->[:geolocator_android] D:\Project Unknown\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-37
 234            android:foregroundServiceType="location" />
-234-->[:geolocator_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-53
+234-->[:geolocator_android] D:\Project Unknown\tcs_app\build\geolocator_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-53
 235
 236        <activity
-236-->[:url_launcher_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-11:74
+236-->[:url_launcher_android] D:\Project Unknown\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-11:74
 237            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-237-->[:url_launcher_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-74
+237-->[:url_launcher_android] D:\Project Unknown\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-74
 238            android:exported="false"
-238-->[:url_launcher_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-37
+238-->[:url_launcher_android] D:\Project Unknown\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-37
 239            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-239-->[:url_launcher_android] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-71
+239-->[:url_launcher_android] D:\Project Unknown\tcs_app\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-71
 240        <activity
-240-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:29:9-46:20
+240-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:29:9-46:20
 241            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-241-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:30:13-80
+241-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:30:13-80
 242            android:excludeFromRecents="true"
-242-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:31:13-46
+242-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:31:13-46
 243            android:exported="true"
-243-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:32:13-36
+243-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:32:13-36
 244            android:launchMode="singleTask"
-244-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:33:13-44
+244-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:33:13-44
 245            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-245-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:34:13-72
+245-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:34:13-72
 246            <intent-filter>
-246-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:35:13-45:29
+246-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:35:13-45:29
 247                <action android:name="android.intent.action.VIEW" />
-247-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:43:13-65
-247-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:43:21-62
+247-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:43:13-65
+247-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:43:21-62
 248
 249                <category android:name="android.intent.category.DEFAULT" />
-249-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:17-76
-249-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:27-73
+249-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:17-76
+249-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:27-73
 250                <category android:name="android.intent.category.BROWSABLE" />
-250-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:17-78
-250-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:27-75
+250-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:17-78
+250-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:27-75
 251
 252                <data
-252-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:40:13-50
+252-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:40:13-50
 253                    android:host="firebase.auth"
 254                    android:path="/"
 255                    android:scheme="genericidp" />
 256            </intent-filter>
 257        </activity>
 258        <activity
-258-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:47:9-64:20
+258-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:47:9-64:20
 259            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-259-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:48:13-79
+259-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:48:13-79
 260            android:excludeFromRecents="true"
-260-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:49:13-46
+260-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:49:13-46
 261            android:exported="true"
-261-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:50:13-36
+261-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:50:13-36
 262            android:launchMode="singleTask"
-262-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:51:13-44
+262-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:51:13-44
 263            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-263-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:52:13-72
+263-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:52:13-72
 264            <intent-filter>
-264-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:53:13-63:29
+264-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:53:13-63:29
 265                <action android:name="android.intent.action.VIEW" />
-265-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:43:13-65
-265-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:43:21-62
+265-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:43:13-65
+265-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:43:21-62
 266
 267                <category android:name="android.intent.category.DEFAULT" />
-267-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:17-76
-267-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:27-73
+267-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:17-76
+267-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:38:27-73
 268                <category android:name="android.intent.category.BROWSABLE" />
-268-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:17-78
-268-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\8d0268553c1211a36e4ed97ade1cdc06\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:27-75
+268-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:17-78
+268-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\4c7b18e83c8afeee1e2a25017740e385\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:39:27-75
 269
 270                <data
-270-->C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\android\app\src\main\AndroidManifest.xml:40:13-50
+270-->D:\Project Unknown\tcs_app\android\app\src\main\AndroidManifest.xml:40:13-50
 271                    android:host="firebase.auth"
 272                    android:path="/"
 273                    android:scheme="recaptcha" />
@@ -564,243 +564,243 @@
 275        </activity>
 276
 277        <uses-library
-277-->[androidx.window:window:1.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\589cb6dd06e2ad5e6abb784cea9ed6e3\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+277-->[androidx.window:window:1.2.0] C:\Users\moham\.gradle\caches\8.9\transforms\4a99ad3e52bb4b88c539532069a24842\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
 278            android:name="androidx.window.extensions"
-278-->[androidx.window:window:1.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\589cb6dd06e2ad5e6abb784cea9ed6e3\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+278-->[androidx.window:window:1.2.0] C:\Users\moham\.gradle\caches\8.9\transforms\4a99ad3e52bb4b88c539532069a24842\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
 279            android:required="false" />
-279-->[androidx.window:window:1.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\589cb6dd06e2ad5e6abb784cea9ed6e3\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+279-->[androidx.window:window:1.2.0] C:\Users\moham\.gradle\caches\8.9\transforms\4a99ad3e52bb4b88c539532069a24842\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
 280        <uses-library
-280-->[androidx.window:window:1.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\589cb6dd06e2ad5e6abb784cea9ed6e3\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+280-->[androidx.window:window:1.2.0] C:\Users\moham\.gradle\caches\8.9\transforms\4a99ad3e52bb4b88c539532069a24842\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
 281            android:name="androidx.window.sidecar"
-281-->[androidx.window:window:1.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\589cb6dd06e2ad5e6abb784cea9ed6e3\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+281-->[androidx.window:window:1.2.0] C:\Users\moham\.gradle\caches\8.9\transforms\4a99ad3e52bb4b88c539532069a24842\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
 282            android:required="false" />
-282-->[androidx.window:window:1.2.0] C:\Users\ABDF92\.gradle\caches\transforms-3\589cb6dd06e2ad5e6abb784cea9ed6e3\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+282-->[androidx.window:window:1.2.0] C:\Users\moham\.gradle\caches\8.9\transforms\4a99ad3e52bb4b88c539532069a24842\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
 283
 284        <service
-284-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+284-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
 285            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
-285-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+285-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
 286            android:enabled="true"
-286-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+286-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
 287            android:exported="false" >
-287-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+287-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
 288            <meta-data
-288-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+288-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
 289                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
-289-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+289-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
 290                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
-290-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+290-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
 291        </service>
 292
 293        <activity
-293-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+293-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
 294            android:name="androidx.credentials.playservices.HiddenActivity"
-294-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+294-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
 295            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-295-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+295-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
 296            android:enabled="true"
-296-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+296-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
 297            android:exported="false"
-297-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+297-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
 298            android:fitsSystemWindows="true"
-298-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+298-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
 299            android:theme="@style/Theme.Hidden" >
-299-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\ABDF92\.gradle\caches\transforms-3\3dfa22729c64fce729d1f195fdc0b320\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+299-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\moham\.gradle\caches\8.9\transforms\26c8a7142229e3748c1ceb5d9c446809\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
 300        </activity>
 301        <activity
-301-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\10cec2e65fb842c581020a4679a9d374\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:23:9-27:75
+301-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\8c972af263748cca135189aaaad719d8\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:23:9-27:75
 302            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-302-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\10cec2e65fb842c581020a4679a9d374\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:24:13-93
+302-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\8c972af263748cca135189aaaad719d8\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:24:13-93
 303            android:excludeFromRecents="true"
-303-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\10cec2e65fb842c581020a4679a9d374\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:25:13-46
+303-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\8c972af263748cca135189aaaad719d8\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:25:13-46
 304            android:exported="false"
-304-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\10cec2e65fb842c581020a4679a9d374\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:26:13-37
+304-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\8c972af263748cca135189aaaad719d8\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:26:13-37
 305            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-305-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\10cec2e65fb842c581020a4679a9d374\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:27:13-72
+305-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\8c972af263748cca135189aaaad719d8\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:27:13-72
 306        <!--
 307            Service handling Google Sign-In user revocation. For apps that do not integrate with
 308            Google Sign-In, this service will never be started.
 309        -->
 310        <service
-310-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\10cec2e65fb842c581020a4679a9d374\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:33:9-37:51
+310-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\8c972af263748cca135189aaaad719d8\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:33:9-37:51
 311            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-311-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\10cec2e65fb842c581020a4679a9d374\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:34:13-89
+311-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\8c972af263748cca135189aaaad719d8\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:34:13-89
 312            android:exported="true"
-312-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\10cec2e65fb842c581020a4679a9d374\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:35:13-36
+312-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\8c972af263748cca135189aaaad719d8\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:35:13-36
 313            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-313-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\10cec2e65fb842c581020a4679a9d374\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:36:13-107
+313-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\8c972af263748cca135189aaaad719d8\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:36:13-107
 314            android:visibleToInstantApps="true" />
-314-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\10cec2e65fb842c581020a4679a9d374\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:37:13-48
+314-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\8c972af263748cca135189aaaad719d8\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:37:13-48
 315
 316        <receiver
-316-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:29:9-40:20
+316-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:29:9-40:20
 317            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-317-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:30:13-78
+317-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:30:13-78
 318            android:exported="true"
-318-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:31:13-36
+318-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:31:13-36
 319            android:permission="com.google.android.c2dm.permission.SEND" >
-319-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:32:13-73
+319-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:32:13-73
 320            <intent-filter>
-320-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-32:29
+320-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-32:29
 321                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-321-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-81
-321-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:25-78
+321-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-81
+321-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:25-78
 322            </intent-filter>
 323
 324            <meta-data
-324-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:37:13-39:40
+324-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:37:13-39:40
 325                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
-325-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:38:17-92
+325-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:38:17-92
 326                android:value="true" />
-326-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:39:17-37
+326-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:39:17-37
 327        </receiver>
 328        <!--
 329             FirebaseMessagingService performs security checks at runtime,
 330             but set to not exported to explicitly avoid allowing another app to call it.
 331        -->
 332        <service
-332-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:46:9-53:19
+332-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:46:9-53:19
 333            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-333-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:47:13-82
+333-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:47:13-82
 334            android:directBootAware="true"
-334-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:48:13-43
+334-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:48:13-43
 335            android:exported="false" >
-335-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5b0e2101d86290b95e3565839f1e5992\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:49:13-37
+335-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\moham\.gradle\caches\8.9\transforms\ce0e2e2ba442a24ef383a6090c1ee265\transformed\jetified-firebase-messaging-24.1.0\AndroidManifest.xml:49:13-37
 336            <intent-filter android:priority="-500" >
-336-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-23:29
+336-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-23:29
 337                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-337-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:17-78
-337-->[:firebase_messaging] C:\Users\ABDF92\Desktop\ProjectUnknown\tcs_new\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:25-75
+337-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:17-78
+337-->[:firebase_messaging] D:\Project Unknown\tcs_app\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:25-75
 338            </intent-filter>
 339        </service>
 340
 341        <activity
-341-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\ABDF92\.gradle\caches\transforms-3\eceb84f63cadab2a7d019fe5f5c9b366\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:9-22:45
+341-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\moham\.gradle\caches\8.9\transforms\8dc07f0f128afb744eb1cc32f1b70b76\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:9-22:45
 342            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-342-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\ABDF92\.gradle\caches\transforms-3\eceb84f63cadab2a7d019fe5f5c9b366\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:19-85
+342-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\moham\.gradle\caches\8.9\transforms\8dc07f0f128afb744eb1cc32f1b70b76\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:19-85
 343            android:exported="false"
-343-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\ABDF92\.gradle\caches\transforms-3\eceb84f63cadab2a7d019fe5f5c9b366\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:22:19-43
+343-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\moham\.gradle\caches\8.9\transforms\8dc07f0f128afb744eb1cc32f1b70b76\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:22:19-43
 344            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-344-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\ABDF92\.gradle\caches\transforms-3\eceb84f63cadab2a7d019fe5f5c9b366\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:21:19-78
+344-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\moham\.gradle\caches\8.9\transforms\8dc07f0f128afb744eb1cc32f1b70b76\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:21:19-78
 345
 346        <provider
-346-->[com.google.firebase:firebase-common:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\b85d27c685baee922b854f54d9d97ab6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+346-->[com.google.firebase:firebase-common:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\99029ce48a35c3f7fe2834010e964b8e\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
 347            android:name="com.google.firebase.provider.FirebaseInitProvider"
-347-->[com.google.firebase:firebase-common:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\b85d27c685baee922b854f54d9d97ab6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+347-->[com.google.firebase:firebase-common:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\99029ce48a35c3f7fe2834010e964b8e\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:24:13-77
 348            android:authorities="com.thecaringsouls.tcs.firebaseinitprovider"
-348-->[com.google.firebase:firebase-common:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\b85d27c685baee922b854f54d9d97ab6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+348-->[com.google.firebase:firebase-common:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\99029ce48a35c3f7fe2834010e964b8e\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:25:13-72
 349            android:directBootAware="true"
-349-->[com.google.firebase:firebase-common:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\b85d27c685baee922b854f54d9d97ab6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+349-->[com.google.firebase:firebase-common:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\99029ce48a35c3f7fe2834010e964b8e\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:26:13-43
 350            android:exported="false"
-350-->[com.google.firebase:firebase-common:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\b85d27c685baee922b854f54d9d97ab6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+350-->[com.google.firebase:firebase-common:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\99029ce48a35c3f7fe2834010e964b8e\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:27:13-37
 351            android:initOrder="100" />
-351-->[com.google.firebase:firebase-common:21.0.0] C:\Users\ABDF92\.gradle\caches\transforms-3\b85d27c685baee922b854f54d9d97ab6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+351-->[com.google.firebase:firebase-common:21.0.0] C:\Users\moham\.gradle\caches\8.9\transforms\99029ce48a35c3f7fe2834010e964b8e\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:28:13-36
 352        <provider
-352-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5470e39d1aac47992480d2a365c4d460\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+352-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\moham\.gradle\caches\8.9\transforms\98d03a21dc185cdd45135b9200077fe1\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
 353            android:name="androidx.startup.InitializationProvider"
-353-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5470e39d1aac47992480d2a365c4d460\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
+353-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\moham\.gradle\caches\8.9\transforms\98d03a21dc185cdd45135b9200077fe1\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
 354            android:authorities="com.thecaringsouls.tcs.androidx-startup"
-354-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5470e39d1aac47992480d2a365c4d460\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
+354-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\moham\.gradle\caches\8.9\transforms\98d03a21dc185cdd45135b9200077fe1\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
 355            android:exported="false" >
-355-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5470e39d1aac47992480d2a365c4d460\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
+355-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\moham\.gradle\caches\8.9\transforms\98d03a21dc185cdd45135b9200077fe1\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
 356            <meta-data
-356-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5470e39d1aac47992480d2a365c4d460\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+356-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\moham\.gradle\caches\8.9\transforms\98d03a21dc185cdd45135b9200077fe1\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
 357                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-357-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5470e39d1aac47992480d2a365c4d460\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+357-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\moham\.gradle\caches\8.9\transforms\98d03a21dc185cdd45135b9200077fe1\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
 358                android:value="androidx.startup" />
-358-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ABDF92\.gradle\caches\transforms-3\5470e39d1aac47992480d2a365c4d460\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+358-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\moham\.gradle\caches\8.9\transforms\98d03a21dc185cdd45135b9200077fe1\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
 359            <meta-data
-359-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+359-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
 360                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-360-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+360-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
 361                android:value="androidx.startup" />
-361-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+361-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
 362        </provider>
 363
 364        <meta-data
-364-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\ABDF92\.gradle\caches\transforms-3\3207bfe9573d01fa490ff3d4df93c1a0\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+364-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\moham\.gradle\caches\8.9\transforms\70f3ff591b0aa814cc5f01d0c1c6fef4\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
 365            android:name="com.google.android.gms.version"
-365-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\ABDF92\.gradle\caches\transforms-3\3207bfe9573d01fa490ff3d4df93c1a0\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+365-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\moham\.gradle\caches\8.9\transforms\70f3ff591b0aa814cc5f01d0c1c6fef4\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
 366            android:value="@integer/google_play_services_version" />
-366-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\ABDF92\.gradle\caches\transforms-3\3207bfe9573d01fa490ff3d4df93c1a0\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+366-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\moham\.gradle\caches\8.9\transforms\70f3ff591b0aa814cc5f01d0c1c6fef4\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
 367
 368        <receiver
-368-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+368-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
 369            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-369-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+369-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
 370            android:directBootAware="false"
-370-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+370-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
 371            android:enabled="true"
-371-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+371-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
 372            android:exported="true"
-372-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+372-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
 373            android:permission="android.permission.DUMP" >
-373-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+373-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
 374            <intent-filter>
-374-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+374-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
 375                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-375-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-375-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+375-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+375-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
 376            </intent-filter>
 377            <intent-filter>
-377-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+377-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
 378                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-378-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-378-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+378-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+378-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
 379            </intent-filter>
 380            <intent-filter>
-380-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+380-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
 381                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-381-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-381-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+381-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+381-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
 382            </intent-filter>
 383            <intent-filter>
-383-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+383-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
 384                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-384-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-384-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ABDF92\.gradle\caches\transforms-3\ae42a86d7b53aed88a48a0415d2161ff\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+384-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+384-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\moham\.gradle\caches\8.9\transforms\b4c8fde4ceacbdda2d25a0d78a503254\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
 385            </intent-filter>
 386        </receiver>
 387
 388        <service
-388-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\025ed9b03d8ac1a5033304dd99c57a65\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
+388-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\cac21581050c1bce7f61faf184ec86b3\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
 389            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-389-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\025ed9b03d8ac1a5033304dd99c57a65\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
+389-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\cac21581050c1bce7f61faf184ec86b3\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
 390            android:exported="false" >
-390-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\025ed9b03d8ac1a5033304dd99c57a65\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
+390-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\cac21581050c1bce7f61faf184ec86b3\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
 391            <meta-data
-391-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\025ed9b03d8ac1a5033304dd99c57a65\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
+391-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\cac21581050c1bce7f61faf184ec86b3\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
 392                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-392-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\025ed9b03d8ac1a5033304dd99c57a65\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
+392-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\cac21581050c1bce7f61faf184ec86b3\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
 393                android:value="cct" />
-393-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\025ed9b03d8ac1a5033304dd99c57a65\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
+393-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\cac21581050c1bce7f61faf184ec86b3\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
 394        </service>
 395        <service
-395-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\fdd8187cd3fbb8e6edf779f3d137c3fd\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
+395-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\3eab008b6212e003aadd142e83a9171a\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
 396            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-396-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\fdd8187cd3fbb8e6edf779f3d137c3fd\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
+396-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\3eab008b6212e003aadd142e83a9171a\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
 397            android:exported="false"
-397-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\fdd8187cd3fbb8e6edf779f3d137c3fd\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
+397-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\3eab008b6212e003aadd142e83a9171a\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
 398            android:permission="android.permission.BIND_JOB_SERVICE" >
-398-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\fdd8187cd3fbb8e6edf779f3d137c3fd\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
+398-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\3eab008b6212e003aadd142e83a9171a\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
 399        </service>
 400
 401        <receiver
-401-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\fdd8187cd3fbb8e6edf779f3d137c3fd\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
+401-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\3eab008b6212e003aadd142e83a9171a\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
 402            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-402-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\fdd8187cd3fbb8e6edf779f3d137c3fd\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
+402-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\3eab008b6212e003aadd142e83a9171a\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
 403            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
-403-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\ABDF92\.gradle\caches\transforms-3\fdd8187cd3fbb8e6edf779f3d137c3fd\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
+403-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moham\.gradle\caches\8.9\transforms\3eab008b6212e003aadd142e83a9171a\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
 404        <activity
-404-->[com.google.android.play:core-common:2.0.3] C:\Users\ABDF92\.gradle\caches\transforms-3\d2180f88ecaffa6b876ce2f7caa0f1ff\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+404-->[com.google.android.play:core-common:2.0.3] C:\Users\moham\.gradle\caches\8.9\transforms\d2023cbac563073f5e31966b7bf7479d\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:14:9-18:65
 405            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-405-->[com.google.android.play:core-common:2.0.3] C:\Users\ABDF92\.gradle\caches\transforms-3\d2180f88ecaffa6b876ce2f7caa0f1ff\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:15:13-93
+405-->[com.google.android.play:core-common:2.0.3] C:\Users\moham\.gradle\caches\8.9\transforms\d2023cbac563073f5e31966b7bf7479d\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:15:13-93
 406            android:exported="false"
-406-->[com.google.android.play:core-common:2.0.3] C:\Users\ABDF92\.gradle\caches\transforms-3\d2180f88ecaffa6b876ce2f7caa0f1ff\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:16:13-37
+406-->[com.google.android.play:core-common:2.0.3] C:\Users\moham\.gradle\caches\8.9\transforms\d2023cbac563073f5e31966b7bf7479d\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:16:13-37
 407            android:stateNotNeeded="true"
-407-->[com.google.android.play:core-common:2.0.3] C:\Users\ABDF92\.gradle\caches\transforms-3\d2180f88ecaffa6b876ce2f7caa0f1ff\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:17:13-42
+407-->[com.google.android.play:core-common:2.0.3] C:\Users\moham\.gradle\caches\8.9\transforms\d2023cbac563073f5e31966b7bf7479d\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:17:13-42
 408            android:theme="@style/Theme.PlayCore.Transparent" />
-408-->[com.google.android.play:core-common:2.0.3] C:\Users\ABDF92\.gradle\caches\transforms-3\d2180f88ecaffa6b876ce2f7caa0f1ff\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:18:13-62
+408-->[com.google.android.play:core-common:2.0.3] C:\Users\moham\.gradle\caches\8.9\transforms\d2023cbac563073f5e31966b7bf7479d\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:18:13-62
 409    </application>
 410
 411</manifest>

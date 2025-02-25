@@ -5,7 +5,7 @@
 5    <uses-sdk android:minSdkVersion="19" />
 6
 7    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-7-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\connectivity_plus-6.1.2\android\src\main\AndroidManifest.xml:3:3-76
-7-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\connectivity_plus-6.1.2\android\src\main\AndroidManifest.xml:3:20-74
+7-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\connectivity_plus-6.1.2\android\src\main\AndroidManifest.xml:3:3-76
+7-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\connectivity_plus-6.1.2\android\src\main\AndroidManifest.xml:3:20-74
 8
 9</manifest>

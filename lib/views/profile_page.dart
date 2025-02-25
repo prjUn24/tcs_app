@@ -1,15 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:tcs/theme/theme.dart';
 import 'package:tcs/theme/theme_provider.dart';
 import 'package:tcs/views/width_and_height.dart';
 import 'package:tcs/widgets/button.dart';
 import 'package:tcs/widgets/text_area.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:lottie/lottie.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -430,7 +430,7 @@ class _ProfilePageState extends State<ProfilePage> {
               color: Colors.pink.shade800,
               size: 24,
             ),
-            onPressed: () => Navigator.pushNamed(context, '/home'),
+            onPressed: () => Navigator.pushNamed(context, "/"),
           ),
         ),
         backgroundColor:
@@ -1582,24 +1582,24 @@ class _ProfilePageState extends State<ProfilePage> {
           BottomNavigationBarItem(
             icon: Container(
               padding: EdgeInsets.all(FrameSize.screenWidth * 0.02),
-              decoration: BoxDecoration(
-                color: colorScheme.primary.withOpacity(0.1),
+              decoration: const BoxDecoration(
+                color: Color(0xffA5B7C7),
                 shape: BoxShape.circle,
               ),
-              child:
-                  Icon(Icons.home_rounded, size: FrameSize.screenWidth * 0.06),
+              child: Icon(Icons.home_rounded,
+                  color: Colors.white, size: FrameSize.screenWidth * 0.06),
             ),
             label: "Home",
           ),
           BottomNavigationBarItem(
             icon: Container(
               padding: EdgeInsets.all(FrameSize.screenWidth * 0.02),
-              decoration: BoxDecoration(
-                color: colorScheme.secondary.withOpacity(0.1),
+              decoration: const BoxDecoration(
+                color: Color(0xff567A9B),
                 shape: BoxShape.circle,
               ),
               child: Icon(Icons.person_rounded,
-                  size: FrameSize.screenWidth * 0.06),
+                  color: Colors.white, size: FrameSize.screenWidth * 0.06),
             ),
             label: "Account",
           ),

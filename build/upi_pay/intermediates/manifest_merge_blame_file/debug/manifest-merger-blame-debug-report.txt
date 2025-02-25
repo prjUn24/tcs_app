@@ -5,239 +5,239 @@
 5    <uses-sdk android:minSdkVersion="21" />
 6
 7    <queries>
-7-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:3:5-8:15
+7-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:3:5-8:15
 8        <intent>
-8-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:4:9-7:18
+8-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:4:9-7:18
 9            <action android:name="android.intent.action.VIEW" />
-9-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:5:13-65
-9-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:5:21-62
+9-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:5:13-65
+9-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:5:21-62
 10
 11            <data android:scheme="upi" />
-11-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:6:13-42
-11-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:6:19-39
+11-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:6:13-42
+11-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:6:19-39
 12        </intent>
 13    </queries>
 14    <queries>
-14-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:3:5-8:15
+14-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:3:5-8:15
 15        <package android:name="com.SIBMobile" />
-15-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:10:9-49
-15-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:10:18-46
+15-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:10:9-49
+15-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:10:18-46
 16        <package android:name="com.YesBank" />
-16-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:11:9-47
-16-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:11:18-44
+16-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:11:9-47
+16-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:11:18-44
 17        <package android:name="com.atomyes" />
-17-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:12:9-47
-17-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:12:18-44
+17-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:12:9-47
+17-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:12:18-44
 18        <package android:name="com.aubank.aupay.bhimupi" />
-18-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:13:9-60
-18-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:13:18-57
+18-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:13:9-60
+18-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:13:18-57
 19        <package android:name="com.bankofbaroda.upi" />
-19-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:14:9-56
-19-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:14:18-53
+19-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:14:9-56
+19-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:14:18-53
 20        <package android:name="com.canarabank.mobility" />
-20-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:15:9-59
-20-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:15:18-56
+20-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:15:9-59
+20-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:15:18-56
 21        <package android:name="com.citrus.citruspay" />
-21-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:16:9-56
-21-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:16:18-53
+21-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:16:9-56
+21-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:16:18-53
 22        <package android:name="com.csam.icici.bank.imobile" />
-22-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:17:9-63
-22-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:17:18-60
+22-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:17:9-63
+22-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:17:18-60
 23        <package android:name="com.cub.plus.gui" />
-23-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:18:9-52
-23-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:18:18-49
+23-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:18:9-52
+23-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:18:18-49
 24        <package android:name="com.cub.wallet.gui" />
-24-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:19:9-54
-24-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:19:18-51
+24-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:19:9-54
+24-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:19:18-51
 25        <package android:name="com.dbs.in.digitalbank" />
-25-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:20:9-58
-25-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:20:18-55
+25-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:20:9-58
+25-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:20:18-55
 26        <package android:name="com.dreamplug.androidapp" />
-26-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:21:9-60
-26-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:21:18-57
+26-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:21:9-60
+26-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:21:18-57
 27        <package android:name="com.enstage.wibmo.hdfc" />
-27-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:22:9-58
-27-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:22:18-55
+27-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:22:9-58
+27-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:22:18-55
 28        <package android:name="com.equitasbank.upi" />
-28-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:23:9-55
-28-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:23:18-52
+28-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:23:9-55
+28-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:23:18-52
 29        <package android:name="com.euronet.iobupi" />
-29-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:24:9-54
-29-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:24:18-51
+29-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:24:9-54
+29-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:24:18-51
 30        <package android:name="com.fampay.in" />
-30-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:25:9-49
-30-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:25:18-46
+30-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:25:9-49
+30-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:25:18-46
 31        <package android:name="com.finacus.jetpay" />
-31-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:26:9-54
-31-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:26:18-51
+31-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:26:9-54
+31-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:26:18-51
 32        <package android:name="com.finacus.tranzapp" />
-32-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:27:9-56
-32-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:27:18-53
+32-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:27:9-56
+32-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:27:18-53
 33        <package android:name="com.finopaytech.bpayfino" />
-33-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:28:9-60
-33-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:28:18-57
+33-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:28:9-60
+33-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:28:18-57
 34        <package android:name="com.fisglobal.bandhanupi.app" />
-34-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:29:9-64
-34-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:29:18-61
+34-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:29:9-64
+34-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:29:18-61
 35        <package android:name="com.fisglobal.syndicateupi.app" />
-35-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:30:9-66
-35-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:30:18-63
+35-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:30:9-66
+35-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:30:18-63
 36        <package android:name="com.freecharge.android" />
-36-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:31:9-58
-36-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:31:18-55
+36-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:31:9-58
+36-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:31:18-55
 37        <package android:name="com.fss.idfcpsp" />
-37-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:32:9-51
-37-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:32:18-48
+37-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:32:9-51
+37-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:32:18-48
 38        <package android:name="com.fss.ippbpsp" />
-38-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:33:9-51
-38-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:33:18-48
+38-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:33:9-51
+38-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:33:18-48
 39        <package android:name="com.fss.jnkpsp" />
-39-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:34:9-50
-39-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:34:18-47
+39-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:34:9-50
+39-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:34:18-47
 40        <package android:name="com.fss.pnbpsp" />
-40-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:35:9-50
-40-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:35:18-47
+40-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:35:9-50
+40-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:35:18-47
 41        <package android:name="com.fss.unbipsp" />
-41-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:36:9-51
-41-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:36:18-48
+41-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:36:9-51
+41-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:36:18-48
 42        <package android:name="com.fss.vijayapsp" />
-42-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:37:9-53
-42-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:37:18-50
+42-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:37:9-53
+42-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:37:18-50
 43        <package android:name="com.google.android.apps.nbu.paisa.user" />
-43-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:38:9-74
-43-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:38:18-71
+43-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:38:9-74
+43-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:38:18-71
 44        <package android:name="com.idbibank.paywiz" />
-44-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:39:9-55
-44-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:39:18-52
+44-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:39:9-55
+44-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:39:18-52
 45        <package android:name="com.infra.boiupi" />
-45-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:40:9-52
-45-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:40:18-49
+45-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:40:9-52
+45-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:40:18-49
 46        <package android:name="com.infrasoft.uboi" />
-46-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:41:9-54
-46-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:41:18-51
+46-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:41:9-54
+46-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:41:18-51
 47        <package android:name="com.infrasofttech.centralbankupi" />
-47-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:42:9-68
-47-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:42:18-65
+47-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:42:9-68
+47-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:42:18-65
 48        <package android:name="com.infrasofttech.indianbankupi" />
-48-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:43:9-67
-48-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:43:18-64
+48-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:43:9-67
+48-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:43:18-64
 49        <package android:name="com.infrasofttech.mahaupi" />
-49-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:44:9-61
-49-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:44:18-58
+49-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:44:9-61
+49-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:44:18-58
 50        <package android:name="com.jio.myjio" />
-50-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:45:9-49
-50-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:45:18-46
+50-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:45:9-49
+50-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:45:18-46
 51        <package android:name="com.khaalijeb.inkdrops" />
-51-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:46:9-58
-51-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:46:18-55
+51-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:46:9-58
+51-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:46:18-55
 52        <package android:name="com.lcode.allahabadupi" />
-52-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:47:9-58
-52-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:47:18-55
+52-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:47:9-58
+52-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:47:18-55
 53        <package android:name="com.lcode.corpupi" />
-53-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:48:9-53
-53-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:48:18-50
+53-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:48:9-53
+53-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:48:18-50
 54        <package android:name="com.lcode.csbupi" />
-54-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:49:9-52
-54-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:49:18-49
+54-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:49:9-52
+54-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:49:18-49
 55        <package android:name="com.lcode.dlbupi" />
-55-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:50:9-52
-55-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:50:18-49
+55-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:50:9-52
+55-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:50:18-49
 56        <package android:name="com.lcode.smartz" />
-56-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:51:9-52
-56-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:51:18-49
+56-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:51:9-52
+56-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:51:18-49
 57        <package android:name="com.lcode.ucoupi" />
-57-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:52:9-52
-57-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:52:18-49
+57-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:52:9-52
+57-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:52:18-49
 58        <package android:name="com.lvbank.upaay" />
-58-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:53:9-52
-58-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:53:18-49
+58-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:53:9-52
+58-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:53:18-49
 59        <package android:name="com.mgs.hsbcupi" />
-59-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:54:9-51
-59-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:54:18-48
+59-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:54:9-51
+59-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:54:18-48
 60        <package android:name="com.mgs.induspsp" />
-60-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:55:9-52
-60-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:55:18-49
+60-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:55:9-52
+60-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:55:18-49
 61        <package android:name="com.mgs.obcbank" />
-61-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:56:9-51
-61-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:56:18-48
+61-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:56:9-51
+61-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:56:18-48
 62        <package android:name="com.microlucid.mudrapay.android" />
-62-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:57:9-67
-62-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:57:18-64
+62-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:57:9-67
+62-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:57:18-64
 63        <package android:name="com.mipay.in.wallet" />
-63-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:58:9-55
-63-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:58:18-52
+63-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:58:9-55
+63-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:58:18-52
 64        <package android:name="com.mobikwik_new" />
-64-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:59:9-52
-64-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:59:18-49
+64-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:59:9-52
+64-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:59:18-49
 65        <package android:name="com.mobileware.upipsb" />
-65-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:60:9-57
-65-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:60:18-54
+65-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:60:9-57
+65-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:60:18-54
 66        <package android:name="com.myairtelapp" />
-66-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:61:9-51
-66-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:61:18-48
+66-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:61:9-51
+66-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:61:18-48
 67        <package android:name="com.mycompany.kvb" />
-67-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:62:9-53
-67-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:62:18-50
+67-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:62:9-53
+67-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:62:18-50
 68        <package android:name="com.olive.andhra.upi" />
-68-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:63:9-56
-68-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:63:18-53
+68-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:63:9-56
+68-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:63:18-53
 69        <package android:name="com.olive.dcb.upi" />
-69-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:64:9-53
-69-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:64:18-50
+69-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:64:9-53
+69-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:64:18-50
 70        <package android:name="com.omegaon_internet_pvt_ltd" />
-70-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:65:9-64
-70-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:65:18-61
+70-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:65:9-64
+70-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:65:18-61
 71        <package android:name="com.phonepe.app" />
-71-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:66:9-51
-71-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:66:18-48
+71-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:66:9-51
+71-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:66:18-48
 72        <package android:name="com.rblbank.mobank" />
-72-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:67:9-54
-72-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:67:18-51
+72-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:67:9-54
+72-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:67:18-51
 73        <package android:name="com.rblbank.upi" />
-73-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:68:9-51
-73-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:68:18-48
+73-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:68:9-51
+73-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:68:18-48
 74        <package android:name="com.realmepay.payments" />
-74-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:69:9-58
-74-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:69:18-55
+74-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:69:9-58
+74-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:69:18-55
 75        <package android:name="com.sbi.upi" />
-75-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:70:9-47
-75-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:70:18-44
+75-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:70:9-47
+75-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:70:18-44
 76        <package android:name="com.snapwork.hdfc" />
-76-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:71:9-53
-76-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:71:18-50
+76-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:71:9-53
+76-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:71:18-50
 77        <package android:name="com.truecaller" />
-77-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:72:9-50
-77-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:72:18-47
+77-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:72:9-50
+77-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:72:18-47
 78        <package android:name="com.udma.yuvapay.app" />
-78-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:73:9-56
-78-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:73:18-53
+78-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:73:9-56
+78-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:73:18-53
 79        <package android:name="com.ultracash.payment.customer" />
-79-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:74:9-66
-79-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:74:18-63
+79-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:74:9-66
+79-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:74:18-63
 80        <package android:name="com.upi.axispay" />
-80-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:75:9-51
-80-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:75:18-48
+80-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:75:9-51
+80-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:75:18-48
 81        <package android:name="com.upi.federalbank.org.lotza" />
-81-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:76:9-65
-81-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:76:18-62
+81-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:76:9-65
+81-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:76:18-62
 82        <package android:name="com.whatsapp" />
-82-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:77:9-48
-82-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:77:18-45
+82-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:77:9-48
+82-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:77:18-45
 83        <package android:name="in.amazon.mShop.android.shopping" />
-83-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:78:9-68
-83-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:78:18-65
+83-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:78:9-68
+83-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:78:18-65
 84        <package android:name="in.cointab.app" />
-84-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:79:9-50
-84-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:79:18-47
+84-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:79:9-50
+84-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:79:18-47
 85        <package android:name="in.org.npci.upiapp" />
-85-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:80:9-54
-85-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:80:18-51
+85-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:80:9-54
+85-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:80:18-51
 86        <package android:name="money.bullet" />
-86-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:81:9-48
-86-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:81:18-45
+86-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:81:9-48
+86-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:81:18-45
 87        <package android:name="net.one97.paytm" />
-87-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:82:9-51
-87-->C:\Users\ABDF92\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:82:18-48
+87-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:82:9-51
+87-->C:\Users\moham\AppData\Local\Pub\Cache\hosted\pub.dev\upi_pay-1.1.0\android\src\main\AndroidManifest.xml:82:18-48
 88    </queries>
 89
 90</manifest>
